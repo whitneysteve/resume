@@ -10,6 +10,11 @@ sha=$(git rev-parse HEAD)
 branch=$(git rev-parse --abbrev-ref HEAD)
 tmp_branch="merge_test_$sha"
 
+msg "Committing changes"
+git add .
+git commit -m "${message:-$(git rev-parse --abbrev-ref HEAD)}"
+git push origin $(git rev-parse --abbrev-ref HEAD)
+
 msg "Switching to master"
 git checkout master
 
@@ -33,7 +38,7 @@ git merge $branch
 
 msg "Pushing master to git server"
 git push origin master
-git push origin mirror
+git push mirror master
 
 msg "Deleting feature branch"
 git branch -D $branch
