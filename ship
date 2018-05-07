@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 . scripts/common.sh
 
 test_and_lint
@@ -14,6 +12,8 @@ msg "Committing changes"
 git add .
 git commit -m "${message:-$(git rev-parse --abbrev-ref HEAD)}"
 git push origin $(git rev-parse --abbrev-ref HEAD)
+
+set -e
 
 msg "Switching to master"
 git checkout master
