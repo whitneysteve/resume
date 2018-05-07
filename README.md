@@ -1,7 +1,7 @@
 Stephen Whitney's Resume
 ========================
 
-This is the source code for my resume site. It's a React app created using `Facebook's create-react-app <https://github.com/facebook/create-react-app>`_.
+This is the source code for my resume site. It's a React app created using [Facebook's create-react-app] (https://github.com/facebook/create-react-app).
 
 Besides that, as with msot things, it's a work in progress.
 
