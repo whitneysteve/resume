@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Setup the development environment.
+
+set -e
+
+npm install
+npm install npm-run-all -g
+npm install less -g
+npm install less-watch-compiler -g

@@ -1,0 +1,13 @@
+{
+  "extends": "react-app",
+  "globals": {
+    "clearSessionStorage": false,
+    "expect": false,
+    "flushPromises": false,
+    "it": false
+  },
+  "rules": {
+    "handle-callback-err": "off",
+    "no-console": "off"
+  }
+}

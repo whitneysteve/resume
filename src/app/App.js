@@ -1,4 +1,3 @@
-import UserReview from '../review/UserReview';
 import React, { Component } from 'react';
 
 /**

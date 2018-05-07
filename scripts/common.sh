@@ -2,17 +2,17 @@
 
 function lint() {
   msg "Running Linter"
-  # TODO
+  npm-run-all lint
 }
 
 function run() {
   msg "Running Locally..."
-  # TODO
+  npm start
 }
 
 function test() {
   msg "Running Tests"
-  # TODO
+  CI=true npm test
 }
 
 function test_and_lint() {

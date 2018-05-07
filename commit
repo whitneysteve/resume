@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Commit the current changes.
+
 set -e
 
 . scripts/common.sh
