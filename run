@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+. scripts/common.sh
+
+run $*

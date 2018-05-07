@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+. scripts/common.sh
+
+msg "Checking out $1"
+git checkout -b $1

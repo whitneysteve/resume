@@ -1,0 +1,41 @@
+#!/bin/bash
+
+set -e
+
+. scripts/common.sh
+
+test_and_lint
+
+sha=$(git rev-parse HEAD)
+branch=$(git rev-parse --abbrev-ref HEAD)
+tmp_branch="merge_test_$sha"
+
+msg "Switching to master"
+git checkout master
+
+msg "Getting latest master"
+git pull
+
+msg "Switching to integration branch: $tmp_branch"
+git checkout -b $tmp_branch
+
+msg "Merging changes from $branch"
+git merge $branch
+
+test_and_lint
+
+msg "Tests OK, deleting integration branch: $tmp_branch"
+git checkout master
+git branch -D $tmp_branch
+
+msg "Merging your changes to master"
+git merge $branch
+
+msg "Pushing master to git server"
+git push origin master
+git push origin mirror
+
+msg "Deleting feature branch"
+git branch -D $branch
+
+msg "Nice work!"
