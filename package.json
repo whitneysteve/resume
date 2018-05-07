@@ -1,0 +1,33 @@
+{
+  "name": "stephen-whitney-resume",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "4.7.0",
+    "react": "16.1.1",
+    "react-dom": "16.1.1"
+  },
+  "devDependencies": {
+    "enzyme": "3.0.0",
+    "enzyme-adapter-react-16": "1.1.0",
+    "eslint": "^4.19.1",
+    "jest-cli": "21.2.1",
+    "jest-enzyme": "4.0.1",
+    "prettier": "1.9.2",
+    "react-scripts": "1.0.17",
+    "react-test-renderer": "16.2.0"
+  },
+  "scripts": {
+    "lint": "eslint --fix src",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p lint watch-less start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all lint build-css build-js",
+    "build-css": "lessc src/index.less src/index.css --source-map=src/index.css.map",
+    "watch-less": "less-watch-compiler src src index.less --source-map",
+    "test": "npm-run-all lint test-js",
+    "test-js": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "postinstall": "npm update"
+  }
+}
