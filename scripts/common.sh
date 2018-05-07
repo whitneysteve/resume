@@ -2,8 +2,9 @@
 
 function commit() {
   msg "Committing changes"
+  message="$1"
   git add .
-  git commit -m "${1:-$(git rev-parse --abbrev-ref HEAD)}"
+  git commit -m "${message:-$(git rev-parse --abbrev-ref HEAD)}"
   git push origin $(git rev-parse --abbrev-ref HEAD)
 }
 

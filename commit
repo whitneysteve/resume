@@ -6,6 +6,7 @@ set -e
 
 . scripts/common.sh
 
-test_and_lint
+# test_and_lint
 
-commit $*
+message=$*
+commit $message
