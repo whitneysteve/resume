@@ -4,23 +4,27 @@ Besides that, as with msot things, it's a work in progress.
 
 Working on this usually follows the following pattern. You'll need npm.
 
-# Create a branch
+Create a branch
+===============
 
 `./branch <branch_name>`
 
 Usually I make some changes.
 
-# Run Locally
+Run Locally
+===========
 
 `./run`
 
 This will start a development server and reload as appropriate.
 
-# Lint
+Lint
+====
 
 `./lint`
 
-# Commit, or Ship
+Commit, or Ship
+===============
 
 If you want to commit and keep working run:
 
@@ -30,8 +34,10 @@ If you want to commit and are done, ship it!
 
 `./ship`
 
-# Other Commands
+Other Commands
+==============
 
-## Test
+Test
+----
 
 `./test`
