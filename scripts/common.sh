@@ -2,7 +2,7 @@
 
 function lint() {
   msg "Running Linter"
-  npm-run-all lint
+  npm run lint
 }
 
 function run() {
