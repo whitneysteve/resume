@@ -1,5 +1,12 @@
 #!/bin/bash
 
+function commit() {
+  msg "Committing changes"
+  git add .
+  git commit -m "${1:-$(git rev-parse --abbrev-ref HEAD)}"
+  git push origin $(git rev-parse --abbrev-ref HEAD)
+}
+
 function lint() {
   msg "Running Linter"
   npm run lint

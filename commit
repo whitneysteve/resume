@@ -8,9 +8,4 @@ set -e
 
 test_and_lint
 
-message=$*
-
-msg "Committing changes"
-git add .
-git commit -m "${message:-$(git rev-parse --abbrev-ref HEAD)}"
-git push origin $(git rev-parse --abbrev-ref HEAD)
+commit $*

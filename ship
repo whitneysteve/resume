@@ -14,9 +14,7 @@ branch=$(git rev-parse --abbrev-ref HEAD)
 tmp_branch="merge_test_$sha"
 
 msg "Committing changes"
-git add .
-git commit -m "${message:-$(git rev-parse --abbrev-ref HEAD)}"
-git push origin $(git rev-parse --abbrev-ref HEAD)
+commit
 
 set -e
 
@@ -41,9 +39,11 @@ git branch -D $tmp_branch
 msg "Merging your changes to master"
 git merge $branch
 
+msg "Deploying"
+npm run deploy
+
 msg "Pushing master to git server"
 git push origin master
-git push mirror master
 
 msg "Deleting feature branch"
 git branch -D $branch
