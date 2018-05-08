@@ -42,6 +42,9 @@ git merge $branch
 msg "Deploying"
 npm run deploy
 
+msg "Committing changes"
+commit
+
 msg "Pushing master to git server"
 git push origin master
 
