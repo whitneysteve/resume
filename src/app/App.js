@@ -31,55 +31,55 @@ class App extends Component {
               <a href="#skills-today">
                 Today
               </a>
+              <div id="skills-today">
+                Scala		    <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Javascript	<i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Python		  <i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Ruby		    <i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Java			  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Objective C	<i className="fas fa-star"></i><br/>
+              </div>
             </li>
             <li>
               <a href="#skills-2-years-ago">
                 2 Years Ago
               </a>
+              <div id="skills-2-years-ago">
+                Scala		    <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Javascript	<i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Python		  0 stars<br/>
+                Ruby		    <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Java			  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Objective C	<i className="fas fa-star"></i><br/>
+              </div>
             </li>
             <li>
               <a href="#skills-4-years-ago">
                 4 Years Ago
               </a>
+              <div id="skills-4-years-ago">
+                Scala		    0 stars<br/>
+                Javascript	<i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Python		  0 stars<br/>
+                Ruby		    <i className="fas fa-star"></i><br/>
+                Java			  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Objective C	<i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+              </div>
             </li>
             <li>
               <a href="#skills-6-years-ago">
                 6 Years Ago
               </a>
+              <div id="skills-6-years-ago">
+                Scala		    0 stars<br/>
+                Javascript	<i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Python		  0 stars<br/>
+                Ruby		    0 stars<br/>
+                Java			  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
+                Objective C	0 stars<br/>
+              </div>
             </li>
           </ol>
-          <div id="skills-today">
-            Scala		    5 stars<br/>
-            Javascript	3 stars<br/>
-            Python		  2 stars<br/>
-            Ruby		    2 stars<br/>
-            Java			  3 stars<br/>
-            Objective C	1 stars<br/>
-          </div>
-          <div id="skills-2-years-ago">
-            Scala		    3 stars<br/>
-            Javascript	4 stars<br/>
-            Python		  0 stars<br/>
-            Ruby		    4 stars<br/>
-            Java			  5 stars<br/>
-            Objective C	1 stars<br/>
-          </div>
-          <div id="skills-4-years-ago">
-            Scala		    0 stars<br/>
-            Javascript	5 stars<br/>
-            Python		  0 stars<br/>
-            Ruby		    1 stars<br/>
-            Java			  5 stars<br/>
-            Objective C	3 stars<br/>
-          </div>
-          <div id="skills-6-years-ago">
-            Scala		    0 stars<br/>
-            Javascript	4 stars<br/>
-            Python		  0 stars<br/>
-            Ruby		    0 stars<br/>
-            Java			  5 stars<br/>
-            Objective C	0 stars<br/>
-          </div>
           <div>
             I can usually go from zero to 2 or 3 stars pretty quickly.
           </div>
