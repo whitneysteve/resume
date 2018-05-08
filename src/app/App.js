@@ -156,19 +156,6 @@ class App extends Component {
             <li>M.Bs, Information Systems, 1st Class Honours, 2007</li>
           </ol>
         </div>
-        <div className="Section" id="publications">
-          <h1>Patents etc.</h1>
-          <div>
-            I made a small number of publications and conference presentations. I have made 15 patent
-            filings between 2010 and 2014, individually and as part of a team, where my employer valued them.
-            I have achieved several performance and innovation awards throughout my career. Details, although
-            rather dry and outdated, available on request.
-          </div>
-        </div>
-        <div className="Section" id="referees">
-          <h1>Referees</h1>
-          <div>Referees available on request.</div>
-        </div>
         <div className="Section" id="contact">
           <h1>Contact</h1>
           <div>
