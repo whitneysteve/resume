@@ -1,17 +1,22 @@
+import Landing from '../landing/landing'
 import React, { Component } from 'react';
 
 /**
  * The main driver and parent container for the app.
  */
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      resume: false
+    };
+  }
+
   render() {
     return (
-      <div className="App">
-        <div className="Section" id="landing">
-          <h1>Intro</h1>
-          <h2>Stephen Whitney</h2>
-          <h3>Software Engineer</h3>
-        </div>
+      <div className={"App " + (this.state.resume ? "" : "non-resume") }>
+        <Landing />
         <div className="Section" id="location">
           <h1>Location</h1>
           <div>

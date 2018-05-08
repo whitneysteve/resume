@@ -42,8 +42,10 @@ git merge $branch
 msg "Deploying"
 npm run deploy
 
-unset -e
+# Commit can fail for no files to add, this is fine.
+set +e
 commit
+set -e
 
 msg "Pushing master to git server"
 git push origin master

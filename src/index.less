@@ -3,9 +3,24 @@
 @white: #ffffff;
 
 @import "app/App.less";
+@import "landing/Landing.less";
+@import "sections/Sections.less";
+@import "styles/Styles.less";
 
 body {
-  margin: 0;
+  margin: 0px 20px;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Lato, Helvetica, sans-serif;
+
+  h2 {
+    .dark-text;
+    font-size: 4em;
+    font-weight: 400;
+  }
+
+  h3 {
+    .dark-text;
+    font-size: 3em;
+    font-weight: 400;
+  }
 }
