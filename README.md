@@ -37,6 +37,8 @@ If you want to commit and are done, ship it!
 
 `./ship`
 
+The build folder is checked in for deployment on GitHub pages.
+
 Other Commands
 --------------
 
