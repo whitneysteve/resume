@@ -26,6 +26,7 @@ function test() {
 function test_and_lint() {
   msg "Running Linter and Tests"
   lint
+  echo $?
   test
 }
 
