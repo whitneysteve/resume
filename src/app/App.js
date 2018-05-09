@@ -1,6 +1,7 @@
 import Landing from '../landing/Landing'
 import Location from '../location/Location'
 import React, { Component } from 'react';
+import Skills from '../skills/Skills'
 
 /**
  * The main driver and parent container for the app.
@@ -19,72 +20,7 @@ class App extends Component {
       <div className={"App " + (this.state.resume ? "" : "non-resume") }>
         <Landing />
         <Location />
-        <div className="Section" id="skills">
-          <h1>Skills</h1>
-          <ol>
-            <li>
-              <a href="#skills-today">
-                Today
-              </a>
-              <div id="skills-today">
-                Scala		    <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Javascript	<i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Python		  <i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Ruby		    <i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Java			  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Objective C	<i className="fas fa-star"></i><br/>
-              </div>
-            </li>
-            <li>
-              <a href="#skills-2-years-ago">
-                2 Years Ago
-              </a>
-              <div id="skills-2-years-ago">
-                Scala		    <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Javascript	<i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Python		  0 stars<br/>
-                Ruby		    <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Java			  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Objective C	<i className="fas fa-star"></i><br/>
-              </div>
-            </li>
-            <li>
-              <a href="#skills-4-years-ago">
-                4 Years Ago
-              </a>
-              <div id="skills-4-years-ago">
-                Scala		    0 stars<br/>
-                Javascript	<i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Python		  0 stars<br/>
-                Ruby		    <i className="fas fa-star"></i><br/>
-                Java			  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Objective C	<i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-              </div>
-            </li>
-            <li>
-              <a href="#skills-6-years-ago">
-                6 Years Ago
-              </a>
-              <div id="skills-6-years-ago">
-                Scala		    0 stars<br/>
-                Javascript	<i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Python		  0 stars<br/>
-                Ruby		    0 stars<br/>
-                Java			  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><br/>
-                Objective C	0 stars<br/>
-              </div>
-            </li>
-          </ol>
-          <div>
-            I can usually go from zero to 2 or 3 stars pretty quickly.
-          </div>
-          <div>
-            The time it takes me to get to 4 or 5 stars depends on frequency, scope of work and teamwork.
-          </div>
-          <div>
-            I like to help others get stars too.
-          </div>
-        </div>
+        <Skills />
         <div className="Section" id="experience">
           <h1>Experience</h1>
           <div>

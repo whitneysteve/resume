@@ -1,0 +1,43 @@
+#skills {
+  .tabs {
+    .tabs-navigation {
+      float: bottom;
+      width: 100%;
+
+      button {
+        font-size: 1.2em;
+      }
+    }
+
+    .tabs-content {
+      table {
+        font-size: 1.75em;
+        width: 100%;
+        white-space: nowrap;
+
+        tr {
+          td {
+            padding: 10px;
+            text-align: left;
+          }
+
+          td:first-of-type {
+            line-height: 2.5em;
+            text-align: right;
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+
+  .stars {
+    color: @golden;
+    font-size: 1.8em;
+    letter-spacing: 15px;
+
+    @media @tablet {
+      font-size: 1.2em;
+    }
+  }
+}

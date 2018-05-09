@@ -1,0 +1,32 @@
+/* Style the buttons that are used to open the tab content */
+.tabs {
+  text-align: center;
+
+  .tabs-navigation {
+    button {
+      background: inherit;
+      border: none;
+      border-bottom: 2px solid @white;
+      color: @light-grey;
+      cursor: pointer;
+      margin: 0 15px 0 15px;
+      outline: none;
+      padding: 15px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      color: @medium-grey;
+      border-bottom: 2px solid @medium-grey;
+    }
+
+    button.active {
+      color: @dark-grey;
+      border-bottom: 2px solid @dark-grey;
+    }
+  }
+
+  .tabs-content {
+    margin: 30px;
+  }
+}
