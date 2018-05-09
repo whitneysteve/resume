@@ -18,6 +18,8 @@ commit
 
 set -e
 
+test_and_lint
+
 msg "Switching to master"
 git checkout master
 
