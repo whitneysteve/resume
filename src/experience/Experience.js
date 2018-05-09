@@ -63,7 +63,7 @@ class Experience extends Component {
             CRM and operational support).
           </p>
         </div>
-        <div class="experience-footer">
+        <div className="experience-footer">
           These aren’t all the details. Please get in touch for a full C.V. if required.
         </div>
       </div>
