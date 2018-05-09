@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://whitneysteve.github.io/resume",
   "dependencies": {
+    "google-map-react": "^1.0.0",
     "react": "16.1.1",
     "react-dom": "16.1.1"
   },

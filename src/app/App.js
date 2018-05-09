@@ -1,4 +1,5 @@
-import Landing from '../landing/landing'
+import Landing from '../landing/Landing'
+import Location from '../location/Location'
 import React, { Component } from 'react';
 
 /**
@@ -17,13 +18,7 @@ class App extends Component {
     return (
       <div className={"App " + (this.state.resume ? "" : "non-resume") }>
         <Landing />
-        <div className="Section" id="location">
-          <h1>Location</h1>
-          <div>
-            I’m based in Dublin, Ireland <span aria-label="Ireland Flag" role="img"> 🇮🇪</span> been fortunate enough to work
-            directly with great people based from San Francisco to Singapore.
-          </div>
-        </div>
+        <Location />
         <div className="Section" id="skills">
           <h1>Skills</h1>
           <ol>
