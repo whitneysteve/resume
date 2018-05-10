@@ -3,6 +3,7 @@ import Experience from '../experience/Experience'
 import Education from '../education/Education'
 import Landing from '../landing/Landing'
 import Location from '../location/Location'
+import Publications from '../publications/Publications'
 import React, { Component } from 'react';
 import Skills from '../skills/Skills'
 
@@ -27,6 +28,7 @@ class App extends Component {
         <Experience />
         <Education />
         <Contact />
+        <Publications />
       </div>
     );
   }

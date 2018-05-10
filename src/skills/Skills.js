@@ -18,13 +18,11 @@ class Skills extends Component {
   }
 
   render() {
-    // Use flexbox
-
     return (
       <div className="Section" id="skills">
         <h1>Skills</h1>
         <Tabs>
-          { SKILLS.map(genSkillTab) }
+          { SKILLS.map(genSkillEraTab) }
         </Tabs>
         <p>
           I can usually go from zero to 2 or 3 stars pretty quickly.
@@ -40,15 +38,21 @@ class Skills extends Component {
   }
 }
 
-const genSkillTab = (skill) => {
+/**
+ * Generates a Tab element for an era of skills.
+ *
+ * @param {Object} era the skill to render.
+ * @returns the Tab JSX element.
+ */
+const genSkillEraTab = (era) => {
   return (
-    <Tab key={skill.title} title={skill.title}>
+    <Tab key={era.title} title={era.title}>
       <div className="skills-container">
-        { skill.skills.map(genSkillRow) }
-        { skill.outdated &&
+        { era.skills.map(genSkillRow) }
+        { era.outdated &&
             <div className="skills-container-skill">
               <div className="skills-container-skill-name">Out of practice</div>
-              <div className="skills-container-skill-rating skills-container-skill-outdated">{ skill.outdated }</div>
+              <div className="skills-container-skill-rating skills-container-skill-outdated">{ era.outdated }</div>
             </div>
         }
       </div>
@@ -56,11 +60,20 @@ const genSkillTab = (skill) => {
   );
 };
 
+/**
+ * Generate a row that contains the skill name and it's rating.
+ *
+ * @param {Object} skill the skill to render.
+ */
 const genSkillRow = (skill) => {
   return (
     <div className="skills-container-skill" key={skill.title}>
       <div className="skills-container-skill-name">{ skill.title }</div>
-      <div className="skills-container-skill-rating">{ genStars(skill.stars) }</div>
+      <div
+        aria-label={ skill.stars + " stars" }
+        className="skills-container-skill-rating">
+        { genStars(skill.stars) }
+      </div>
     </div>
   );
 };
@@ -68,7 +81,17 @@ const genSkillRow = (skill) => {
 const genStars = (numStars) => {
   return (
     <div className="stars">
-      { [...Array(numStars).keys()].map(key => <i key={key} className="fas fa-star"></i>) }
+      {
+        [...Array(numStars).keys()].map(key => {
+          return (
+            <i
+              aria-label="Gold star"
+              className="fas fa-star"
+              key={key}
+              role="presentation"></i>
+          );
+        })
+      }
     </div>
   );
 };
@@ -78,7 +101,7 @@ const SKILLS = [
     title: "Today",
     skills: [
       { title: "Scala", stars: 5 },
-      { title: "JavaScript", stars: 3 },
+      { title: "Javascript & CSS", stars: 3 },
       { title: "Python", stars: 2 },
       { title: "Ruby", stars: 2 }
     ],
@@ -87,7 +110,7 @@ const SKILLS = [
   {
     title: "2016",
     skills: [
-      { title: "Javascript", stars: 4 },
+      { title: "Javascript & CSS", stars: 4 },
       { title: "Ruby", stars: 4 },
       { title: "Scala", stars: 3 }
     ],
@@ -97,7 +120,7 @@ const SKILLS = [
     title: "2014",
     skills: [
       { title: "Java", stars: 5 },
-      { title: "JavaScript", stars: 5 },
+      { title: "Javascript & CSS", stars: 5 },
       { title: "Objective-C", stars: 3 },
       { title: "Ruby", stars: 2 }
     ]
@@ -106,7 +129,7 @@ const SKILLS = [
     title: "2012",
     skills: [
       { title: "Java", stars: 5 },
-      { title: "JavaScript", stars: 4 },
+      { title: "Javascript & CSS", stars: 4 },
     ]
   }
 ];
