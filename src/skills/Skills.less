@@ -1,7 +1,6 @@
 #skills {
   .tabs {
     .tabs-navigation {
-      float: bottom;
       width: 100%;
 
       button {
@@ -10,21 +9,43 @@
     }
 
     .tabs-content {
-      table {
-        font-size: 1.75em;
-        width: 100%;
-        white-space: nowrap;
+      font-size: 1.75em;
+      width: 100%;
+      white-space: nowrap;
 
-        tr {
-          td {
-            padding: 10px;
-            text-align: left;
+      .skills-container {
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 90%;
+
+        @media @phone {
+          width: 95%;
+        }
+
+        .skills-container-skill {
+          align-items: baseline;
+          display: flex;
+          flex-wrap: wrap;
+          margin: 15px;
+
+          @media @phone, @tablet {
+            flex-direction: column;
+            align-items: center;
           }
 
-          td:first-of-type {
-            line-height: 2.5em;
-            text-align: right;
-            width: 40%;
+          .skills-container-skill-name {
+            width: 45%;
+
+            @media @phone, @tablet {
+              margin-bottom: 10px;
+              width: 100%;
+            }
+          }
+
+          .skills-container-skill-outdated {
+            color: @medium-grey;
           }
         }
       }
@@ -35,6 +56,10 @@
     color: @golden;
     font-size: 1.8em;
     letter-spacing: 15px;
+
+    @media @phone {
+      font-size: 1em;
+    }
 
     @media @tablet {
       font-size: 1.2em;

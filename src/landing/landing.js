@@ -15,6 +15,7 @@ class Landing extends Component {
         </div>
         <h2>Stephen Whitney</h2>
         <h3>Software Engineer</h3>
+        <h4>Since 2005</h4>
       </div>
     );
   }

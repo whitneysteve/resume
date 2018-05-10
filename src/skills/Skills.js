@@ -19,102 +19,12 @@ class Skills extends Component {
 
   render() {
     // Use flexbox
+
     return (
       <div className="Section" id="skills">
         <h1>Skills</h1>
         <Tabs>
-          <Tab title="Today">
-            <table>
-              <tbody>
-                <tr>
-                  <td>Scala</td>
-                  <td>{ genStars(5) }</td>
-                </tr>
-                <tr>
-                  <td>JavaScript</td>
-                  <td>{ genStars(3) }</td>
-                </tr>
-                <tr>
-                  <td>Python</td>
-                  <td>{ genStars(2) }</td>
-                </tr>
-                <tr>
-                  <td>Ruby</td>
-                  <td>{ genStars(2) }</td>
-                </tr>
-                <tr>
-                  <td>Out of Practice</td>
-                  <td>
-                    Java, Objective-C
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </Tab>
-          <Tab title="2 years ago...">
-            <table>
-              <tbody>
-                <tr>
-                  <td>JavaScript</td>
-                  <td>{ genStars(4) }</td>
-                </tr>
-                <tr>
-                  <td>Ruby</td>
-                  <td>{ genStars(4) }</td>
-                </tr>
-                <tr>
-                  <td>Scala</td>
-                  <td>{ genStars(3) }</td>
-                </tr>
-                <tr>
-                  <td>Ruby</td>
-                  <td>{ genStars(2) }</td>
-                </tr>
-                <tr>
-                  <td>Out of Practice</td>
-                  <td>
-                    Java, Objective-C
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </Tab>
-          <Tab title="4 years ago...">
-            <table>
-              <tbody>
-                <tr>
-                  <td>Java</td>
-                  <td>{ genStars(5) }</td>
-                </tr>
-                <tr>
-                  <td>JavaScript</td>
-                  <td>{ genStars(5) }</td>
-                </tr>
-                <tr>
-                  <td>Objective-C</td>
-                  <td>{ genStars(3) }</td>
-                </tr>
-                <tr>
-                  <td>Ruby</td>
-                  <td>{ genStars(2) }</td>
-                </tr>
-              </tbody>
-            </table>
-          </Tab>
-          <Tab title="6 years ago...">
-            <table>
-              <tbody>
-                <tr>
-                  <td>Java</td>
-                  <td>{ genStars(5) }</td>
-                </tr>
-                <tr>
-                  <td>JavaScript</td>
-                  <td>{ genStars(4) }</td>
-                </tr>
-              </tbody>
-            </table>
-          </Tab>
+          { SKILLS.map(genSkillTab) }
         </Tabs>
         <p>
           I can usually go from zero to 2 or 3 stars pretty quickly.
@@ -130,12 +40,75 @@ class Skills extends Component {
   }
 }
 
+const genSkillTab = (skill) => {
+  return (
+    <Tab key={skill.title} title={skill.title}>
+      <div className="skills-container">
+        { skill.skills.map(genSkillRow) }
+        { skill.outdated &&
+            <div className="skills-container-skill">
+              <div className="skills-container-skill-name">Out of practice</div>
+              <div className="skills-container-skill-rating skills-container-skill-outdated">{ skill.outdated }</div>
+            </div>
+        }
+      </div>
+    </Tab>
+  );
+};
+
+const genSkillRow = (skill) => {
+  return (
+    <div className="skills-container-skill" key={skill.title}>
+      <div className="skills-container-skill-name">{ skill.title }</div>
+      <div className="skills-container-skill-rating">{ genStars(skill.stars) }</div>
+    </div>
+  );
+};
+
 const genStars = (numStars) => {
   return (
     <div className="stars">
       { [...Array(numStars).keys()].map(key => <i key={key} className="fas fa-star"></i>) }
     </div>
   );
-}
+};
+
+const SKILLS = [
+  {
+    title: "Today",
+    skills: [
+      { title: "Scala", stars: 5 },
+      { title: "JavaScript", stars: 3 },
+      { title: "Python", stars: 2 },
+      { title: "Ruby", stars: 2 }
+    ],
+    outdated: "Java, Objective-C"
+  },
+  {
+    title: "2016",
+    skills: [
+      { title: "Javascript", stars: 4 },
+      { title: "Ruby", stars: 4 },
+      { title: "Scala", stars: 3 }
+    ],
+    outdated: "Java, Objective-C"
+  },
+  {
+    title: "2014",
+    skills: [
+      { title: "Java", stars: 5 },
+      { title: "JavaScript", stars: 5 },
+      { title: "Objective-C", stars: 3 },
+      { title: "Ruby", stars: 2 }
+    ]
+  },
+  {
+    title: "2012",
+    skills: [
+      { title: "Java", stars: 5 },
+      { title: "JavaScript", stars: 4 },
+    ]
+  }
+];
 
 export default Skills;
