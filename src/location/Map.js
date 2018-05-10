@@ -19,8 +19,7 @@ class Map extends Component {
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyC87jefYvUwpJ45N4Dxo_o7Cg0tjvZtcck" }}
           defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-        >
+          defaultZoom={this.props.zoom}>
           <AnyReactComponent
             lat={59.955413}
             lng={30.337844}
