@@ -20,13 +20,12 @@ function run() {
 
 function test() {
   msg "Running Tests"
-  CI=true npm test
+  CI=true npm run test
 }
 
 function test_and_lint() {
   msg "Running Linter and Tests"
   lint
-  echo $?
   test
 }
 

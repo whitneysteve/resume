@@ -32,8 +32,7 @@
     "predeploy": "npm run build",
     "start": "npm-run-all -p lint watch-less start-js",
     "start-js": "react-scripts start",
-    "test": "npm-run-all lint test-js",
-    "test-js": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --bail",
     "watch-less": "less-watch-compiler src src index.less --source-map"
   }
 }

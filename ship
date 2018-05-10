@@ -7,8 +7,6 @@
 
 . scripts/common.sh
 
-test_and_lint
-
 sha=$(git rev-parse HEAD)
 branch=$(git rev-parse --abbrev-ref HEAD)
 tmp_branch="merge_test_$sha"
@@ -17,8 +15,6 @@ msg "Committing changes"
 commit
 
 set -e
-
-test_and_lint
 
 msg "Switching to master"
 git checkout master
