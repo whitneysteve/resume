@@ -1,0 +1,33 @@
+#education {
+  .education-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .education-container-qualification {
+      .slight-shadow;
+      margin: 20px;
+      padding: 20px 50px;
+      text-align: center;
+      width: 30%;
+      min-width: 200px;
+
+      div {
+        margin: 10px;
+      }
+
+      .education-container-qualification-logo {
+        img {
+          height: 400px;
+          max-width: 90%;
+
+          @media @phone, @tablet {
+            height: auto;
+          }
+        }
+
+
+      }
+    }
+  }
+}
