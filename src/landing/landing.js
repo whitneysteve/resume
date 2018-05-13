@@ -7,6 +7,7 @@ class Landing extends Component {
   render() {
     return (
       <div className="Section" id="landing">
+        <div aria-hidden="true" className="parallax-cutoff">
         <h1>Intro</h1>
         <div className="avatar">
             <img
@@ -16,6 +17,8 @@ class Landing extends Component {
         <h2>Stephen Whitney</h2>
         <h3>Software Engineer</h3>
         <h4>Since 2005</h4>
+        </div>
+
       </div>
     );
   }
