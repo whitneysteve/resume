@@ -1,9 +1,16 @@
+$animation-background: #58D5D3;
+$animation-palette: #F8D5F0, #41A4C3, #3F4B83;
+
+$small-circles: generate-items(150, $animation-palette);
+$medium-circles: generate-items(90, $animation-palette);
+$large-circles: generate-items(30, $animation-palette);
+
 #landing {
+  margin-top: 0;
+  position: relative;
   text-align: center;
 
   @include parallax();
-  background-color: $twitter-background;
-  background-image: url(img/twitter_background.svg);
 
   .avatar {
     img {
@@ -14,20 +21,56 @@
 
       @include slight-shadow();
 
-      @media #{phone} {
+      @media #{$phone} {
         width: 60%;
       }
 
-      @media #{tablet} {
+      @media #{$tablet} {
         width: 40%;
       }
     }
   }
 
-  .parallax-cutoff {
-    // Generated
-    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 83%, rgba(255,255,255,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 51%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 51%,rgba(255,255,255,1) 83%,rgba(255,255,255,1) 100%);
+  .floaty-container {
+    @include floaty-container();
+    background-color: $animation-background;
+    height: 300px;
+
+    @media #{$phone} {
+      height: 200px;
+    }
+
+    @media #{$tablet} {
+      height: 250px;
+    }
+
+    .floaty-1 {
+      @include floaty();
+      animation: upwards-journey 45s linear infinite;
+      border-radius: 45px;
+      box-shadow: $large-circles;
+      height: 90px;
+      width: 90px;
+      opacity: (random(50) + 50) / 100;
+    }
+
+    .floaty-2 {
+      @include floaty();
+      animation: upwards-journey 35s linear infinite;
+      border-radius: 20px;
+      box-shadow: $medium-circles;
+      height: 40px;
+      width: 40px;
+      opacity: (random(50) + 50) / 100;
+    }
+
+    .floaty-3 {
+      animation: upwards-journey 25s linear infinite;
+      border-radius: 10px;
+      box-shadow: $small-circles;
+      height: 20px;
+      width: 20px;
+      opacity: (random(50) + 50) / 100;
+    }
   }
 }

@@ -20,7 +20,7 @@
         justify-content: center;
         width: 90%;
 
-        @media #{phone} {
+        @media #{$phone} {
           width: 95%;
         }
 
@@ -30,7 +30,7 @@
           flex-wrap: wrap;
           margin: 15px;
 
-          @media #{phone}, #{tablet} {
+          @media #{$phone}, #{$tablet} {
             flex-direction: column;
             align-items: center;
           }
@@ -38,7 +38,7 @@
           .skills-container-skill-name {
             width: 45%;
 
-            @media #{phone}, #{tablet} {
+            @media #{$phone}, #{$tablet} {
               margin-bottom: 10px;
               width: 100%;
             }
@@ -47,7 +47,7 @@
           .skills-container-skill-rating {
             max-width: 55%;
 
-            @media #{phone}, #{tablet} {
+            @media #{$phone}, #{$tablet} {
               max-width: 100%;
             }
           }
@@ -65,11 +65,11 @@
     font-size: 1.8em;
     letter-spacing: 15px;
 
-    @media #{phone} {
+    @media #{$phone} {
       font-size: 1em;
     }
 
-    @media #{tablet} {
+    @media #{$tablet} {
       font-size: 1.2em;
     }
   }

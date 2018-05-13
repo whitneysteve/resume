@@ -1,0 +1,40 @@
+/**
+ * Generate n random elements.
+ */
+ @function generate-items ($n, $colors) {
+  $color: nth($colors, random(length($colors)));
+  $value: '#{random(2000)}px #{random(2000)}px #{$color}';
+  @for $i from 2 through $n {
+    $color: nth($colors, random(length($colors)));
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #{$color}';
+  }
+
+  @return unquote($value);
+}
+
+/**
+ * Send items upwards.
+ */
+@keyframes upwards-journey {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+@mixin floaty-container() {
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+@mixin floaty() {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}

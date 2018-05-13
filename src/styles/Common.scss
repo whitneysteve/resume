@@ -19,12 +19,12 @@ h3 {
 
 p {
   font-size: 1.2em;
-  margin: 0 20px;
+  margin: 20px;
   text-align: center;
 }
 
 .Section {
   @include dark-text();
   font-size: 1.2em;
-  margin-bottom: 50px;
+  margin: 50px 0 50px 0;
 }

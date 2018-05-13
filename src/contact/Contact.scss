@@ -4,17 +4,17 @@
   .contact-container {
     display: flex;
 
-    @media #{phone} {
+    @media #{$phone} {
       flex-direction: column;
     }
 
     .contact-container-text {
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: space-between;
       width: 60%;
 
-      @media #{phone} {
+      @media #{$phone} {
         width: 100%;
       }
 
@@ -23,7 +23,7 @@
         margin-left: 75px;
         text-align: left;
 
-        @media #{phone} {
+        @media #{$phone} {
           margin-left: 0;
           text-align: center;
         }
@@ -34,10 +34,10 @@
       align-items: center;
       display: inline-flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: space-between;
       width: 40%;
 
-      @media #{phone} {
+      @media #{$phone} {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;

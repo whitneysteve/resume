@@ -31,7 +31,7 @@ class Skills extends Component {
           The time it takes me to get to 4 or 5 stars depends on frequency, scope of work and teamwork.
         </p>
         <p>
-          I like to help others get stars too. <span aria-label="Heart" role="img">❤️</span>
+          I like to help others get stars too <span aria-label="Heart" role="img">❤️</span>
         </p>
       </div>
     );
