@@ -102,17 +102,17 @@ const SKILLS = [
     skills: [
       { title: "Scala", stars: 5 },
       { title: "Javascript & CSS", stars: 3 },
-      { title: "Python", stars: 2 },
-      { title: "Ruby", stars: 2 }
+      { title: "Ruby", stars: 2 },
+      { title: "Python", stars: 2 }
     ],
     outdated: "Java, Objective-C"
   },
   {
     title: "2016",
     skills: [
+      { title: "Scala", stars: 3 },
       { title: "Javascript & CSS", stars: 4 },
-      { title: "Ruby", stars: 4 },
-      { title: "Scala", stars: 3 }
+      { title: "Ruby", stars: 4 }
     ],
     outdated: "Java, Objective-C"
   },
