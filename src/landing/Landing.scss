@@ -1,9 +1,9 @@
 $animation-background: #58D5D3;
 $animation-palette: #F8D5F0, #41A4C3, #3F4B83;
 
-$small-circles: generate-items(150, $animation-palette);
-$medium-circles: generate-items(90, $animation-palette);
-$large-circles: generate-items(30, $animation-palette);
+$small-circles: generate-items(1000, $animation-palette);
+$medium-circles: generate-items(750, $animation-palette);
+$large-circles: generate-items(200, $animation-palette);
 
 #landing {
   margin-top: 0;
@@ -51,7 +51,7 @@ $large-circles: generate-items(30, $animation-palette);
       box-shadow: $large-circles;
       height: 90px;
       width: 90px;
-      opacity: (random(50) + 50) / 100;
+      opacity: (random(15) + 15) / 100;
     }
 
     .floaty-2 {
@@ -61,7 +61,7 @@ $large-circles: generate-items(30, $animation-palette);
       box-shadow: $medium-circles;
       height: 40px;
       width: 40px;
-      opacity: (random(50) + 50) / 100;
+      opacity: (random(15) + 15) / 100;
     }
 
     .floaty-3 {
@@ -70,7 +70,7 @@ $large-circles: generate-items(30, $animation-palette);
       box-shadow: $small-circles;
       height: 20px;
       width: 20px;
-      opacity: (random(50) + 50) / 100;
+      opacity: (random(15) + 15) / 100;
     }
   }
 }
