@@ -1,0 +1,20 @@
+$phone: #{"only screen and (max-width: 600px)"};
+$tablet: #{"screen and (min-width: 601px) and (max-width: 800px)"};
+
+@import "styles/Mixins.scss";
+@import "styles/Common.scss";
+
+@import "app/App.scss";
+@import "contact/Contact.scss";
+@import "education/Education.scss";
+@import "experience/Experience.scss";
+@import "landing/Landing.scss";
+@import "location/Location.scss";
+@import "skills/Skills.scss";
+@import "tabs/Tabs.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Lato, Helvetica, sans-serif;
+}

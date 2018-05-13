@@ -4,7 +4,7 @@
 
 set -e
 
+gem install sass
+
 npm install
 npm install npm-run-all -g
-npm install less -g
-npm install less-watch-compiler -g

@@ -4,13 +4,13 @@
   }
 
   .map {
-    .slight-shadow;
+    @include slight-shadow();
 
     height: 400px;
     margin-left: 12.5%;
     width: 75%;
 
-    @media @phone, @tablet {
+    @media #{phone}, #{tablet} {
       width: 90%;
       margin-left: 5%;
     }

@@ -23,16 +23,16 @@
   },
   "scripts": {
     "build": "npm-run-all lint build-css build-js",
-    "build-css": "lessc src/index.less src/index.css --source-map=src/index.css.map",
+    "build-css": "sass --update src/index.scss:src/index.css",
     "build-js": "react-scripts build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
     "lint": "eslint --fix src",
     "postinstall": "npm update",
     "predeploy": "npm run build",
-    "start": "npm-run-all -p lint watch-less start-js",
+    "sass" : "sass --watch src/index.scss:src/index.css",
+    "start": "npm-run-all -p lint sass start-js",
     "start-js": "react-scripts start",
-    "test": "react-scripts test --env=jsdom --bail",
-    "watch-less": "less-watch-compiler src src index.less --source-map"
+    "test": "react-scripts test --env=jsdom --bail"
   }
 }

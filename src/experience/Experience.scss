@@ -1,24 +1,24 @@
-@amdocs-background: @medium-grey;
-@ibm-background: #1e4b60;
-@mastercard-background: #5b6770;
-@newbay-background: #ffa515;
-@twitter-background: #2bafe9;
+$amdocs-background: $medium-grey;
+$ibm-background: #1e4b60;
+$mastercard-background: #5b6770;
+$newbay-background: #ffa515;
+$twitter-background: #2bafe9;
 
 .experience {
-  .parallax;
-  .slight-inset-shadow;
+  @include parallax();
+  @include slight-inset-shadow();
 
-  background-color: @twitter-background;
+  background-color: $twitter-background;
   background-image: url(img/twitter_background.svg);
   background-position: bottom;
   background-position-y: 300px;
   background-size: 100%;
-  color: @white;
+  color: $white;
   padding: 5px 30px;
   transition: background-color ease-in-out 0.3s;
 
   h3, h4  {
-    color: @white;
+    color: $white;
     font-weight: 500;
     margin-left: 0;
   }
@@ -36,7 +36,7 @@
   }
 
   .experience-footer {
-    color: @white;
+    color: $white;
     font-size: 1.2em;
     margin: 50px 0;
     text-align: center;
@@ -53,22 +53,22 @@
 }
 
 .amdocs {
-  background-color: @amdocs-background;
+  background-color: $amdocs-background;
   background-image: url(img/amdocs_background.svg);
 }
 
 .ibm {
-  background-color: @ibm-background;
+  background-color: $ibm-background;
   background-image: url(img/ibm_background.svg);
   background-position-y: 170px;
 }
 
 .mastercard {
-  background-color: @mastercard-background;
+  background-color: $mastercard-background;
   background-image: url(img/mastercard_background.svg);
 }
 
 .newbay {
-  background-color: @newbay-background;
+  background-color: $newbay-background;
   background-image: url(img/newbay_background.svg);
 }

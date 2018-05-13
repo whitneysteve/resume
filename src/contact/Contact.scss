@@ -4,7 +4,7 @@
   .contact-container {
     display: flex;
 
-    @media @phone {
+    @media #{phone} {
       flex-direction: column;
     }
 
@@ -14,7 +14,7 @@
       justify-content: space-evenly;
       width: 60%;
 
-      @media @phone {
+      @media #{phone} {
         width: 100%;
       }
 
@@ -23,7 +23,7 @@
         margin-left: 75px;
         text-align: left;
 
-        @media @phone {
+        @media #{phone} {
           margin-left: 0;
           text-align: center;
         }
@@ -37,7 +37,7 @@
       justify-content: space-evenly;
       width: 40%;
 
-      @media @phone {
+      @media #{phone} {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;

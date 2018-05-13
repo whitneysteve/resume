@@ -3,7 +3,7 @@ a, button {
 }
 
 h1, h2, h3, h4, h5 {
-  .dark-text;
+  @include dark-text();
   margin: 20px;
 }
 
@@ -24,7 +24,7 @@ p {
 }
 
 .Section {
-  .dark-text;
+  @include dark-text();
   font-size: 1.2em;
   margin-bottom: 50px;
 }
