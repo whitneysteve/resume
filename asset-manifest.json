@@ -1,6 +1,11 @@
 {
-  "main.css": "static/css/main.94c14517.css",
-  "main.css.map": "static/css/main.94c14517.css.map",
-  "main.js": "static/js/main.6a55411a.js",
-  "main.js.map": "static/js/main.6a55411a.js.map"
+  "main.css": "static/css/main.27e4c7b4.css",
+  "main.css.map": "static/css/main.27e4c7b4.css.map",
+  "main.js": "static/js/main.4cb2a280.js",
+  "main.js.map": "static/js/main.4cb2a280.js.map",
+  "static/media/amdocs.svg": "static/media/amdocs.1d159d12.svg",
+  "static/media/ibm.svg": "static/media/ibm.cd396c2f.svg",
+  "static/media/mastercard.svg": "static/media/mastercard.3508369d.svg",
+  "static/media/newbay.svg": "static/media/newbay.1a052dcf.svg",
+  "static/media/twitter_blend.svg": "static/media/twitter_blend.204b7046.svg"
 }
