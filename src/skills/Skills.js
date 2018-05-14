@@ -1,3 +1,4 @@
+import Floaty from '../floaty/Floaty';
 import React, { Component } from 'react';
 import { Tabs, Tab } from '../tabs/Tabs';
 
@@ -24,15 +25,30 @@ class Skills extends Component {
         <Tabs>
           { SKILLS.map(genSkillEraTab) }
         </Tabs>
-        <p>
-          I can usually go from zero to 2 or 3 stars pretty quickly.
-        </p>
-        <p>
-          The time it takes me to get to 4 or 5 stars depends on frequency, scope of work and teamwork.
-        </p>
-        <p>
-          I like to help others get stars too <span aria-label="Heart" role="img">❤️</span>
-        </p>
+        <div>
+          <div className="skills-tempo-container">
+            <Floaty numLayers={3} />
+            <div className="skills-star-container stars">
+              <div>
+                <i aria-label="Gold star" className="fas fa-star stars" role="presentation"></i>
+                <i aria-label="Gold star" className="fas fa-star stars" role="presentation"></i>
+                <i aria-label="Gold star" className="far fa-star stars" role="presentation"></i>
+              </div>
+              { genStars(2) }
+            </div>
+            <div className="skills-text-container">
+              <p>
+                I can usually go from zero to 2 or 3 stars pretty quickly.
+              </p>
+              <p>
+                The time it takes me to get to 4 or 5 stars depends on frequency, scope of work and teamwork.
+              </p>
+              <p>
+                I like to help others get <span aria-label="stars" role="img">⭐️️</span> too <span aria-label="Heart" role="img">❤️</span>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
