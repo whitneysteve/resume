@@ -1,33 +1,43 @@
+$further-at-bottom: 10px 10px 40px 10px;
+
 #education {
   margin: 20px;
   text-align: center;
 
   .education-container {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: space-evenly;
+
+    @media #{$phone} {
+      flex-wrap: wrap;
+    }
+
+    div {
+      margin: 5px;
+    }
 
     .education-container-qualification {
       @include slight-shadow;
-      margin: 10px 40px;
-      padding: 10px;
-      text-align: center;
+      margin: 10px;
+      padding: $further-at-bottom;
+      width: 50%;
 
-      @media #{$phone}, #{$tablet} {
-        margin: 0 0 30px 0;
-      }
-      min-width: 200px;
-
-      div {
-        margin: 10px;
+      @media #{$phone} {
+        width: 95%;
       }
 
       .education-container-qualification-logo {
         img {
-          height: 400px;
-          max-width: 90%;
-          @media #{$phone} {
-            height: auto;
+          max-height: 400px;
+          max-width:90%;
+          padding: $further-at-bottom;
+
+          @media #{$phone}, #{$tablet} {
+            max-height:100%;
+          }
+
+          @media #{$tablet} {
+            height: 200px;
           }
         }
       }

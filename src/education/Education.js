@@ -32,7 +32,10 @@ const renderQualication = (qualification) => {
         { qualification.school }
       </div>
       <div className="education-container-qualification-course">
-        { qualification.course }, { qualification.grade }
+        { qualification.course }
+      </div>
+      <div className="education-container-qualification-result">
+        { qualification.grade }
       </div>
       <div className="education-container-qualification-year">
         { qualification.year }
