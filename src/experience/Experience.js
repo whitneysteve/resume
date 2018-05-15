@@ -11,7 +11,48 @@ class Experience extends Component {
       selected: CURRENT
     }
 
+    this.handleScroll = this.handleScroll.bind(this);
     this.highlightJob = this.highlightJob.bind(this);
+  }
+
+  /**
+   * Find the element closest to the specified position.
+   *
+   * @param {Array} elements
+   * @param {Number} position
+   */
+  closestElement(elements, position) {
+    let minDiff = 999999;
+    let closest;
+
+    elements.forEach(element => {
+      const diff = Math.abs(position - element.offsetTop);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closest = element;
+      }
+    });
+
+    return closest;
+  }
+
+  /**
+   * Handle a scroll event in the case the highlighted job needs to be changed.
+   *
+   * @param {Object} e the scroll event that caused this invocation.
+   */
+  handleScroll(e) {
+    const currentTopPosition = document.documentElement.scrollTop;
+
+    // Find the element closest to the top of the screen.
+    const nearsetJob = this.closestElement(
+      Array.from(document.querySelectorAll('.experience-job')),
+      currentTopPosition
+    );
+
+    if (nearsetJob && nearsetJob.id && nearsetJob.id !== this.state.selected) {
+      this.setState({ selected: nearsetJob.id });
+    }
   }
 
   /**
@@ -22,20 +63,36 @@ class Experience extends Component {
    */
   genJob(job) {
     return (
-      <div
-        className="experience-job"
-        id={job.id} key={job.company}
-        onMouseOver={this.highlightJob}>
+      <div className="experience-job" id={job.id} key={job.company}>
         <h3>{job.company}</h3>
         <h4>{job.position}</h4>
-        { job.terms.map(genTerm) }
         { job.blurbs.map(genBlurb) }
+        { job.terms.map(genTerm) }
       </div>
     );
   }
 
-  highlightJob(e) {
-    this.setState({ selected: e.target.id });
+  /**
+   * Highlight a job to give it prominence over the others.
+   *
+   * @param {String} jobId the ID of the job that should currently be highlighted.
+   */
+  highlightJob(jobId) {
+    this.setState({ selected: jobId });
+  }
+
+  /**
+   * Latch onto scroll events so we can update the job background.
+   */
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  /**
+   * Remove the listener to scroll events created when component was mounted.
+   */
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   render() {
@@ -60,7 +117,7 @@ class Experience extends Component {
  * @param {String} term the length of time worked at the job.
  */
 const genTerm = (term) => {
-  return <h5 key={term}>{term}</h5>;
+  return <sub key={term}>{term}</sub>;
 };
 
 /**
@@ -84,7 +141,7 @@ const JOBS = [
     ],
     blurbs: [
       "Twitter is my favourite website and I’m very lucky to have the opportunity to work and learn here.",
-      "Mostly backend engineering on low and high throughput applications, from Ruby to Scala, from monoliths to micro services and Hadoop.",
+      "Mostly backend engineering on low and high throughput applications, from Ruby to Scala, from monoliths to micro services, and Hadoop.",
       "Building internal web-apps in React / Angular / Backbone when I can."
     ]
   },

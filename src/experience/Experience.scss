@@ -15,13 +15,28 @@ $twitter-background: #2bafe9;
   background-size: 100%;
   color: $white;
   padding: 5px 30px;
-  transition: background-color ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
 
-  h3, h4  {
-    color: $white;
-    font-weight: 500;
-    margin-left: 0;
+  @media #{$tablet} {
+    background-position-y: 200px;
   }
+
+  @mixin experience-text {
+    color: $white;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  h3, h4, h5  {
+    @include experience-text();
+    font-weight: 500;
+  }
+
+  p {
+    @include experience-text();
+    font-weight: 400;
+  }
+
 
   h3 {
     margin-top: 40px;
@@ -31,8 +46,9 @@ $twitter-background: #2bafe9;
     font-size: 1.4em;
   }
 
-  h5, p {
-    display: none;
+
+  h5 {
+    font-size: 1.1em;
   }
 
   .experience-footer {
@@ -45,6 +61,18 @@ $twitter-background: #2bafe9;
   .experience-job {
     cursor: pointer;
     outline: none;
+
+    sub {
+      &:after {
+        content: ", "
+      }
+    }
+
+    sub:last-of-type {
+      &:after {
+        content: ""
+      }
+    }
   }
 
   .experience-job * {
@@ -55,12 +83,17 @@ $twitter-background: #2bafe9;
 .amdocs {
   background-color: $amdocs-background;
   background-image: url(img/amdocs_background.svg);
+  background-position-y: 100px;
 }
 
 .ibm {
   background-color: $ibm-background;
   background-image: url(img/ibm_background.svg);
-  background-position-y: 170px;
+  background-position-y: 270px;
+
+  @media #{$tablet} {
+    background-position-y: 170px;
+  }
 }
 
 .mastercard {
