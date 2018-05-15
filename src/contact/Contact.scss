@@ -1,8 +1,11 @@
 #contact {
-  margin-left: 40px;
+  display: flex;
+  justify-content: center;
 
   .contact-container {
     display: flex;
+    justify-content: space-evenly;
+    width: 80%;
 
     @media #{$phone} {
       flex-direction: column;
@@ -12,19 +15,18 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 60%;
+      margin-right: 100px;
 
       @media #{$phone} {
-        width: 100%;
+        margin-right: 0;
       }
 
       p {
         font-size: 1.4em;
-        margin-left: 75px;
+        margin-left: 0;
         text-align: left;
 
         @media #{$phone} {
-          margin-left: 0;
           text-align: center;
         }
       }
@@ -35,19 +37,20 @@
       display: inline-flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 40%;
+      margin-right: 15px;
 
       @media #{$phone} {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 35px;
-        width: 100%;
       }
 
       img {
-        padding: 5px;
         width: 75px;
+
+        @media #{$phone} {
+          margin: 10px;
+        }
       }
     }
   }
