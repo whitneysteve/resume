@@ -21,7 +21,7 @@ $large-stars: generate-items(200, $animation-palette);
 
     @media #{$phone}, #{$tablet} {
       flex-direction: column;
-      padding: 20px 20px 0 20px;
+      padding: 70px 20px 0 20px;
     }
 
     .floaty-container {
