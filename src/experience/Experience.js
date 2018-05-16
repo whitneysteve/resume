@@ -42,7 +42,9 @@ class Experience extends Component {
    * @param {Object} e the scroll event that caused this invocation.
    */
   handleScroll(e) {
-    const currentTopPosition = document.documentElement.scrollTop;
+    const documentElement = document.scrollingElement || document.documentElement;
+    const currentTopPosition = documentElement.scrollTop;
+    console.log(currentTopPosition);
 
     // Find the element closest to the top of the screen.
     const nearsetJob = this.closestElement(

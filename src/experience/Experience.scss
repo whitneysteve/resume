@@ -15,7 +15,8 @@ $twitter-background: #2bafe9;
   background-size: 100%;
   color: $white;
   padding: 5px 30px;
-  transition: all ease-in-out 0.3s;
+  transition: background-color ease-in 0.3s;
+
 
   @media #{$tablet} {
     background-position-y: 200px;
