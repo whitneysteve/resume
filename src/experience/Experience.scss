@@ -10,16 +10,14 @@ $twitter-background: #2bafe9;
 
   background-color: $twitter-background;
   background-image: url(img/twitter_background.svg);
-  background-position: bottom;
-  background-position-y: 300px;
+  background-position: center center;
   background-size: 100%;
   color: $white;
   padding: 5px 30px;
   transition: background-color ease-in 0.3s;
 
-
-  @media #{$tablet} {
-    background-position-y: 200px;
+  @media #{$phone} {
+    background-size: 10%;
   }
 
   @mixin experience-text {
@@ -60,9 +58,6 @@ $twitter-background: #2bafe9;
   }
 
   .experience-job {
-    cursor: pointer;
-    outline: none;
-
     sub {
       &:after {
         content: ", "
@@ -75,26 +70,16 @@ $twitter-background: #2bafe9;
       }
     }
   }
-
-  .experience-job * {
-    pointer-events: none;
-  }
 }
 
 .amdocs {
   background-color: $amdocs-background;
   background-image: url(img/amdocs_background.svg);
-  background-position-y: 100px;
 }
 
 .ibm {
   background-color: $ibm-background;
   background-image: url(img/ibm_background.svg);
-  background-position-y: 270px;
-
-  @media #{$tablet} {
-    background-position-y: 170px;
-  }
 }
 
 .mastercard {
