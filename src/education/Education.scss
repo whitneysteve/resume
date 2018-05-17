@@ -17,6 +17,7 @@
     .education-container-qualification {
       @include slight-shadow;
       margin: 10px;
+      max-width: 500px;
       padding: $further-at-bottom;
       width: 45%;
 
