@@ -1,11 +1,11 @@
 {
-  "main.css": "static/css/main.eb692248.css",
-  "main.css.map": "static/css/main.eb692248.css.map",
-  "main.js": "static/js/main.d18fb6b3.js",
-  "main.js.map": "static/js/main.d18fb6b3.js.map",
-  "static/media/amdocs_background.svg": "static/media/amdocs_background.1d159d12.svg",
-  "static/media/ibm_background.svg": "static/media/ibm_background.106f1a0c.svg",
-  "static/media/mastercard_background.svg": "static/media/mastercard_background.3508369d.svg",
+  "main.css": "static/css/main.39a6444d.css",
+  "main.css.map": "static/css/main.39a6444d.css.map",
+  "main.js": "static/js/main.8aa5f316.js",
+  "main.js.map": "static/js/main.8aa5f316.js.map",
+  "static/media/amdocs_background.svg": "static/media/amdocs_background.d3cdbe00.svg",
+  "static/media/ibm_background.svg": "static/media/ibm_background.cd396c2f.svg",
+  "static/media/mastercard_background.svg": "static/media/mastercard_background.8025edb6.svg",
   "static/media/newbay_background.svg": "static/media/newbay_background.1a052dcf.svg",
   "static/media/twitter_background.svg": "static/media/twitter_background.204b7046.svg"
 }
