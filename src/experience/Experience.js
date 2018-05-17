@@ -44,7 +44,6 @@ class Experience extends Component {
   handleScroll(e) {
     const documentElement = document.scrollingElement || document.documentElement;
     const currentTopPosition = documentElement.scrollTop;
-    console.log(currentTopPosition);
 
     // Find the element closest to the top of the screen.
     const nearsetJob = this.closestElement(
@@ -55,23 +54,6 @@ class Experience extends Component {
     if (nearsetJob && nearsetJob.id && nearsetJob.id !== this.state.selected) {
       this.setState({ selected: nearsetJob.id });
     }
-  }
-
-  /**
-   * Genreate the markup for a job and attach hover events to update the
-   * background.
-   *
-   * @param {Object} job the job configuration.
-   */
-  genJob(job) {
-    return (
-      <div className="experience-job" id={job.id} key={job.company}>
-        <h3>{job.company}</h3>
-        <h4>{job.position}</h4>
-        { job.blurbs.map(genBlurb) }
-        { job.terms.map(genTerm) }
-      </div>
-    );
   }
 
   /**
@@ -102,8 +84,7 @@ class Experience extends Component {
       <div className={`Section ${this.state.selected} experience`} id="experience">
         <h1>Experience</h1>
         <div>
-          {/* Requires explicit arrow for scope in genJob. */}
-          { JOBS.map(x => this.genJob(x)) }
+          { JOBS.map(genJob) }
           <div className="experience-footer">
             These aren’t all the details. Please get in touch for a full C.V.
           </div>
@@ -112,6 +93,23 @@ class Experience extends Component {
     );
   }
 }
+
+/**
+   * Genreate the markup for a job and attach hover events to update the
+   * background.
+   *
+   * @param {Object} job the job configuration.
+   */
+  const genJob = (job) => {
+    return (
+      <div className="experience-job" id={ job.id } key={ job.company }>
+        <h3>{ job.company }</h3>
+        <h4>{ job.position }</h4>
+        { job.blurbs.map(genBlurb) }
+        { job.terms.map(genTerm) }
+      </div>
+    );
+  };
 
 /**
  * Generate the markup for a term spent at a job.
@@ -145,7 +143,8 @@ const JOBS = [
       "Twitter is my favourite website and I’m very lucky to have the opportunity to work and learn here.",
       "Mostly backend engineering on low and high throughput applications, from Ruby to Scala, from monoliths to micro services, and Hadoop.",
       "Building internal web-apps in React / Angular / Backbone when I can."
-    ]
+    ],
+    logo: "img/twitter_background.svg"
   },
   {
     id: "mastercard",
@@ -157,7 +156,8 @@ const JOBS = [
     blurbs: [
       "Researching emerging technologies and trends to create prototypes and other innovations for MasterCard’s next and future generation of products.",
       "Had to pleasure of launching several new, multi-platform services to prototype, pilot, beta and full production."
-    ]
+    ],
+    logo: "img/mastercard_background.svg"
   },
   {
     id: "ibm",
@@ -169,7 +169,8 @@ const JOBS = [
     ],
     blurbs: [
       "Working on Java enterprise software for Lotus collaboration products and sensor processing frameworks for Smarter Software (Smarter Cities, Smarter Industries etc.) I learned my trade as a software developer, designer and team lead."
-    ]
+    ],
+    logo: "img/ibm_background.svg"
   },
   {
     id: "newbay",
@@ -180,7 +181,8 @@ const JOBS = [
     ],
     blurbs: [
       "Java Developer on white label photo and video sharing platform and social network gateways for telcos."
-    ]
+    ],
+    logo: "img/newbay_background.svg"
   },
   {
     id: "amdocs",
@@ -190,8 +192,9 @@ const JOBS = [
       "September 2007 - July 2008"
     ],
     blurbs: [
-      "Java Developer working deployment infrastructure and migrating existing applications to J2EE (billing, CRM and operational support)."
-    ]
+      "Java Developer working on deployment infrastructure and migrating existing applications to J2EE (billing, CRM and operational support)."
+    ],
+    logo: "img/amdocs_background.svg"
   }
 ]
 
