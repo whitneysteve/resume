@@ -1,7 +1,7 @@
 $amdocs-background: $medium-grey;
 $ibm-background: #1e4b60;
 $mastercard-background: #5b6770;
-$newbay-background: #ffa515;
+$newbay-background: #f7980b;
 $twitter-background: #2bafe9;
 
 .experience {
@@ -14,7 +14,11 @@ $twitter-background: #2bafe9;
   background-size: 75%;
   color: $white;
   padding: 5px 30px;
-  transition: background-color ease-in 0.3s;
+  transition: background-color ease-in-out 0.3s;
+
+  @include browser(Android,iPhone,iPad) {
+    background-image: none;
+  }
 
   @mixin experience-text {
     color: $white;
@@ -31,7 +35,6 @@ $twitter-background: #2bafe9;
     @include experience-text();
     font-weight: 400;
   }
-
 
   h3 {
     margin-top: 40px;
@@ -63,6 +66,22 @@ $twitter-background: #2bafe9;
     sub:last-of-type {
       &:after {
         content: ""
+      }
+    }
+
+    .experience-job-company {
+      display: flex;
+      align-items: center;
+
+      img {
+        display: none;
+        height: 40px;
+        margin-left: 15px;
+        vertical-align: middle;
+
+        @include browser(Android,iPhone,iPad) {
+          display: inline;
+        }
       }
     }
   }

@@ -1,3 +1,12 @@
+// Create a kind-of media tag for certain browsers.
+@mixin browser($browsers...) {
+  @each $browser in $browsers {
+    html[data-browser*="#{$browser}"] & {
+      @content;
+    }
+  }
+}
+
 @mixin dark-text {
   color: $dark-grey;
 }

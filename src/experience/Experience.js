@@ -103,7 +103,10 @@ class Experience extends Component {
   const genJob = (job) => {
     return (
       <div className="experience-job" id={ job.id } key={ job.company }>
-        <h3>{ job.company }</h3>
+        <div className="experience-job-company">
+          <h3>{ job.company } <img alt={ `${ job.company } logo` } src={ job.logo } /> </h3>
+
+        </div>
         <h4>{ job.position }</h4>
         { job.blurbs.map(genBlurb) }
         { job.terms.map(genTerm) }
@@ -170,7 +173,7 @@ const JOBS = [
     blurbs: [
       "Working on Java enterprise software for Lotus collaboration products and sensor processing frameworks for Smarter Software (Smarter Cities, Smarter Industries etc.) I learned my trade as a software developer, designer and team lead."
     ],
-    logo: "img/ibm_background.svg"
+    logo: "img/ibm_background_icon.svg"
   },
   {
     id: "newbay",
