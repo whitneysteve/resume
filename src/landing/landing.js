@@ -14,7 +14,6 @@ class Landing extends Component {
               alt="Stephen Whitney"
               src="https://www.gravatar.com/avatar/56ca7097c63f89715d830034165ff7bd?s=350"/>
         </div>
-
         <h2>Stephen Whitney</h2>
         <h3>Software Engineer</h3>
         <h4>Since 2005</h4>

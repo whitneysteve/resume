@@ -14,12 +14,11 @@ $large-circles: generate-items(200, $animation-palette);
 
   .avatar {
     img {
+      @include slight-shadow();
       border: 5px solid $white;
       border-radius: 50%;
       margin-top: 50px;
       width: 30%;
-
-      @include slight-shadow();
 
       @media #{$phone} {
         width: 60%;
