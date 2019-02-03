@@ -1,6 +1,12 @@
 #location {
+  opacity: 0.75;
+
   p:first-of-type {
-    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    margin: 40px 12.5% 0 12.5%;
   }
 
   .map {

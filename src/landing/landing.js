@@ -8,7 +8,9 @@ class Landing extends Component {
     return (
       <div className="Section" id="landing">
         <div>
-          <img src="img/logo.jpg" />
+          <img
+            alt="Stephen Whitney standing on a hill with an umbrella."
+            src="img/logo.jpg" />
         </div>
         <div>
           <h1>Intro</h1>

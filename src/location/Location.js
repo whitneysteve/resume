@@ -9,10 +9,10 @@ class Location extends Component {
     return (
       <div className="Section" id="location">
         <h1>Location</h1>
-        <Map />
         <p>
           I’m based in Dublin, Ireland <span aria-label="Ireland Flag" role="img"> 🇮🇪</span>
         </p>
+        <Map />
         <p>
           I've been fortunate enough to work directly with great people based from San Francisco to Singapore.
         </p>
