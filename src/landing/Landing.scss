@@ -6,5 +6,30 @@ $medium-circles: generate-items(750, $animation-palette);
 $large-circles: generate-items(200, $animation-palette);
 
 #landing {
-  height: 500px;
+  display: flex;
+  margin-bottom: 20px;
+
+  h1, h2, h3 {
+    opacity: 0.45;
+  }
+
+  img {
+    @include slight-shadow();
+
+    background-color: $light-grey;
+    border-radius: 200px;
+    height: 200px;
+    margin: 0px 70px 0px 120px;
+    opacity: 0.75;
+    width: 200px;
+  }
+
+  @media #{$phone}, #{$tablet} {
+    flex-direction: column;
+    text-align: center;
+
+    img {
+      margin: 0;
+    }
+  }
 }

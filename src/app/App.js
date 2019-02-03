@@ -1,4 +1,5 @@
 import Contact from '../contact/Contact'
+import CthuluColumns from '../floaty/CthuluColumns'
 import Experience from '../experience/Experience'
 import Education from '../education/Education'
 import Landing from '../landing/Landing'
@@ -27,6 +28,7 @@ class App extends Component {
         <Experience />
         <Education />
         <Contact />
+        <CthuluColumns />
       </div>
     );
   }

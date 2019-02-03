@@ -1,4 +1,3 @@
-import CthuluColumns from '../floaty/CthuluColumns'
 import React, { Component } from 'react';
 
 /**
@@ -8,11 +7,14 @@ class Landing extends Component {
   render() {
     return (
       <div className="Section" id="landing">
+        <div>
+          <img src="img/logo.jpg" />
+        </div>
+        <div>
           <h1>Intro</h1>
           <h2>Stephen Whitney</h2>
           <h3>Software Engineer</h3>
-          <h4>Since 2005</h4>
-          <CthuluColumns />
+        </div>
       </div>
     );
   }

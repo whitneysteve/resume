@@ -16,8 +16,12 @@ $tablet: #{"screen and (min-width: 601px) and (max-width: 800px)"};
 @import "location/Location.scss";
 @import "skills/Skills.scss";
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Lato, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+
+
 }
