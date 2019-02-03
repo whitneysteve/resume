@@ -22,8 +22,11 @@ class App extends Component {
   render() {
     return (
       <div className={"App " + (this.state.resume ? "" : "non-resume") }>
-        <Landing />
-        <Location />
+        <div>
+          <Landing />
+          <Location />
+          <CthuluColumns />
+        </div>
         <Skills />
         <Experience />
         <Education />

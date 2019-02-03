@@ -8,7 +8,7 @@
     button {
       background: inherit;
       border: none;
-      color: $light-grey;
+      color: $medium-grey;
       cursor: pointer;
       margin: 0 30px;
       outline: none;
@@ -31,11 +31,11 @@
     }
 
     button.active {
-      color: $dark-grey;
+      color: $white;
     }
 
     button.active::after {
-      background: $dark-grey;
+      background: $white;
       width: 100%;
     }
   }

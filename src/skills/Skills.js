@@ -22,20 +22,20 @@ class Skills extends Component {
     return (
       <div className="Section" id="skills">
         <h1>Skills</h1>
+        <Floaty numLayers={3} />
         <Tabs>
           { SKILLS.map(genSkillEraTab) }
         </Tabs>
         <div>
           <div className="skills-tempo-container">
-            <Floaty numLayers={3} />
-            <div className="skills-star-container stars">
+            {/* <div className="skills-star-container stars">
               <div>
                 <i aria-label="Gold star" className="fas fa-star stars" role="presentation"></i>
                 <i aria-label="Gold star" className="fas fa-star stars" role="presentation"></i>
                 <i aria-label="Gold star" className="far fa-star stars" role="presentation"></i>
               </div>
               { genStars(2) }
-            </div>
+            </div> */}
             <div className="skills-text-container">
               <p>
                 I can usually go from zero to 2 or 3 stars pretty quickly.
@@ -88,28 +88,47 @@ const genSkillRow = (skill) => {
       <div
         aria-label={ skill.stars + " stars" }
         className="skills-container-skill-rating">
-        { genStars(skill.stars) }
+        { genStars(5, skill.stars) }
       </div>
     </div>
   );
 };
 
-const genStars = (numStars) => {
+/**
+ * Generate a row of stars.
+ *
+ * @param {Number} numStars of stars to render.
+ * @param {Number} numFilledStars of stars to render.
+ */
+const genStars = (numStars, numFilledStars) => {
   return (
     <div className="stars">
       {
-        [...Array(numStars).keys()].map(key => {
-          return (
-            <i
-              aria-label="Gold star"
-              className="fas fa-star"
-              key={key}
-              role="presentation"></i>
-          );
+        [...Array(numFilledStars).keys()].map(key => {
+          return genStar(true, key);
+        })
+      }
+      {
+        [...Array(numStars - numFilledStars).keys()].map(key => {
+          return genStar(false, key);
         })
       }
     </div>
   );
+};
+
+/**
+ * Generate a star.
+ *
+ * @param {Boolean} filled whther the star is filled or hollow.
+ * @param {String} key optional key for adding multiple stars in a row.
+ */
+const genStar = (filled, key) => {
+  return <i
+    aria-label="Gold star"
+    className={filled? "fas fa-star" : "far fa-star"}
+    key={key}
+    role="presentation"></i>;
 };
 
 const SKILLS = [
@@ -117,18 +136,19 @@ const SKILLS = [
     title: "Today",
     skills: [
       { title: "Scala", stars: 5 },
+      { title: "Ruby", stars: 4 },
       { title: "Javascript & CSS", stars: 3 },
-      { title: "Ruby", stars: 2 },
-      { title: "Python", stars: 2 }
+      { title: "Python", stars: 2 },
     ],
     outdated: "Java, Objective-C"
   },
   {
     title: "2016",
     skills: [
-      { title: "Scala", stars: 3 },
+      { title: "Ruby", stars: 4 },
       { title: "Javascript & CSS", stars: 4 },
-      { title: "Ruby", stars: 4 }
+      { title: "Scala", stars: 3 },
+
     ],
     outdated: "Java, Objective-C"
   },
@@ -139,13 +159,6 @@ const SKILLS = [
       { title: "Javascript & CSS", stars: 5 },
       { title: "Objective-C", stars: 3 },
       { title: "Ruby", stars: 2 }
-    ]
-  },
-  {
-    title: "2012",
-    skills: [
-      { title: "Java", stars: 5 },
-      { title: "Javascript & CSS", stars: 4 },
     ]
   }
 ];

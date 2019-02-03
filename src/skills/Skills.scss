@@ -13,108 +13,70 @@ $large-stars: generate-items(200, $animation-palette);
 #skills {
   margin-bottom: 0;
 
-  .skills-tempo-container {
-    display: flex;
-    padding: 40px 40px 0 40px;
-    position: relative;
-    margin-top: 30px;
+  padding: 40px 40px 0 40px;
+  position: relative;
+  margin-top: 30px;
 
-    @media #{$phone}, #{$tablet} {
-      flex-direction: column;
-      padding: 70px 20px 0 20px;
+  @media #{$phone}, #{$tablet} {
+    flex-direction: column;
+    padding: 70px 20px 0 20px;
+  }
+
+  .floaty-container {
+    @include floaty-container();
+    background-color: $animation-background;
+    height: 100% !important;
+    padding-bottom: 50px;
+    // Generated
+    -webkit-box-shadow: inset 0px 0px 179px 0px rgba(0,0,0,0.65);
+    -moz-box-shadow: inset 0px 0px 179px 0px rgba(0,0,0,0.65);
+    box-shadow: inset 0px 0px 179px 0px rgba(0,0,0,0.65);
+
+
+    @media #{$phone} {
+      height: 200px;
     }
 
-    .floaty-container {
-      @include floaty-container();
-      background-color: $animation-background;
-      height: 100% !important;
-      padding-bottom: 50px;
-      // Generated
-      -webkit-box-shadow: inset 0px 0px 179px 0px rgba(0,0,0,0.65);
-      -moz-box-shadow: inset 0px 0px 179px 0px rgba(0,0,0,0.65);
-      box-shadow: inset 0px 0px 179px 0px rgba(0,0,0,0.65);
-
-
-      @media #{$phone} {
-        height: 200px;
-      }
-
-      @media #{$tablet} {
-        height: 250px;
-      }
-
-      .floaty-1 {
-        @include floaty();
-        animation: upwards-journey 45s linear infinite;
-        box-shadow: $large-stars;
-        height: 3px;
-        width: 3px;
-      }
-
-      .floaty-2 {
-        @include floaty();
-        animation: upwards-journey 35s linear infinite;
-        box-shadow: $medium-stars;
-        height: 2px;
-        width: 2px;
-      }
-
-      .floaty-3 {
-        animation: upwards-journey 25s linear infinite;
-        box-shadow: $small-stars;
-        height: 1px;
-        width: 1px;
-      }
+    @media #{$tablet} {
+      height: 250px;
     }
 
-    .skills-star-container {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: space-evenly;
-      min-width: 40%;
-      text-align: center;
-
-      @media #{$phone} {
-        display: none;
-      }
-
-      @media #{$tablet} {
-        font-size: 2em;
-      }
+    .floaty-1 {
+      @include floaty();
+      animation: upwards-journey 45s linear infinite;
+      box-shadow: $large-stars;
+      height: 3px;
+      width: 3px;
     }
 
-    .skills-text-container {
-      color: $white;
-      font-size: 1.5em;
-      font-weight: 700;
+    .floaty-2 {
+      @include floaty();
+      animation: upwards-journey 35s linear infinite;
+      box-shadow: $medium-stars;
+      height: 2px;
+      width: 2px;
+    }
 
-      @media #{$phone}, #{$tablet} {
-        font-weight: 500;
-      }
-
-      p {
-        text-align: left;
-
-        @media #{$phone}, #{$tablet} {
-          text-align: center;
-        }
-      }
+    .floaty-3 {
+      animation: upwards-journey 25s linear infinite;
+      box-shadow: $small-stars;
+      height: 1px;
+      width: 1px;
     }
   }
 
   .tabs {
-    .tabs-navigation {
-      width: 100%;
+    width: 100%;
 
+    .tabs-navigation {
       button {
         font-size: 1.2em;
       }
     }
 
     .tabs-content {
+      color: $white;
       font-size: 1.75em;
-      width: 100%;
       white-space: nowrap;
 
       .skills-container {
@@ -161,6 +123,18 @@ $large-stars: generate-items(200, $animation-palette);
           }
         }
       }
+    }
+  }
+
+  .skills-text-container {
+    color: $white;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: 50px;
+    text-align: center;
+
+    @media #{$phone}, #{$tablet} {
+      font-weight: 500;
     }
   }
 
