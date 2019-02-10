@@ -1,10 +1,7 @@
 
 $column-height: 500;
-$column-palette: #FFFFFF;
+$column-palette: [ $white ];
 $column-width: 95;
-
-// TODO random heights
-// TODO random widths?
 
 @function generate-vertical-columns ($x) {
   $column-color: nth($column-palette, random(length($column-palette)));
@@ -12,7 +9,6 @@ $column-width: 95;
   $value: '#{$x}px #{$y}px #{$column-color}';
 
   @while $y < 3000 {
-    // $column-color: nth($column-palette, random(length($column-palette)));
     $y: $y + 1 + $column_height;
     $value: '#{$value} , #{$x}px #{$y}px #{$column-color}';
   }
@@ -37,22 +33,32 @@ $downwards-columns: generate-horizontal-items($column-width, 100);
 $around: generate-horizontal-items($column-width, 100);
 
 @keyframes column-up {
-  from {
+  0% {
     transform: rotate(1deg) translateY(0px);
   }
-  to {
+  50% {
+    transform: rotate(1deg) translateY(-1000px);
+  }
+  100% {
+    opacity: 0.97;
     transform: rotate(1deg) translateY(-2000px);
   }
 }
 
 
 @keyframes column-down {
-  from {
+  0% {
+
     transform: rotate(1deg) translateY(-2000px);
   }
-  to {
+  50% {
+    transform: rotate(1deg) translateY(-1000px);
+  }
+  100% {
+    opacity: 0.95;
     transform: rotate(1deg) translateY(0px);
   }
+
 }
 
 .cthulu-columns-container {
@@ -85,13 +91,13 @@ $around: generate-horizontal-items($column-width, 100);
 
   .cthulu-column-up {
     @include cthulu-column();
-    animation: column-up 17s linear infinite;
+    animation: column-up 18s linear infinite;
     box-shadow: $upwards-columns;
   }
 
   .cthulu-column-down {
     @include cthulu-column();
-    animation: column-down 15s linear infinite;
+    animation: column-down 14s linear infinite;
     box-shadow: $downwards-columns;
   }
 }
