@@ -33,32 +33,22 @@ $downwards-columns: generate-horizontal-items($column-width, 100);
 $around: generate-horizontal-items($column-width, 100);
 
 @keyframes column-up {
-  0% {
+  from {
     transform: rotate(1deg) translateY(0px);
   }
-  50% {
-    transform: rotate(1deg) translateY(-1000px);
-  }
-  100% {
-    opacity: 0.97;
+  to {
     transform: rotate(1deg) translateY(-2000px);
   }
 }
 
 
 @keyframes column-down {
-  0% {
-
+  from {
     transform: rotate(1deg) translateY(-2000px);
   }
-  50% {
-    transform: rotate(1deg) translateY(-1000px);
-  }
-  100% {
-    opacity: 0.95;
+  to {
     transform: rotate(1deg) translateY(0px);
   }
-
 }
 
 .cthulu-columns-container {
