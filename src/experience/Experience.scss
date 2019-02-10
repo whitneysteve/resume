@@ -2,6 +2,7 @@ $amdocs-background: $medium-grey;
 $ibm-background: #1e4b60;
 $mastercard-background: #5b6770;
 $newbay-background: #f7980b;
+$stripe-background: #53f;
 $twitter-background: #2bafe9;
 
 .experience {
@@ -87,11 +88,6 @@ $twitter-background: #2bafe9;
   }
 }
 
-.amdocs {
-  background-color: $amdocs-background;
-  background-image: url(img/amdocs_background.svg);
-}
-
 .ibm {
   background-color: $ibm-background;
   background-image: url(img/ibm_background.svg);
@@ -102,7 +98,7 @@ $twitter-background: #2bafe9;
   background-image: url(img/mastercard_background.svg);
 }
 
-.newbay {
-  background-color: $newbay-background;
-  background-image: url(img/newbay_background.svg);
+.stripe {
+  background-color: $stripe-background;
+  background-image: url(img/stripe_background.svg);
 }

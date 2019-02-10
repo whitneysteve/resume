@@ -86,7 +86,7 @@ class Experience extends Component {
         <div>
           { JOBS.map(genJob) }
           <div className="experience-footer">
-            These aren’t all the details. Please get in touch for a full C.V.
+            This just a selection. Please get in touch for a full C.V.
           </div>
         </div>
       </div>
@@ -136,23 +136,35 @@ const CURRENT = "twitter";
 
 const JOBS = [
   {
+    id: "stripe",
+    company: "Stripe",
+    position: "Software Engineer",
+    terms: [
+      "November 2018 - Present"
+    ],
+    blurbs: [
+      "Working as a backend engineer on payments in Europe.",
+    ],
+    logo: "img/stripe_background.svg"
+  },
+  {
     id: "twitter",
     company: "Twitter",
     position: "Staff Software Engineer",
     terms: [
-      "December 2013 - Present"
+      "December 2013 - November 2018"
     ],
     blurbs: [
-      "Twitter is my favourite website and I’m very lucky to have the opportunity to work and learn here.",
+      "Twitter is my favourite website and I’m very lucky to have had the opportunity to work and learn here.",
       "Mostly backend engineering on low and high throughput applications, from Ruby to Scala, from monoliths to micro services, and Hadoop.",
-      "Building internal web-apps in React / Angular / Backbone when I can."
+      "Built internal web-apps in React / Angular / Backbone when I could."
     ],
     logo: "img/twitter_background.svg"
   },
   {
     id: "mastercard",
     company: "MasterCard Labs",
-    position: "Consultant Software Engineer",
+    position: "Software Engineer",
     terms: [
       "January 2012 - November 2013"
     ],
@@ -175,30 +187,6 @@ const JOBS = [
     ],
     logo: "img/ibm_background_icon.svg"
   },
-  {
-    id: "newbay",
-    company: "Newbay",
-    position: "Senior Software Engineer",
-    terms: [
-      "July 2008 - May 2010"
-    ],
-    blurbs: [
-      "Java Developer on white label photo and video sharing platform and social network gateways for telcos."
-    ],
-    logo: "img/newbay_background.svg"
-  },
-  {
-    id: "amdocs",
-    company: "Amdocs",
-    position: "Senior Subject Matter Expert",
-    terms: [
-      "September 2007 - July 2008"
-    ],
-    blurbs: [
-      "Java Developer working on deployment infrastructure and migrating existing applications to J2EE (billing, CRM and operational support)."
-    ],
-    logo: "img/amdocs_background.svg"
-  }
 ]
 
 export default Experience;
