@@ -107,7 +107,12 @@ class Experience extends Component {
           <h3>{ job.company } <img alt={ `${ job.company } logo` } src={ job.logo } /> </h3>
 
         </div>
-        <h4>{ job.position }</h4>
+        <h4>
+          { job.position }
+          <i className="tooltip fas fa-info-circle">
+            <span className="tip">¯\_(ツ)_/¯</span>
+          </i>
+        </h4>
         { job.blurbs.map(genBlurb) }
         { job.terms.map(genTerm) }
       </div>
@@ -164,7 +169,7 @@ const JOBS = [
   {
     id: "mastercard",
     company: "MasterCard Labs",
-    position: "Software Engineer",
+    position: "Consultant Software Engineer",
     terms: [
       "January 2012 - November 2013"
     ],

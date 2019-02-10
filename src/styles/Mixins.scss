@@ -24,6 +24,13 @@
   box-shadow: 0px 6px 13px 0px rgba(219,219,219,1);
 }
 
+@mixin slight-dark-shadow {
+  // Generated
+  -webkit-box-shadow: 0px 1px 1px 0px #444;
+  -moz-box-shadow: 0px 1px 1px 0px #444;
+  box-shadow: 0px 1px 1px 0px #444;
+}
+
 @mixin slight-inset-shadow {
   // Generated
   -webkit-box-shadow: inset 0px 0px 19px -5px rgba(0,0,0,0.34);

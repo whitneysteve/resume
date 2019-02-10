@@ -1,8 +1,6 @@
 import GoogleMapReact from "google-map-react"
 import React, { Component } from 'react';
 
-const AnyReactComponent = ({ text }) => <div>{ text }</div>;
-
 class Map extends Component {
   // Dublin
   static defaultProps = {
@@ -31,7 +29,6 @@ class Map extends Component {
   };
 
   handleScroll(event) {
-    console.log('the scroll things', event)
     if (window.scrollY > 50) {
       this.setState({expand: true});
       this.removeScrollListener();
@@ -45,11 +42,6 @@ class Map extends Component {
           bootstrapURLKeys={{ key: "AIzaSyC87jefYvUwpJ45N4Dxo_o7Cg0tjvZtcck" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}>
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text={'Kreyser Avrora'}
-          />
         </GoogleMapReact>
       </div>
     )

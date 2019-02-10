@@ -1,0 +1,49 @@
+.tooltip {
+  position: relative;
+
+  .tip {
+    @include slight-dark-shadow;
+    background-color: $white;
+    border-radius: 10px;
+    color: $medium-grey;
+    visibility: hidden;
+    opacity: 0;
+    left: 29px;
+    padding: 15px 30px;
+    position: absolute;
+    top: -15px;
+    width: 70px;
+
+    transition: opacity ease-in-out 0.3s;
+  }
+
+  &:after {
+    border: solid 7px transparent;
+    border-right-color: #FFF;
+    visibility: hidden;
+
+    opacity: 0;
+    content: "";
+    left: 15px;
+    position: absolute;
+    top: 2px;
+
+    transition: opacity ease-in-out 0.3s;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .tip {
+      display: inline;
+      opacity: 1;
+      visibility: initial;
+    }
+
+    &:after {
+      display: block;
+      opacity: 1;
+      visibility: initial;
+    }
+  }
+}
