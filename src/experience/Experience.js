@@ -157,7 +157,7 @@ const JOBS = [
     blurbs: [
       "Twitter is my favourite website and I’m very lucky to have had the opportunity to work and learn here.",
       "Mostly backend engineering on low and high throughput applications, from Ruby to Scala, from monoliths to micro services, and Hadoop.",
-      "Built internal web-apps in React / Angular / Backbone when I could."
+      "Built web-apps in React when I could."
     ],
     logo: "img/twitter_background.svg"
   },

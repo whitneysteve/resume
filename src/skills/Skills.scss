@@ -119,7 +119,7 @@ $large-stars: generate-items(200, $animation-palette);
           }
 
           .skills-container-skill-outdated {
-            color: $medium-grey;
+            opacity: 0.75;
           }
         }
       }

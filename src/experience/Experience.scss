@@ -2,17 +2,17 @@ $amdocs-background: $medium-grey;
 $ibm-background: #1e4b60;
 $mastercard-background: #5b6770;
 $newbay-background: #f7980b;
-$stripe-background: #53f;
+$stripe-background: #6971e0;
 $twitter-background: #2bafe9;
 
 .experience {
   @include parallax();
   @include slight-inset-shadow();
 
-  background-color: $twitter-background;
-  background-image: url(img/twitter_background.svg);
+  background-color: $stripe-background;
+  background-image: url(img/stripe_background.svg);
   background-position: center center;
-  background-size: 50%;
+  background-size: 70%;
   color: $white;
   padding: 5px 30px;
   transition: background-color ease-in-out 0.3s;
@@ -42,7 +42,8 @@ $twitter-background: #2bafe9;
   }
 
   h4 {
-    font-size: 1.4em;
+    font-size: 0.9em;
+    margin-top: 5px;
   }
 
 
@@ -58,6 +59,8 @@ $twitter-background: #2bafe9;
   }
 
   .experience-job {
+    margin-bottom: 20px;
+
     sub {
       &:after {
         content: ", "
@@ -98,7 +101,7 @@ $twitter-background: #2bafe9;
   background-image: url(img/mastercard_background.svg);
 }
 
-.stripe {
-  background-color: $stripe-background;
-  background-image: url(img/stripe_background.svg);
+.twitter {
+  background-color: $twitter-background;
+  background-image: url(img/twitter_background.svg);
 }
