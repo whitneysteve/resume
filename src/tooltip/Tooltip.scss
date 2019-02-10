@@ -2,7 +2,6 @@
   position: relative;
 
   .tip {
-    @include slight-dark-shadow;
     background-color: $white;
     border-radius: 10px;
     color: $medium-grey;
@@ -12,7 +11,7 @@
     position: absolute;
     top: -15px;
     transition: opacity ease-in-out 0.3s;
-    visibility: hidden;
+    display:none;
     white-space: nowrap;
     width: 70px;
   }
@@ -26,7 +25,7 @@
     position: absolute;
     top: 2px;
     transition: opacity ease-in-out 0.3s;
-    visibility: hidden;
+    display:none;
   }
 
   &:hover {
