@@ -7,7 +7,8 @@ $large-circles: generate-items(200, $animation-palette);
 
 #landing {
   background-color: $light-grey;
-  height: 500px;
+  height: 100vh;
+
 
   margin-top: 0;
 
@@ -88,37 +89,64 @@ $large-circles: generate-items(200, $animation-palette);
     .landing-0 {}
 
     .landing-1 {
-      background-position: 66% 85%;
+      background-position: 72% 85%;
       text-align: left;
+    }
+
+    .landing-3 {
+      background-position: 55% 50%;
+    }
+
+    .landing-4 {
+      background-position: 80% 50%;
+      text-align: left;
+    }
+
+    .landing-5 {
+      background-position: 60% 50%;
+      justify-content: flex-start;
+    }
+
+    .landing-6 {
+      background-position: 30% 50%;
+    }
+
+    .landing-7 {
+      justify-content: flex-end;
+      text-align: left;
+    }
+  }
+
+  @media #{$phone} {
+    .landing-0 {
+      background-position: 70% 30%;
     }
 
     .landing-2 {
       justify-content: flex-start;
     }
 
-    .landing-3 {}
+    .landing-3 {
+      background-position: 83% 50%;
 
-    .landing-4 {
-      background-position: 75% 50%;
+      h3 {
+        padding-top: 95%;
+      }
     }
 
-    .landing-5 {
-      background-position: 25% 50%;
-      justify-content: flex-start;
+    .landing-7 {
+      background-position: 80% 50%;
     }
+  }
 
-    .landing-6 {
-      background-position: 40% 50%;
+  @media #{$tablet} {
+    .landing-2 {
+      justify-content: center;
     }
 
     .landing-7 {
       background-position: 70% 50%;
-      text-align: left;
-    }
-  }
-
-  @media #{$phone}, #{$tablet} {
-    .landing-4 {
+      justify-content: flex-end;
       text-align: left;
     }
   }
