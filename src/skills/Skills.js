@@ -28,14 +28,6 @@ class Skills extends Component {
         </Tabs>
         <div>
           <div className="skills-tempo-container">
-            {/* <div className="skills-star-container stars">
-              <div>
-                <i aria-label="Gold star" className="fas fa-star stars" role="presentation"></i>
-                <i aria-label="Gold star" className="fas fa-star stars" role="presentation"></i>
-                <i aria-label="Gold star" className="far fa-star stars" role="presentation"></i>
-              </div>
-              { genStars(2) }
-            </div> */}
             <div className="skills-text-container">
               <p>
                 I can usually go from zero to 2 or 3 stars pretty quickly.
