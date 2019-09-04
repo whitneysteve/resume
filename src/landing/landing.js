@@ -20,7 +20,8 @@ const SoftwareEngineer = 'Software engineer';
  * Landing renders the top of the site, with my face on it.
  */
 class Landing extends Component {
-  state = {jobIndex: Math.floor(Math.random() * MaxLandings)}
+  // state = {jobIndex: Math.floor(Math.random() * MaxLandings)}
+  state = {jobIndex: 0}
 
   handleKeyDown = (event) => {
     let jobIndex = this.state.jobIndex;

@@ -10,7 +10,8 @@ $large-circles: generate-items(200, $animation-palette);
   @include slight-inset-shadow();
 
   background-color: $light-grey;
-  height: 75vh;
+  height: 500px;
+
   margin-top: 0;
 
   h1, h2, h3, h4 {
@@ -84,6 +85,42 @@ $large-circles: generate-items(200, $animation-palette);
     img {
       margin: 0;
     }
+
+    .landing-0 {}
+
+    .landing-1 {
+      background-position: 66% 85%;
+      text-align: left;
+    }
+
+    .landing-2 {
+      justify-content: flex-start;
+    }
+
+    .landing-3 {}
+
+    .landing-4 {
+      background-position: 75% 50%;
+    }
+
+    .landing-5 {
+      background-position: 25% 50%;
+      justify-content: flex-start;
+    }
+
+    .landing-6 {
+      background-position: 40% 50%;
+    }
+
+    .landing-7 {
+      background-position: 70% 50%;
+      text-align: left;
+    }
+  }
+
+  @media #{$phone}, #{$tablet} {
+    .landing-4 {
+      text-align: left;
+    }
   }
 }
-
