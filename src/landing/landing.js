@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 const JobDescriptions = {
@@ -14,14 +15,16 @@ const JobDescriptions = {
 const MaxLandings = 7;
 const LeftKey = 37;
 const RightKey = 39;
-const SoftwareEngineer = 'Software engineer';
 
 /**
  * Landing renders the top of the site, with my face on it.
  */
 class Landing extends Component {
-  // state = {jobIndex: Math.floor(Math.random() * MaxLandings)}
-  state = {jobIndex: 0}
+  static defaultProps = {
+    start: Math.floor(Math.random() * MaxLandings)
+  };
+
+  state = {jobIndex: this.props.start};
 
   handleKeyDown = (event) => {
     let jobIndex = this.state.jobIndex;
@@ -52,15 +55,20 @@ class Landing extends Component {
   }
 
   render() {
+    const {jobIndex} = this.state;
     return (
       <div className="Section" id="landing">
-        <div className={`landing-container landing-${this.state.jobIndex}`}>
+        <div className={`landing-container landing-${jobIndex}`}>
           <h2>Stephen Whitney</h2>
-          <h3>{JobDescriptions[this.state.jobIndex]}</h3>
+          <h3>{JobDescriptions[jobIndex]}</h3>
         </div>
       </div>
     );
   }
 }
+
+Landing.propTypes = {
+  start: PropTypes.number,
+};
 
 export default Landing;

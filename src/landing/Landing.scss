@@ -5,11 +5,17 @@ $small-circles: generate-items(1000, $animation-palette);
 $medium-circles: generate-items(750, $animation-palette);
 $large-circles: generate-items(200, $animation-palette);
 
+@keyframes bounce {
+  0% { transform:translateY(0%); }
+  12.5% { transform:translateY(20%); }
+  25% { transform:translateY(0%); }
+  37.5% { transform:translateY(20%); }
+  50% { transform:translateY(0%); }
+}
+
 #landing {
   background-color: $light-grey;
   height: 100vh;
-
-
   margin-top: 0;
 
   h1, h2, h3, h4 {

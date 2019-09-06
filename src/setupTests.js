@@ -9,6 +9,12 @@ global.flushPromises = async () => {
   return new Promise(resolve => setImmediate(resolve));
 };
 
+global.awaitAsync = async (component) => {
+  jest.runAllTicks();
+  component.update();
+  await global.flushPromises();
+};
+
 // Mock storage
 global.localStore = {};
 global.sessionStore = {};
@@ -55,3 +61,12 @@ global.document = {
     return {};
   }
 };
+
+jest.useFakeTimers();
+
+// Mock event listeners. Rather crudely, this will only work for one listener
+// per event.
+global.eventListeners = {};
+document.addEventListener = jest.fn().mockImplementation((event, cb) => {
+  global.eventListeners[event] = cb;
+});
