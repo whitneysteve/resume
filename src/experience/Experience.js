@@ -109,9 +109,6 @@ class Experience extends Component {
         </div>
         <h4>
           { job.position }
-          <i className="tooltip fas fa-info-circle">
-            <span className="tip">¯\_(ツ)_/¯</span>
-          </i>
         </h4>
         { job.blurbs.map(genBlurb) }
         { job.terms.map(genTerm) }
@@ -148,7 +145,8 @@ const JOBS = [
       "November 2018 - Present"
     ],
     blurbs: [
-      "Working as a backend engineer on payments in Europe.",
+      "Working as a full-stack engineer on Stripe's onboarding experience.",
+      "Spending about half my time writing distributed endpoints and message consumers in Ruby and, the other half, building great onboarding interfaces in React.",
     ],
     logo: "img/stripe_background.svg"
   },

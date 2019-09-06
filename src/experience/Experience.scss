@@ -34,7 +34,7 @@ $twitter-background: #2bafe9;
 
   p {
     @include experience-text();
-    font-weight: 400;
+    font-weight: 100;
   }
 
   h3 {
@@ -87,10 +87,19 @@ $twitter-background: #2bafe9;
         margin-left: 15px;
         vertical-align: middle;
 
+        // Because of batched scroll updates these browsers will not support
+        // the background image changing on scroll. So we show the company
+        // logo beside the name.
         @include browser(Android,iPhone,iPad) {
           display: inline;
         }
       }
+    }
+  }
+
+  #stripe {
+    img {
+      height: 70px;
     }
   }
 }
