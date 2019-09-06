@@ -77,12 +77,10 @@ $large-stars: generate-items(200, $animation-palette);
     .tabs-content {
       color: $white;
       font-size: 1.75em;
-      white-space: nowrap;
 
       .skills-container {
         display: inline-flex;
         flex-direction: column;
-        flex-wrap: nowrap;
         justify-content: center;
         width: 90%;
 
@@ -93,7 +91,6 @@ $large-stars: generate-items(200, $animation-palette);
         .skills-container-skill {
           align-items: baseline;
           display: flex;
-          flex-wrap: wrap;
           margin: 15px;
 
           @media #{$phone}, #{$tablet} {
@@ -129,13 +126,8 @@ $large-stars: generate-items(200, $animation-palette);
   .skills-text-container {
     color: $white;
     font-size: 1.1em;
-    font-weight: 700;
     margin-top: 50px;
     text-align: center;
-
-    @media #{$phone}, #{$tablet} {
-      font-weight: 500;
-    }
   }
 
   .stars {
