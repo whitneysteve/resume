@@ -15,6 +15,11 @@
   min-height: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
+
+  // @include browser(Android,iPhone,iPad) {
+  @media #{$phone}, #{$tablet} {
+    background-attachment: scroll
+  }
 }
 
 @mixin slight-shadow {

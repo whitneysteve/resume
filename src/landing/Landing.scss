@@ -18,14 +18,13 @@ $large-circles: generate-items(200, $animation-palette);
   .landing-container {
     @include parallax();
     @include slight-inset-shadow();
-    // background-size: cover;
+    background-size: cover;
     display: flex;
     font-size: 1.4em;
     flex-direction: column;
     top: 0;
     bottom: 0;
   }
-
 
   .landing-0 {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(img/landing-1.jpg);
