@@ -51,9 +51,11 @@ global.window = {
   }
 };
 
-Object.defineProperty(window.location, 'href', {
-  value: '/',
-  writable: true
+Object.defineProperty(window, 'location', {
+  value: {
+    href: '/'
+  },
+  writable: true,
 });
 
 global.document = {
