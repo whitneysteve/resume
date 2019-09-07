@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/resume/static/css/main.d33891c9.chunk.css",
+    "main.js": "/resume/static/js/main.a04bb5b0.chunk.js",
+    "main.js.map": "/resume/static/js/main.a04bb5b0.chunk.js.map",
+    "runtime~main.js": "/resume/static/js/runtime~main.732409e5.js",
+    "runtime~main.js.map": "/resume/static/js/runtime~main.732409e5.js.map",
+    "static/js/2.4447ca56.chunk.js": "/resume/static/js/2.4447ca56.chunk.js",
+    "static/js/2.4447ca56.chunk.js.map": "/resume/static/js/2.4447ca56.chunk.js.map",
+    "index.html": "/resume/index.html",
+    "precache-manifest.e371b09756e4ac4cbba55cf112baa892.js": "/resume/precache-manifest.e371b09756e4ac4cbba55cf112baa892.js",
+    "service-worker.js": "/resume/service-worker.js",
+    "static/css/main.d33891c9.chunk.css.map": "/resume/static/css/main.d33891c9.chunk.css.map",
+    "static/media/index.css": "/resume/static/media/twitter_background.204b7046.svg"
+  }
+}
