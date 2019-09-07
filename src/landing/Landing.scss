@@ -7,7 +7,7 @@ $large-circles: generate-items(200, $animation-palette);
 
 #landing {
   background-color: $light-grey;
-  // height: 100vh;
+  height: 100vh;
   margin: 0;
 
   h1, h2, h3, h4 {
@@ -18,7 +18,7 @@ $large-circles: generate-items(200, $animation-palette);
   .landing-container {
     @include parallax();
     @include slight-inset-shadow();
-    background-size: cover;
+    // background-size: cover;
     display: flex;
     font-size: 1.4em;
     flex-direction: column;
