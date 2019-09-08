@@ -85,8 +85,13 @@ $large-circles: generate-items(200, $animation-palette);
       padding-bottom: 50px;
     }
 
+    .landing-0 {
+      text-align: left;
+    }
+
     .landing-1 {
       background-position: 72% 85%;
+      justify-content: flex-start;
       text-align: left;
     }
 
@@ -96,6 +101,7 @@ $large-circles: generate-items(200, $animation-palette);
 
     .landing-4 {
       background-position: 80% 50%;
+      justify-content: flex-start;
       text-align: left;
     }
 
@@ -106,6 +112,7 @@ $large-circles: generate-items(200, $animation-palette);
 
     .landing-6 {
       background-position: 30% 50%;
+      justify-content: flex-start;
     }
 
     .landing-7 {
@@ -117,6 +124,7 @@ $large-circles: generate-items(200, $animation-palette);
   @media #{$phone} {
     .landing-0 {
       background-position: 70% 30%;
+      text-align: left;
     }
 
     .landing-2 {
