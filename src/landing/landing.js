@@ -21,7 +21,7 @@ const RightKey = 39;
  */
 class Landing extends Component {
   static defaultProps = {
-    start: Math.floor(Math.random() * MaxLandings)
+    start: Math.floor(Math.random() * 8)
   };
 
   state = {jobIndex: this.props.start};

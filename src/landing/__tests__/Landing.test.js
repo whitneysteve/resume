@@ -33,6 +33,7 @@ describe('Landing', () => {
       awaitAsync(component);
       expectLanding(component, 7);
 
+
       // Go right twice
       global.eventListeners.keydown({ keyCode: RightKey });
       global.eventListeners.keydown({ keyCode: RightKey });
