@@ -145,8 +145,8 @@ const JOBS = [
       "November 2018 - Present"
     ],
     blurbs: [
-      "Working as a full-stack engineer on Stripe's onboarding experience.",
-      "Spending about half my time writing distributed endpoints and message consumers in Ruby and, the other half, building great onboarding interfaces in React.",
+      "Working as a full-stack engineer on Stripe's Security Products, building great products to keep our users safe.",
+      "At Stripe I've been fortunate enough to work between writing distributed services and message consumers in Ruby and Java and building, great user experiences in React.",
     ],
     logo: "img/stripe_background.svg"
   },

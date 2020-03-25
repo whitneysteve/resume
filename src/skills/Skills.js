@@ -1,3 +1,4 @@
+
 import Floaty from '../floaty/Floaty';
 import React, { Component } from 'react';
 import { Tabs, Tab } from '../tabs/Tabs';
@@ -127,11 +128,12 @@ const SKILLS = [
   {
     title: "Today",
     skills: [
+      { title: "Java", stars: 5 },
       { title: "Ruby", stars: 5 },
       { title: "Javascript & CSS", stars: 4 },
       { title: "Scala", stars: 3 },
     ],
-    outdated: "Java, Objective-C, Python"
+    outdated: "Objective-C, Python"
   },
   {
     title: "2018",
