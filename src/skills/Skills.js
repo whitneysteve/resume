@@ -129,9 +129,10 @@ const SKILLS = [
     title: "Today",
     skills: [
       { title: "Java", stars: 5 },
-      { title: "Ruby", stars: 5 },
-      { title: "Javascript & CSS", stars: 4 },
+      { title: "Ruby", stars: 4 },
+      { title: "Javascript & CSS", stars: 3 },
       { title: "Scala", stars: 3 },
+      { title: "Go", stars: 2 },
     ],
     outdated: "Objective-C, Python"
   },
