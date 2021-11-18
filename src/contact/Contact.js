@@ -34,7 +34,7 @@ class Contact extends Component {
 
 const genContact = (contact) => {
   return (
-    <a href={contact.link} key={contact.service} target={contact.sameWindow ? "_self" : "_blank"}>
+    <a href={contact.link} key={contact.service} target={contact.sameWindow ? "_self" : "_blank"} rel="noreferrer">
       <img alt={`${contact.service} Logo`} src={contact.logo} />
     </a>
   );

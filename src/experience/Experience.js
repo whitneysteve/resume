@@ -138,11 +138,23 @@ const CURRENT = "twitter";
 
 const JOBS = [
   {
+    id: "intercom",
+    company: "Intercom",
+    position: "Software Engineer",
+    terms: [
+      "2021 - Present"
+    ],
+    blurbs: [
+      "I recently joined Intercom to work on their Growth teams.",
+    ],
+    logo: "img/stripe_background.svg"
+  },
+  {
     id: "stripe",
     company: "Stripe",
     position: "Software Engineer",
     terms: [
-      "November 2018 - Present"
+      "2018 - 2021"
     ],
     blurbs: [
       "Working as a full-stack engineer on Stripe's Security Products, building great products to keep our users safe.",
@@ -153,9 +165,9 @@ const JOBS = [
   {
     id: "twitter",
     company: "Twitter",
-    position: "Staff Software Engineer",
+    position: "Software Engineer",
     terms: [
-      "December 2013 - November 2018"
+      "2013 - 2018"
     ],
     blurbs: [
       "Twitter is my favourite website and I’m very lucky to have had the opportunity to work and learn here.",
@@ -169,26 +181,13 @@ const JOBS = [
     company: "MasterCard Labs",
     position: "Consultant Software Engineer",
     terms: [
-      "January 2012 - November 2013"
+      "2012 - 2013"
     ],
     blurbs: [
       "Researching emerging technologies and trends to create prototypes and other innovations for MasterCard’s next and future generation of products.",
       "Had to pleasure of launching several new, multi-platform services to prototype, pilot, beta and full production."
     ],
     logo: "img/mastercard_background.svg"
-  },
-  {
-    id: "ibm",
-    company: "IBM",
-    position: "Intern, Software Engineer, Team Lead",
-    terms: [
-      "June 2005 - September 2007",
-      "May 2010 - January 2012"
-    ],
-    blurbs: [
-      "Working on Java enterprise software for Lotus collaboration products and sensor processing frameworks for Smarter Software (Smarter Cities, Smarter Industries etc.) I learned my trade as a software developer, designer and team lead."
-    ],
-    logo: "img/ibm_background_icon.svg"
   },
 ]
 

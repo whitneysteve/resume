@@ -128,6 +128,17 @@ const SKILLS = [
   {
     title: "Today",
     skills: [
+      { title: "Ruby", stars: 5 },
+      { title: "Javascript & CSS", stars: 4 },
+      { title: "Java", stars: 3 },
+      { title: "Scala", stars: 3 },
+      { title: "Go", stars: 2 },
+    ],
+    outdated: "Objective-C, Python"
+  },
+  {
+    title: "2020",
+    skills: [
       { title: "Java", stars: 5 },
       { title: "Ruby", stars: 4 },
       { title: "Javascript & CSS", stars: 3 },
@@ -156,15 +167,6 @@ const SKILLS = [
     ],
     outdated: "Java, Objective-C"
   },
-  {
-    title: "2014",
-    skills: [
-      { title: "Java", stars: 5 },
-      { title: "Javascript & CSS", stars: 5 },
-      { title: "Objective-C", stars: 3 },
-      { title: "Ruby", stars: 2 }
-    ]
-  }
 ];
 
 export default Skills;

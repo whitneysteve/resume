@@ -6,4 +6,5 @@ set -e
 
 . scripts/common.sh
 
+export NODE_OPTIONS=--openssl-legacy-provider
 run $*

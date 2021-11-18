@@ -4,7 +4,7 @@
 
 set -e
 
-gem install sass
+brew install sass/sass/sass
 
 npm install
 npm install npm-run-all -g

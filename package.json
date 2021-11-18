@@ -11,8 +11,8 @@
   "devDependencies": {
     "enzyme": "3.0.0",
     "enzyme-adapter-react-16": "1.1.0",
-    "eslint": "^4.19.1",
-    "eslint-config-react-app": "5.0.1",
+    "eslint": "7.5.0",
+    "eslint-config-react-app": "6.0.0",
     "gh-pages": "^2.1.1",
     "jest": "^25.0.0",
     "jest-cli": "^25.0.0",

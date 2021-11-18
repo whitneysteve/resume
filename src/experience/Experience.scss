@@ -1,8 +1,8 @@
 $amdocs-background: $medium-grey;
-$ibm-background: #1e4b60;
+$intercom-background: #326BFF;
 $mastercard-background: #5b6770;
 $newbay-background: #f7980b;
-$stripe-background: #6971e0;
+$stripe-background: #537cec;
 $twitter-background: #2bafe9;
 
 .experience {
@@ -104,9 +104,9 @@ $twitter-background: #2bafe9;
   }
 }
 
-.ibm {
-  background-color: $ibm-background;
-  background-image: url(img/ibm_background.svg);
+.intercom {
+  background-color: $intercom-background;
+  background-image: url(img/intercom_background.svg);
 }
 
 .mastercard {
