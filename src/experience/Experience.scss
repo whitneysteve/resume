@@ -10,7 +10,7 @@ $twitter-background: #2bafe9;
   @include slight-inset-shadow();
 
   background-color: $stripe-background;
-  background-image: url(img/stripe_background.svg);
+  // background-image: url(img/stripe_background.svg);
   background-position: center center;
   background-size: 50%;
   color: $white;
@@ -106,15 +106,15 @@ $twitter-background: #2bafe9;
 
 .intercom {
   background-color: $intercom-background;
-  background-image: url(img/intercom_background.svg);
+  // background-image: url(img/intercom_background.svg);
 }
 
 .mastercard {
   background-color: $mastercard-background;
-  background-image: url(img/mastercard_background.svg);
+  // background-image: url(img/mastercard_background.svg);
 }
 
 .twitter {
   background-color: $twitter-background;
-  background-image: url(img/twitter_background.svg);
+  // background-image: url(img/twitter_background.svg);
 }

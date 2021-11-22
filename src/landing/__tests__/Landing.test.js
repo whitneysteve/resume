@@ -1,6 +1,6 @@
-import Landing from '../Landing';
+import { shallow } from 'enzyme';
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import Landing from '../Landing';
 
 const LeftKey = 37;
 const RightKey = 39;
@@ -18,7 +18,11 @@ describe('Landing', () => {
     };
 
     it('cycles through landing images', () => {
-      const component = mount(<Landing start={0}/>);
+      document.addEventListener = jest.fn((event, cb) => {
+        global.eventListeners[event] = cb;
+      });
+
+      const component = shallow(<Landing start={0}/>);
       expectLanding(component, 0);
       global.eventListeners.keydown({ keyCode: RightKey });
       awaitAsync(component);
@@ -26,7 +30,11 @@ describe('Landing', () => {
     });
 
     it('handles boundaries', () => {
-      const component = mount(<Landing start={0}/>);
+      document.addEventListener = jest.fn((event, cb) => {
+        global.eventListeners[event] = cb;
+      });
+
+      const component = shallow(<Landing start={0}/>);
       expectLanding(component, 0);
       // Go left
       global.eventListeners.keydown({ keyCode: LeftKey });
