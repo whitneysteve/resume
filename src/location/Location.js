@@ -1,5 +1,5 @@
-import Map from './Map'
 import React, { Component } from 'react';
+import Map from './Map';
 
 /**
  * Landing renders the blurb about my location and the map story.
