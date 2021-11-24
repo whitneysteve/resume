@@ -57,10 +57,21 @@ class Landing extends Component {
   render() {
     const {jobIndex} = this.state;
     return (
-      <div className="Section" id="landing">
-        <div className={`landing-container landing-${jobIndex}`}>
-          <h2>Stephen Whitney</h2>
-          <h3>{JobDescriptions[jobIndex]}</h3>
+      <div className={`Section `} id="landing">
+        <div className={`dev-grid landing-container landing-${jobIndex}`}>
+          <div className="landing-text-overlay">
+            <h1>Stephen Whitney</h1>
+            <h2>{JobDescriptions[jobIndex]}</h2>
+          </div>
+          <div className="dev-grid-cell">
+              <div class="dev-grid-measurement-right">100px</div>
+              <div class="dev-grid-measurement-bottom">200px</div>
+              <div class="dev-grid-measurement-left">100px</div>
+              <div class="dev-grid-measurement-top">200px</div>
+          </div>
+          <div className="dev-grid-cell"></div>
+          <div className="dev-grid-cell"></div>
+          <div className="dev-grid-cell"></div>
         </div>
       </div>
     );
