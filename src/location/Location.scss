@@ -2,24 +2,38 @@
   opacity: 0.75;
   font-size: 1.6em;
 
-  p:first-of-type {
-    margin-bottom: 40px;
+  .dev-grid {
+    flex-direction: row;
+
+    @media #{$phone} {
+      flex-direction: column-reverse;
+    }
   }
 
-  p {
-    margin: 40px 12.5% 0 12.5%;
+  .location-text {
+    flex-direction: column;
+
+    p {
+      margin: 20px 60px;
+    }
+
+    p:last-of-type {
+      margin-bottom: 60px;
+    }
+
+    @media #{$phone}, #{$tablet} {
+      font-size: 0.9em;
+    }
   }
 
   .map {
     @include slight-shadow();
 
-    height: 400px;
-    margin-left: 12.5%;
+    height: 75%;
     width: 75%;
 
     @media #{$phone}, #{$tablet} {
       width: 90%;
-      margin-left: 5%;
     }
   }
 }

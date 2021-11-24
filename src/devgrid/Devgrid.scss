@@ -1,4 +1,4 @@
-$grid-colour: #f2f2f2;
+$grid-colour: #c7c7c7;
 
 @mixin measurement {
   position: absolute;
@@ -28,7 +28,7 @@ $grid-colour: #f2f2f2;
   height: 50vh;
   width: 50vw;
 
-  @media #{$phone} {
+  @media only screen and (max-width: 375px) {
     height: 100vh;
     width: 100vw;
   }
