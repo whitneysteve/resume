@@ -3,8 +3,8 @@ $tablet: #{"screen and (min-width: 601px) and (max-width: 800px)"};
 
 @import "styles/Mixins.scss";
 @import "styles/Common.scss";
-@import "styles/Devgrid.scss";
 
+@import "devgrid/Devgrid.scss";
 @import "floaty/Floaty.scss";
 @import "tabs/Tabs.scss";
 @import "tooltip/Tooltip.scss";

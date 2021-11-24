@@ -64,14 +64,21 @@ class Landing extends Component {
             <h2>{JobDescriptions[jobIndex]}</h2>
           </div>
           <div className="dev-grid-cell">
-              <div class="dev-grid-measurement-right">100px</div>
-              <div class="dev-grid-measurement-bottom">200px</div>
-              <div class="dev-grid-measurement-left">100px</div>
-              <div class="dev-grid-measurement-top">200px</div>
+              <div className="dev-grid-measurement-right"></div>
+              <div className="dev-grid-measurement-top"></div>
+              <div className="dev-grid-measurement-bottom"></div>
           </div>
-          <div className="dev-grid-cell"></div>
-          <div className="dev-grid-cell"></div>
-          <div className="dev-grid-cell"></div>
+          <div className="dev-grid-cell">
+            <div className="dev-grid-measurement-right"></div>
+          </div>
+          <div className="dev-grid-cell">
+            <div className="dev-grid-measurement-bottom"></div>
+            <div className="dev-grid-measurement-left"></div>
+          </div>
+          <div className="dev-grid-cell">
+            <div className="dev-grid-measurement-left"></div>
+            <div className="dev-grid-measurement-top"></div>
+          </div>
         </div>
       </div>
     );

@@ -20,7 +20,6 @@ $large-circles: generate-items(200, $animation-palette);
     background-size: cover;
     display: flex;
     font-size: 1.4em;
-    flex-direction: column;
     top: 0;
     bottom: 0;
   }
@@ -90,7 +89,6 @@ $large-circles: generate-items(200, $animation-palette);
   }
 
   @media #{$phone}, #{$tablet} {
-    flex-direction: column;
     text-align: center;
 
     img {
