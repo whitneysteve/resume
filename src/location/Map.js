@@ -1,4 +1,4 @@
-import GoogleMapReact from "google-map-react"
+import GoogleMapReact from "google-map-react";
 import React, { Component } from 'react';
 
 class Map extends Component {
@@ -37,7 +37,7 @@ class Map extends Component {
 
   render() {
     return (
-      <div className={this.state && this.state.expand ? "map map-expanded" : "map"}>
+      <div id="map" className={this.state && this.state.expand ? "map map-expanded" : "map"}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyC87jefYvUwpJ45N4Dxo_o7Cg0tjvZtcck" }}
           defaultCenter={this.props.center}

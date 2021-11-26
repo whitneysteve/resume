@@ -6,6 +6,11 @@ $grid-colour: #c7c7c7;
   font-size: 10px;
 }
 
+@mixin margin {
+  display: flex;
+  flex-direction: row;
+}
+
 .dev-grid {
   display: flex;
   flex-direction: row;
@@ -66,11 +71,39 @@ $grid-colour: #c7c7c7;
     transform: rotate(180deg);
   }
 
+  .dev-grid-margin-top-left-corner-left {
+    @include measurement;
+    @include margin;
+  }
+
+  .dev-grid-margin-bottom-left-corner-down {
+    @include measurement;
+    @include margin;
+    transform: rotate(90deg);
+  }
+
+  .dev-grid-margin-center-up {
+    @include measurement;
+    @include margin;
+    transform: rotate(270deg);
+  }
+
   .dev-grid-measurement-right::after, .dev-grid-measurement-right::before,
   .dev-grid-measurement-left::after, .dev-grid-measurement-left::before,
   .dev-grid-measurement-top::after, .dev-grid-measurement-top::before,
   .dev-grid-measurement-bottom::after, .dev-grid-measurement-bottom::before {
-    content: '  —  '
+    content: '—';
+    opacity: 0.5;
+  }
+
+  .dev-grid-margin-top-left-corner-left:after, .dev-grid-margin-top-left-corner-left:before,
+  .dev-grid-margin-bottom-left-corner-down:after, .dev-grid-margin-bottom-left-corner-down:before,
+  .dev-grid-margin-center-up:after, .dev-grid-margin-center-up:before {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid $grid-colour;
+    margin: auto;
+    opacity: 0.5;
   }
 }
 
