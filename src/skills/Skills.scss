@@ -12,10 +12,7 @@ $large-stars: generate-items(200, $animation-palette);
 
 #skills {
   margin-bottom: 0;
-
-  padding: 40px 40px 0 40px;
   position: relative;
-  margin-top: 30px;
 
   @media #{$phone}, #{$tablet} {
     flex-direction: column;
@@ -26,7 +23,6 @@ $large-stars: generate-items(200, $animation-palette);
     @include floaty-container();
     background-color: $animation-background;
     height: 100% !important;
-    padding-bottom: 50px;
     // Generated
     -webkit-box-shadow: inset 0px 0px 179px 0px rgba(0,0,0,0.65);
     -moz-box-shadow: inset 0px 0px 179px 0px rgba(0,0,0,0.65);
@@ -35,6 +31,7 @@ $large-stars: generate-items(200, $animation-palette);
 
     @media #{$phone} {
       height: 200px;
+      padding-bottom: 150px;
     }
 
     @media #{$tablet} {
@@ -69,6 +66,10 @@ $large-stars: generate-items(200, $animation-palette);
     width: 100%;
 
     .tabs-navigation {
+      @media #{$phone} {
+        margin-bottom: -150px;
+      }
+
       button {
         font-size: 1.2em;
       }
@@ -79,25 +80,7 @@ $large-stars: generate-items(200, $animation-palette);
       font-size: 1.75em;
 
       .skills-container {
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 90%;
-
-        @media #{$phone} {
-          width: 95%;
-        }
-
         .skills-container-skill {
-          align-items: baseline;
-          display: flex;
-          margin: 15px;
-
-          @media #{$phone}, #{$tablet} {
-            flex-direction: column;
-            align-items: center;
-          }
-
           .skills-container-skill-name {
             width: 45%;
 
@@ -121,13 +104,6 @@ $large-stars: generate-items(200, $animation-palette);
         }
       }
     }
-  }
-
-  .skills-text-container {
-    color: $white;
-    font-size: 1.1em;
-    margin-top: 50px;
-    text-align: center;
   }
 
   .stars {

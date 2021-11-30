@@ -1,7 +1,7 @@
 
-import Floaty from '../floaty/Floaty';
 import React, { Component } from 'react';
-import { Tabs, Tab } from '../tabs/Tabs';
+import Floaty from '../floaty/Floaty';
+import { Tab, Tabs } from '../tabs/Tabs';
 
 /**
  * Skills renders the current and past skills section.
@@ -22,26 +22,10 @@ class Skills extends Component {
   render() {
     return (
       <div className="Section" id="skills">
-        <h1>Skills</h1>
         <Floaty numLayers={3} />
         <Tabs>
           { SKILLS.map(genSkillEraTab) }
         </Tabs>
-        <div>
-          <div className="skills-tempo-container">
-            <div className="skills-text-container">
-              <p>
-                I can usually go from zero to 2 or 3 stars pretty quickly.
-              </p>
-              <p>
-                The time it takes me to get to 4 or 5 stars depends on frequency, scope of work and teamwork.
-              </p>
-              <p>
-                I like to help others get <span aria-label="stars" role="img">⭐️️</span> too <span aria-label="Heart" role="img">❤️</span>
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     );
   }
@@ -56,14 +40,8 @@ class Skills extends Component {
 const genSkillEraTab = (era) => {
   return (
     <Tab key={era.title} title={era.title}>
-      <div className="skills-container">
+      <div className="skills-container dev-grid">
         { era.skills.map(genSkillRow) }
-        { era.outdated &&
-            <div className="skills-container-skill">
-              <div className="skills-container-skill-name">Out of practice</div>
-              <div className="skills-container-skill-rating skills-container-skill-outdated">{ era.outdated }</div>
-            </div>
-        }
       </div>
     </Tab>
   );
@@ -76,8 +54,11 @@ const genSkillEraTab = (era) => {
  */
 const genSkillRow = (skill) => {
   return (
-    <div className="skills-container-skill" key={skill.title}>
-      <div className="skills-container-skill-name">{ skill.title }</div>
+    <div className="dev-grid-cell skills-container-skill" key={ skill.title }>
+      <div>
+        <div className="skills-container-skill-logo"><img alt={ skill.title } src={ skill.logo } /></div>
+        <div className="skills-container-skill-name">{ skill.title }</div>
+      </div>
       <div
         aria-label={ skill.stars + " stars" }
         className="skills-container-skill-rating">
@@ -124,28 +105,30 @@ const genStar = (filled, key) => {
     role="presentation"></i>;
 };
 
+const JS = {title: "Javascript & CSS", logo: "img/apple-icon-60x60.png"}
+const RUBY = {title: "Ruby", logo: "img/languages/ruby.svg"}
+const SCALA = {title: "Scala", logo: "img/languages/scala.svg"}
+const GOLANG = {title: "Golang", logo: "img/languages/golang.svg"}
+
 const SKILLS = [
   {
     title: "Today",
     skills: [
-      { title: "Ruby", stars: 5 },
-      { title: "Javascript & CSS", stars: 4 },
-      { title: "Java", stars: 3 },
-      { title: "Scala", stars: 3 },
-      { title: "Go", stars: 2 },
+      { ...JS, stars: 5 },
+      { ...RUBY, stars: 4 },
+      { ...SCALA, stars: 3 },
+      { ...GOLANG, stars: 3 },
     ],
-    outdated: "Objective-C, Python"
   },
   {
     title: "2020",
     skills: [
-      { title: "Java", stars: 5 },
-      { title: "Ruby", stars: 4 },
-      { title: "Javascript & CSS", stars: 3 },
+      { title: "Ruby", stars: 5 },
+      { title: "Javascript & CSS", stars: 4 },
       { title: "Scala", stars: 3 },
       { title: "Go", stars: 2 },
+
     ],
-    outdated: "Objective-C, Python"
   },
   {
     title: "2018",
@@ -155,17 +138,16 @@ const SKILLS = [
       { title: "Javascript & CSS", stars: 3 },
       { title: "Python", stars: 2 },
     ],
-    outdated: "Java, Objective-C"
   },
   {
     title: "2016",
     skills: [
+      { title: "Java", stars: 5 },
       { title: "Ruby", stars: 4 },
       { title: "Javascript & CSS", stars: 4 },
       { title: "Scala", stars: 3 },
 
     ],
-    outdated: "Java, Objective-C"
   },
 ];
 

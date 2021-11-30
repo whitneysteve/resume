@@ -8,7 +8,7 @@ class Location extends Component {
   render() {
     return (
       <div className="Section" id="location">
-        <div className="dev-grid">
+        <div className="dev-grid-half">
           <div className="dev-grid-cell location-text">
             <div className="dev-grid-measurement-right"></div>
             <div className="dev-grid-margin-center-up" data-target="location-text-p"></div>

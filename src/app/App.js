@@ -14,9 +14,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Devgrid></Devgrid>
+        <Devgrid />
         <Landing />
         <Location />
+        <Skills />
       </div>
     );
   }
@@ -24,7 +25,6 @@ class App extends Component {
   todo() {
     return (
       <div className="App">
-        <Skills />
         <Experience />
         <Education />
         <Contact />

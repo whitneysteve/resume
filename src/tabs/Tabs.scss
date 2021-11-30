@@ -1,8 +1,16 @@
 /* Style the buttons that are used to open the tab content */
 .tabs {
+  display: flex;
+  align-items: center;
+
   text-align: center;
 
   .tabs-navigation {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+
     text-align: center;
 
     button {
