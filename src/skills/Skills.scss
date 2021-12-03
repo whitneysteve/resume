@@ -14,11 +14,6 @@ $large-stars: generate-items(200, $animation-palette);
   margin-bottom: 0;
   position: relative;
 
-  @media #{$phone}, #{$tablet} {
-    flex-direction: column;
-    padding: 70px 20px 0 20px;
-  }
-
   .floaty-container {
     @include floaty-container();
     background-color: $animation-background;
@@ -31,7 +26,7 @@ $large-stars: generate-items(200, $animation-palette);
 
     @media #{$phone} {
       height: 200px;
-      padding-bottom: 150px;
+      padding-bottom: 70px;
     }
 
     @media #{$tablet} {
@@ -67,11 +62,18 @@ $large-stars: generate-items(200, $animation-palette);
 
     .tabs-navigation {
       @media #{$phone} {
-        margin-bottom: -150px;
+        margin-bottom: -50px;
       }
 
       button {
         font-size: 1.2em;
+      }
+
+      .tabs-tab {
+        @media #{$phone} {
+          margin: 0 15px;
+          padding: 0;
+        }
       }
     }
 
@@ -81,25 +83,36 @@ $large-stars: generate-items(200, $animation-palette);
 
       .skills-container {
         .skills-container-skill {
-          .skills-container-skill-name {
-            width: 45%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
 
-            @media #{$phone}, #{$tablet} {
-              margin-bottom: 10px;
-              width: 100%;
+          .skills-container-skill-name-logo {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            width: 40%;
+            height: 100%;
+          }
+
+          .skills-container-skill-name {
+            font-size: 0.7em;
+            margin: 0 50px;
+          }
+
+          .skills-container-skill-logo {
+            margin-bottom: 15px;
+
+            img {
+              width: 40%;
+              max-height: 350px;
             }
           }
 
           .skills-container-skill-rating {
-            max-width: 55%;
-
-            @media #{$phone}, #{$tablet} {
-              max-width: 100%;
-            }
-          }
-
-          .skills-container-skill-outdated {
-            opacity: 0.75;
+            width: 60%;
           }
         }
       }
@@ -108,7 +121,10 @@ $large-stars: generate-items(200, $animation-palette);
 
   .stars {
     color: $golden;
-    font-size: 1.8em;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+    justify-content: center;
     letter-spacing: 15px;
 
     @media #{$phone} {
@@ -117,6 +133,10 @@ $large-stars: generate-items(200, $animation-palette);
 
     @media #{$tablet} {
       font-size: 1.2em;
+    }
+
+    .avoid-wrap {
+      white-space: nowrap;
     }
   }
 }

@@ -1,6 +1,12 @@
 
 import React, { Component } from 'react';
 import Floaty from '../floaty/Floaty';
+import golang from '../img/languages/golang.svg';
+import java from '../img/languages/java.svg';
+import js from '../img/languages/js.svg';
+import python from '../img/languages/python.svg';
+import ruby from '../img/languages/ruby.svg';
+import scala from '../img/languages/scala.svg';
 import { Tab, Tabs } from '../tabs/Tabs';
 
 /**
@@ -55,14 +61,14 @@ const genSkillEraTab = (era) => {
 const genSkillRow = (skill) => {
   return (
     <div className="dev-grid-cell skills-container-skill" key={ skill.title }>
-      <div>
+      <div className="skills-container-skill-name-logo">
         <div className="skills-container-skill-logo"><img alt={ skill.title } src={ skill.logo } /></div>
         <div className="skills-container-skill-name">{ skill.title }</div>
       </div>
       <div
         aria-label={ skill.stars + " stars" }
         className="skills-container-skill-rating">
-        { genStars(5, skill.stars) }
+        { genStars(skill.stars) }
       </div>
     </div>
   );
@@ -71,22 +77,26 @@ const genSkillRow = (skill) => {
 /**
  * Generate a row of stars.
  *
- * @param {Number} numStars of stars to render.
  * @param {Number} numFilledStars of stars to render.
  */
-const genStars = (numStars, numFilledStars) => {
+const genStars = (numFilledStars) => {
+  const firstThree = (
+    <div class="avoid-wrap">
+      {genStar(numFilledStars > 0, 1)}
+      {genStar(numFilledStars > 1, 2)}
+      {genStar(numFilledStars > 2, 3)}
+    </div>
+  )
+  const lastTwo = (
+    <div class="avoid-wrap">
+      {genStar(numFilledStars > 3, 4)}
+      {genStar(numFilledStars > 4, 5)}
+    </div>
+  )
   return (
     <div className="stars">
-      {
-        [...Array(numFilledStars).keys()].map(key => {
-          return genStar(true, key);
-        })
-      }
-      {
-        [...Array(numStars - numFilledStars).keys()].map(key => {
-          return genStar(false, key);
-        })
-      }
+      {firstThree}
+      {lastTwo}
     </div>
   );
 };
@@ -105,10 +115,12 @@ const genStar = (filled, key) => {
     role="presentation"></i>;
 };
 
-const JS = {title: "Javascript & CSS", logo: "img/apple-icon-60x60.png"}
-const RUBY = {title: "Ruby", logo: "img/languages/ruby.svg"}
-const SCALA = {title: "Scala", logo: "img/languages/scala.svg"}
-const GOLANG = {title: "Golang", logo: "img/languages/golang.svg"}
+const JS = {title: "Javascript & CSS", logo: js}
+const RUBY = {title: "Ruby", logo: ruby}
+const SCALA = {title: "Scala", logo: scala}
+const GOLANG = {title: "Golang", logo: golang}
+const PYTHON = {title: "Python", logo: python}
+const JAVA = {title: "Java", logo: java}
 
 const SKILLS = [
   {
@@ -123,29 +135,29 @@ const SKILLS = [
   {
     title: "2020",
     skills: [
-      { title: "Ruby", stars: 5 },
-      { title: "Javascript & CSS", stars: 4 },
-      { title: "Scala", stars: 3 },
-      { title: "Go", stars: 2 },
+      { ...RUBY, stars: 5 },
+      { ...JS, stars: 4 },
+      { ...SCALA, stars: 3 },
+      { ...GOLANG, stars: 2 },
 
     ],
   },
   {
     title: "2018",
     skills: [
-      { title: "Scala", stars: 5 },
-      { title: "Ruby", stars: 4 },
-      { title: "Javascript & CSS", stars: 3 },
-      { title: "Python", stars: 2 },
+      { ...SCALA, stars: 5 },
+      { ...RUBY, stars: 4 },
+      { ...JS, stars: 3 },
+      { ...PYTHON, stars: 2 },
     ],
   },
   {
     title: "2016",
     skills: [
-      { title: "Java", stars: 5 },
-      { title: "Ruby", stars: 4 },
-      { title: "Javascript & CSS", stars: 4 },
-      { title: "Scala", stars: 3 },
+      { ...JAVA, stars: 5 },
+      { ...RUBY, stars: 4 },
+      { ...JS, stars: 4 },
+      { ...SCALA, stars: 3 },
 
     ],
   },
