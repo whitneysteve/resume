@@ -55,10 +55,12 @@ function updateTopLeftCornerLeftMargins() {
     const secondY = parentRect.left;
     const distance = Math.abs(Math.round(firstY - secondY));
 
-    element.innerHTML = `${distance}px`;
-    element.style.top = `${targetRect.top - parentRect.top}px`;
-    element.style.left = `${distance/4}px`;
-    element.style.width = `${distance/2}px`;
+    updateElement(
+      element,
+      targetRect.top - parentRect.top,
+      distance/4,
+      distance,
+    );
   }
 }
 
@@ -70,13 +72,14 @@ function updateBottomLeftCornerDownMargins() {
     const firstY = targetRect.top + targetRect.height;
     const secondY = parentRect.top + parentRect.height;
     const distance = Math.abs(Math.round(firstY - secondY));
+    const leftCorner = (parentRect.top + parentRect.height) - (targetRect.top);
 
-    const leftCorner = (parentRect.top + parentRect.height) - (targetRect.top)
-
-    element.innerHTML = `${distance}px`;
-    element.style.top = `${leftCorner + (distance/2)}px`;
-    element.style.left = `${targetRect.left - parentRect.left}px`;
-    element.style.width = `${distance/2}px`;
+    updateElement(
+      element,
+      leftCorner + (distance/2),
+      targetRect.left - parentRect.left,
+      distance,
+    );
   }
 }
 
@@ -89,10 +92,12 @@ function updateCenterUpMargins() {
     const secondY = parentRect.top;
     const distance = Math.abs(Math.round(firstY - secondY));
 
-    element.innerHTML = `${distance}px`;
-    element.style.top = `${distance/2}px`;
-    element.style.left = `${(targetRect.width/2) - (distance/4)}px`;
-    element.style.width = `${distance/2}px`;
+    updateElement(
+      element,
+      distance/2,
+      (targetRect.width/2) - (distance/4),
+      distance,
+    );
   }
 }
 
@@ -111,11 +116,21 @@ function updateBetweens() {
     const secondX = target2Rect.left;
     const distance = Math.abs(Math.round(firstX - secondX));
 
-    element.innerHTML = `${distance}px`;
-    element.style.top = `${(target1Rect.top - target1ParentRect.top) + (distance/2)}px`;
-    element.style.left = `${target1Rect.width - (distance / 4)}px`;
-    element.style.width = `${distance/2}px`;
+    updateElement(
+      element,
+      (target1Rect.top - target1ParentRect.top) + (distance/2),
+      target1Rect.width - (distance / 4),
+      distance,
+    );
   }
+}
+
+function updateElement(element, top, left, distance) {
+  element.innerHTML = `${distance}px`;
+  element.style.top = `${top}px`;
+  element.style.left = `${left}px`;
+  element.style.width = `${distance/2}px`;
+  element.style.display = distance < 35 ? "none" : "flex";
 }
 
 function getElementRectangles(element) {
