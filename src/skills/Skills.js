@@ -59,13 +59,21 @@ const genSkillEraTab = (era) => {
  * @param {Object} skill the skill to render.
  */
 const genSkillRow = (skill) => {
+  const safeTitle = skill.title.replace(/[\W_]+/g," ")
+  const containerId = `skill-${safeTitle}-logo-container`;
+  const logoImgId = `skill-${safeTitle}-logo-img`;
+  const starsId = `skill-${safeTitle}-stars`;
+
   return (
     <div className="dev-grid-cell skills-container-skill" key={ skill.title }>
-      <div className="skills-container-skill-name-logo">
-        <div className="skills-container-skill-logo"><img alt={ skill.title } src={ skill.logo } /></div>
-        <div className="skills-container-skill-name">{ skill.title }</div>
+      <div className="dev-grid-margin-between" data-target-one={ containerId } data-target-two={ starsId } />
+      <div className="dev-grid-margin-center-up" data-target={ logoImgId } />
+      <div id={ containerId } className="skills-container-skill-name-logo">
+        <div id={ logoImgId } className="skills-container-skill-logo"><img alt={ skill.title } src={ skill.logo } /></div>
+        <div id={ starsId } className="skills-container-skill-name">{ skill.title }</div>
       </div>
       <div
+        id={ starsId}
         aria-label={ skill.stars + " stars" }
         className="skills-container-skill-rating">
         { genStars(skill.stars) }
@@ -81,14 +89,14 @@ const genSkillRow = (skill) => {
  */
 const genStars = (numFilledStars) => {
   const firstThree = (
-    <div class="avoid-wrap">
+    <div className="avoid-wrap">
       {genStar(numFilledStars > 0, 1)}
       {genStar(numFilledStars > 1, 2)}
       {genStar(numFilledStars > 2, 3)}
     </div>
   )
   const lastTwo = (
-    <div class="avoid-wrap">
+    <div className="avoid-wrap">
       {genStar(numFilledStars > 3, 4)}
       {genStar(numFilledStars > 4, 5)}
     </div>

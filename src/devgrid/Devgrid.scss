@@ -103,6 +103,11 @@ $grid-colour: #c7c7c7;
     transform: rotate(270deg);
   }
 
+  .dev-grid-margin-between {
+    @include measurement;
+    @include margin;
+  }
+
   .dev-grid-measurement-right::after, .dev-grid-measurement-right::before,
   .dev-grid-measurement-left::after, .dev-grid-measurement-left::before,
   .dev-grid-measurement-top::after, .dev-grid-measurement-top::before,
@@ -113,7 +118,8 @@ $grid-colour: #c7c7c7;
 
   .dev-grid-margin-top-left-corner-left:after, .dev-grid-margin-top-left-corner-left:before,
   .dev-grid-margin-bottom-left-corner-down:after, .dev-grid-margin-bottom-left-corner-down:before,
-  .dev-grid-margin-center-up:after, .dev-grid-margin-center-up:before {
+  .dev-grid-margin-center-up:after, .dev-grid-margin-center-up:before,
+  .dev-grid-margin-between:after, .dev-grid-margin-between:before {
     content: "";
     flex: 1 1;
     border-bottom: 1px solid $grid-colour;

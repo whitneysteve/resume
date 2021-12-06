@@ -25,6 +25,7 @@ function drawMeasurements() {
   updateBottomLeftCornerDownMargins();
   updateTopLeftCornerLeftMargins();
   updateCenterUpMargins();
+  updateBetweens();
 }
 
 function updateX() {
@@ -90,7 +91,29 @@ function updateCenterUpMargins() {
 
     element.innerHTML = `${distance}px`;
     element.style.top = `${distance/2}px`;
-    element.style.left = `${(parentRect.width/2) - (distance/4)}px`;
+    element.style.left = `${(targetRect.width/2) - (distance/4)}px`;
+    element.style.width = `${distance/2}px`;
+  }
+}
+
+function updateBetweens() {
+  const elements = document.getElementsByClassName('dev-grid-margin-between');
+  for(let element of elements) {
+    const target1 = document.getElementById(element.dataset.targetOne);
+    const target1Parent = target1.parentElement;
+    const target2 = document.getElementById(element.dataset.targetTwo);
+
+    const target1Rect = target1.getBoundingClientRect();
+    const target1ParentRect = target1Parent.getBoundingClientRect();
+    const target2Rect = target2.getBoundingClientRect();
+
+    const firstX = target1Rect.right;
+    const secondX = target2Rect.left;
+    const distance = Math.abs(Math.round(firstX - secondX));
+
+    element.innerHTML = `${distance}px`;
+    element.style.top = `${(target1Rect.top - target1ParentRect.top) + (distance/2)}px`;
+    element.style.left = `${target1Rect.width - (distance / 4)}px`;
     element.style.width = `${distance/2}px`;
   }
 }
