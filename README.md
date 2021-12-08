@@ -5,7 +5,7 @@ This is the source code for my resume site. It's a React app created using [Face
 
 Besides that, as with most things, it's a work in progress.
 
-Working on this usually follows the following pattern. You'll need `npm` and to run `./setup` to set up.
+Working on this usually follows the following pattern. You'll need `yarn` and to run `./setup` to set up.
 
 Create a branch
 ---------------

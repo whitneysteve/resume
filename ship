@@ -38,7 +38,7 @@ msg "Merging your changes to master"
 git merge $branch
 
 msg "Deploying"
-npm run deploy
+yarn run deploy
 
 # Commit can fail for no files to add, this is fine.
 set +e

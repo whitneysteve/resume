@@ -10,22 +10,22 @@ function commit() {
 
 function lint() {
   msg "Running Linter"
-  npm run lint
+  yarn run lint
 }
 
 function run() {
   msg "Running Locally..."
-  npm start
+  yarn start
 }
 
 function test() {
   msg "Running Tests"
-  CI=true npm run test
+  CI=true yarn run test
 }
 
 function test-watcher() {
   msg "Running Tests"
-  npm test
+  yarn test
 }
 
 function test_and_lint() {

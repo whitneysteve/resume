@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://whitneysteve.github.io/resume",
   "dependencies": {
+    "@visx/visx": "2.5.0",
     "google-map-react": "^1.1.4",
     "react": "16.14",
     "react-dom": "16.14"
@@ -29,8 +30,7 @@
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
     "lint": "eslint --fix src",
-    "postinstall": "npm update",
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "sass": "sass --watch src/index.scss:src/index.css",
     "start": "npm-run-all -p lint sass start-js",
     "start-js": "react-scripts start",
