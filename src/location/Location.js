@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Map from './Map';
 
 /**
- * Landing renders the blurb about my location and the map story.
+ * Location renders the blurb about my location and the map story.
  */
 class Location extends Component {
   render() {

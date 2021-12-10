@@ -12,14 +12,14 @@ const JobDescriptions = {
   7: 'Software engineer',
 }
 
-const MaxLandings = 7;
+const MaxHeaders = 7;
 const LeftKey = 37;
 const RightKey = 39;
 
 /**
- * Landing renders the top of the site, with my face on it.
+ * Header renders the top of the site, with my face on it.
  */
-class Landing extends Component {
+class Header extends Component {
   static defaultProps = {
     start: Math.floor(Math.random() * 8)
   };
@@ -30,12 +30,12 @@ class Landing extends Component {
     let jobIndex = this.state.jobIndex;
     if (event.keyCode === LeftKey) {
       if (jobIndex === 0) {
-        jobIndex = MaxLandings;
+        jobIndex = MaxHeaders;
       } else {
         jobIndex--;
       }
     } else if (event.keyCode === RightKey) {
-      if (jobIndex >= MaxLandings) {
+      if (jobIndex >= MaxHeaders) {
         jobIndex = 0;
       } else {
         jobIndex++;
@@ -57,9 +57,9 @@ class Landing extends Component {
   render() {
     const {jobIndex} = this.state;
     return (
-      <div className={`Section `} id="landing">
-        <div className={`dev-grid landing-container landing-${jobIndex}`}>
-          <div className="landing-text-overlay">
+      <div className={`Section `} id="header">
+        <div className={`dev-grid header-container header-${jobIndex}`}>
+          <div className="header-text-overlay">
             <h1>Stephen Whitney</h1>
             <h2>{JobDescriptions[jobIndex]}</h2>
           </div>
@@ -85,8 +85,8 @@ class Landing extends Component {
   }
 }
 
-Landing.propTypes = {
+Header.propTypes = {
   start: PropTypes.number,
 };
 
-export default Landing;
+export default Header;

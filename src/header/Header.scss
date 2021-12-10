@@ -5,7 +5,7 @@ $small-circles: generate-items(1000, $animation-palette);
 $medium-circles: generate-items(750, $animation-palette);
 $large-circles: generate-items(200, $animation-palette);
 
-#landing {
+#header {
   background-color: $light-grey;
   margin: 0;
 
@@ -14,7 +14,7 @@ $large-circles: generate-items(200, $animation-palette);
     text-shadow: 0px 1px rgba(255,255,255,0.5);
   }
 
-  .landing-container {
+  .header-container {
     @include parallax();
     @include slight-inset-shadow();
     background-size: cover;
@@ -24,70 +24,70 @@ $large-circles: generate-items(200, $animation-palette);
     bottom: 0;
   }
 
-  .landing-text-overlay {
+  .header-text-overlay {
     position: absolute;
   }
 
-  .landing-0 {
+  .header-0 {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(img/landing-1.jpg);
     background-position: 75% 30%;
     justify-content: flex-end;
 
-    .landing-text-overlay {
+    .header-text-overlay {
       right: 0;
       text-align: right;
     }
   }
 
-  .landing-1 {
+  .header-1 {
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(0,0,0,0.2) 100%), url(img/landing-2.jpg);
     background-position: 100% 50%;
     text-align: left;
 
-    .landing-text-overlay {
+    .header-text-overlay {
       bottom: 0;
     }
   }
 
-  .landing-2 {
+  .header-2 {
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(64,64,64,0.1) 100%), url(img/landing-3.jpg);
     background-position: 50% 90%;
     align-items: center;
 
-    .landing-text-overlay {
+    .header-text-overlay {
       bottom: 0;
       text-align: center;
     }
   }
 
-  .landing-3 {
+  .header-3 {
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(64,64,64,0.1) 100%), url(img/landing-4.jpg);
     background-position: 57% 50%;
   }
 
-  .landing-4 {
+  .header-4 {
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(64,64,64,0.1) 100%), url(img/landing-5.jpg);
     background-position: 80% 50%;
     justify-content: flex-end;
   }
 
-  .landing-5 {
+  .header-5 {
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(img/landing-6.jpg);
     background-position: 50% 85%;
   }
 
-  .landing-6 {
+  .header-6 {
     background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 33%, rgba(64, 64, 64, 0.5) 100%), url(img/landing-7.jpg);
     background-position: 40% 50%;
     justify-content: flex-end;
 
-    .landing-text-overlay {
+    .header-text-overlay {
       right: 0;
       text-align: right;
     }
   }
 
-  .landing-7 {
+  .header-7 {
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(64,64,64,0.1) 100%), url(img/landing-8.jpg);
     background-position: 70% 50%;
   }
@@ -103,93 +103,93 @@ $large-circles: generate-items(200, $animation-palette);
       padding-bottom: 50px;
     }
 
-    .landing-0 {
+    .header-0 {
       text-align: left;
     }
 
-    .landing-1 {
+    .header-1 {
       background-position: 72% 85%;
     }
 
-    .landing-2 {
-      .landing-text-overlay {
+    .header-2 {
+      .header-text-overlay {
         top: 0;
       }
     }
 
-    .landing-3 {
+    .header-3 {
       background-position: 80% 50%;
     }
 
-    .landing-4 {
+    .header-4 {
       background-position: 80% 50%;
       justify-content: flex-start;
       text-align: left;
     }
 
-    .landing-5 {
+    .header-5 {
       background-position: 60% 50%;
       justify-content: flex-start;
     }
 
-    .landing-6 {
+    .header-6 {
       background-position: 30% 50%;
       justify-content: flex-start;
     }
 
-    .landing-7 {
+    .header-7 {
       justify-content: flex-end;
       text-align: left;
     }
   }
 
   @media #{$phone} {
-    .landing-0 {
+    .header-0 {
       background-position: 70% 30%;
       text-align: left;
     }
 
-    .landing-1 {
-      .landing-text-overlay {
+    .header-1 {
+      .header-text-overlay {
         top: 0;
       }
     }
 
-    .landing-2 {
+    .header-2 {
       font-size: 1.2em;
       justify-content: flex-start;
     }
 
-    .landing-3 {
+    .header-3 {
       background-position: 83% 50%;
       justify-content: flex-end;
     }
 
-    .landing-4, .landing-6 {
+    .header-4, .header-6 {
       font-size: 1.2em;
     }
 
-    .landing-5 {
+    .header-5 {
       font-size: 1.1em;
     }
 
-    .landing-7 {
+    .header-7 {
       background-position: 80% 50%;
     }
   }
 
   @media #{$tablet} {
-    .landing-2 {
+    .header-2 {
       justify-content: center;
     }
 
-    .landing-3 {
-      .landing-text-overlay {
+    .header-3 {
+      .header-text-overlay {
         text-align: left;
       }
     }
 
-    .landing-7 {
+    .header-7 {
       background-position: 70% 50%;
       justify-content: flex-end;
       text-align: left;

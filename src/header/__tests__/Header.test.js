@@ -1,32 +1,32 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import Landing from '../Landing';
+import Header from '../Header';
 
 const LeftKey = 37;
 const RightKey = 39;
 
-describe('Landing', () => {
+describe('Header', () => {
   it('renders without crashing', () => {
     shallow(
-      <Landing />
+      <Header />
     );
   });
 
-  describe('Navigating through landings', () => {
-    const expectLanding = (component, expectedIndex) => {
-      expect(component.find(`div.landing-${expectedIndex}`)).toHaveLength(1);
+  describe('Navigating through headers', () => {
+    const expectHeader = (component, expectedIndex) => {
+      expect(component.find(`div.header-${expectedIndex}`)).toHaveLength(1);
     };
 
-    it('cycles through landing images', () => {
+    it('cycles through header images', () => {
       document.addEventListener = jest.fn((event, cb) => {
         global.eventListeners[event] = cb;
       });
 
-      const component = shallow(<Landing start={0}/>);
-      expectLanding(component, 0);
+      const component = shallow(<Header start={0}/>);
+      expectHeader(component, 0);
       global.eventListeners.keydown({ keyCode: RightKey });
       awaitAsync(component);
-      expectLanding(component, 1);
+      expectHeader(component, 1);
     });
 
     it('handles boundaries', () => {
@@ -34,19 +34,18 @@ describe('Landing', () => {
         global.eventListeners[event] = cb;
       });
 
-      const component = shallow(<Landing start={0}/>);
-      expectLanding(component, 0);
+      const component = shallow(<Header start={0}/>);
+      expectHeader(component, 0);
       // Go left
       global.eventListeners.keydown({ keyCode: LeftKey });
       awaitAsync(component);
-      expectLanding(component, 7);
-
+      expectHeader(component, 7);
 
       // Go right twice
       global.eventListeners.keydown({ keyCode: RightKey });
       global.eventListeners.keydown({ keyCode: RightKey });
       awaitAsync(component);
-      expectLanding(component, 1);
+      expectHeader(component, 1);
     });
   })
 });

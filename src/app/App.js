@@ -3,7 +3,7 @@ import Contact from '../contact/Contact'
 import Devgrid from '../devgrid/Devgrid'
 import Education from '../education/Education'
 import Experience from '../experience/Experience'
-import Landing from '../landing/Landing'
+import Header from '../header/Header'
 import Location from '../location/Location'
 import Skills from '../skills/Skills'
 
@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <Devgrid />
-        <Landing />
+        <Header />
         <Location />
         <Skills />
       </div>
