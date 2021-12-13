@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, } from 'react';
 
 /**
  * Experience renders my previous jobs.
@@ -8,7 +8,7 @@ class Experience extends Component {
     super(props);
 
     this.state = {
-      selected: CURRENT
+      selected: CURRENT,
     }
 
     this.handleScroll = this.handleScroll.bind(this);
@@ -48,11 +48,11 @@ class Experience extends Component {
     // Find the element closest to the top of the screen.
     const nearsetJob = this.closestElement(
       Array.from(document.querySelectorAll('.experience-job')),
-      currentTopPosition
+      currentTopPosition,
     );
 
     if (nearsetJob && nearsetJob.id && nearsetJob.id !== this.state.selected) {
-      this.setState({ selected: nearsetJob.id });
+      this.setState({ selected: nearsetJob.id, });
     }
   }
 
@@ -62,7 +62,7 @@ class Experience extends Component {
    * @param {String} jobId the ID of the job that should currently be highlighted.
    */
   highlightJob(jobId) {
-    this.setState({ selected: jobId });
+    this.setState({ selected: jobId, });
   }
 
   /**
@@ -142,52 +142,52 @@ const JOBS = [
     company: "Intercom",
     position: "Software Engineer",
     terms: [
-      "2021 - Present"
+      "2021 - Present",
     ],
     blurbs: [
       "I recently joined Intercom to work on their Growth teams.",
     ],
-    logo: "img/stripe_background.svg"
+    logo: "img/stripe_background.svg",
   },
   {
     id: "stripe",
     company: "Stripe",
     position: "Software Engineer",
     terms: [
-      "2018 - 2021"
+      "2018 - 2021",
     ],
     blurbs: [
       "Working as a full-stack engineer on Stripe's Security Products, building great products to keep our users safe.",
       "At Stripe I've been fortunate enough to work between writing distributed services and message consumers in Ruby and Java and building, great user experiences in React.",
     ],
-    logo: "img/stripe_background.svg"
+    logo: "img/stripe_background.svg",
   },
   {
     id: "twitter",
     company: "Twitter",
     position: "Software Engineer",
     terms: [
-      "2013 - 2018"
+      "2013 - 2018",
     ],
     blurbs: [
       "Twitter is my favourite website and I’m very lucky to have had the opportunity to work and learn here.",
       "Mostly backend engineering on low and high throughput applications, from Ruby to Scala, from monoliths to micro services, and Hadoop.",
-      "Built web-apps in React when I could."
+      "Built web-apps in React when I could.",
     ],
-    logo: "img/twitter_background.svg"
+    logo: "img/twitter_background.svg",
   },
   {
     id: "mastercard",
     company: "MasterCard Labs",
     position: "Consultant Software Engineer",
     terms: [
-      "2012 - 2013"
+      "2012 - 2013",
     ],
     blurbs: [
       "Researching emerging technologies and trends to create prototypes and other innovations for MasterCard’s next and future generation of products.",
-      "Had to pleasure of launching several new, multi-platform services to prototype, pilot, beta and full production."
+      "Had to pleasure of launching several new, multi-platform services to prototype, pilot, beta and full production.",
     ],
-    logo: "img/mastercard_background.svg"
+    logo: "img/mastercard_background.svg",
   },
 ]
 
