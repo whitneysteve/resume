@@ -30,38 +30,40 @@ function generateExpCurve(slope, max) {
   return [...new Set(arr)];
 }
 
-let firstRawData = generateExpCurve(0.009, 3.5)
-
 function createDataSet(label, data) {
   return {
-    label: 'Working on my own',
-    data: firstRawData,
+
+
     borderColor: function (context) {
       const chart = context.chart;
       const { ctx, chartArea } = chart;
-
       if (!chartArea) {
-        // This case happens on initial chart load
         return;
       }
       return getGradient(ctx, chartArea);
     },
-    tension: 0.4,
     cubicInterpolationMode: 'monotone',
-    pointRadius: 0
+    label,
+    data,
+    pointRadius: 0,
+    tension: 0.4,
+
+
   }
 }
+
+let firstRawData = generateExpCurve(0.009, 3.5)
 
 const data = {
   datasets: [
     createDataSet('Working on my own', firstRawData),
     createDataSet('When working with others', generateExpCurve(0.012, 4.2)),
-    createDataSet('With frequent use and working with others', generateExpCurve(0.015, 5))
-  ]
+    createDataSet('With frequent use and working with others', generateExpCurve(0.015, 5)),
+  ],
 };
 
-let width, height, gradient;
 function getGradient(ctx, chartArea) {
+  let width, height, gradient;
   const chartWidth = chartArea.right - chartArea.left;
   const chartHeight = chartArea.bottom - chartArea.top;
   if (!gradient || width !== chartWidth || height !== chartHeight) {

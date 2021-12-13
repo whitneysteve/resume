@@ -12,7 +12,7 @@
     "no-console": "error",
     "comma-dangle": [
       "error",
-      "only-multiline"
+      "always-multiline"
     ]
   }
 }
