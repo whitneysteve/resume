@@ -1,4 +1,4 @@
-import React, { Component, } from 'react';
+import React, { Component } from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -25,9 +25,9 @@ ChartJS.register(
 function generateExpCurve(slope, max) {
   let arr = [];
   for (let i = 0; i < 250; i++) {
-    arr.push({ x: i, y: max * (1 - Math.exp(-i * slope)), });
+    arr.push({ x: i, y: max * (1 - Math.exp(-i * slope)) });
   }
-  return [...new Set(arr),];
+  return [...new Set(arr)];
 }
 
 let firstRawData = generateExpCurve(0.009, 3.5)
@@ -38,7 +38,7 @@ function createDataSet(label, data) {
     data: firstRawData,
     borderColor: function (context) {
       const chart = context.chart;
-      const { ctx, chartArea, } = chart;
+      const { ctx, chartArea } = chart;
 
       if (!chartArea) {
         // This case happens on initial chart load
@@ -54,59 +54,10 @@ function createDataSet(label, data) {
 
 const data = {
   datasets: [
-    {
-      label: 'Working on my own',
-      data: firstRawData,
-      borderColor: function (context) {
-        const chart = context.chart;
-        const { ctx, chartArea, } = chart;
-
-        if (!chartArea) {
-          // This case happens on initial chart load
-          return;
-        }
-        return getGradient(ctx, chartArea);
-      },
-      tension: 0.4,
-      cubicInterpolationMode: 'monotone',
-      pointRadius: 0,
-    },
-    {
-      label: 'When working with others',
-      data: generateExpCurve(0.012, 4.2),
-
-      borderColor: function (context) {
-        const chart = context.chart;
-        const { ctx, chartArea, } = chart;
-
-        if (!chartArea) {
-          // This case happens on initial chart load
-          return;
-        }
-        return getGradient(ctx, chartArea);
-      },
-      tension: 0.4,
-      cubicInterpolationMode: 'monotone',
-      pointRadius: 0,
-    },
-    {
-      label: 'With frequent use and working with others',
-      data: generateExpCurve(0.015, 5),
-      borderColor: function (context) {
-        const chart = context.chart;
-        const { ctx, chartArea, } = chart;
-
-        if (!chartArea) {
-          // This case happens on initial chart load
-          return;
-        }
-        return getGradient(ctx, chartArea);
-      },
-      tension: 0.4,
-      cubicInterpolationMode: 'monotone',
-      pointRadius: 0,
-    },
-  ],
+    createDataSet('Working on my own', firstRawData),
+    createDataSet('When working with others', generateExpCurve(0.012, 4.2)),
+    createDataSet('With frequent use and working with others', generateExpCurve(0.015, 5))
+  ]
 };
 
 let width, height, gradient;
@@ -132,7 +83,7 @@ var xDelayed;
 var yDelayed;
 const totalDuration = 3000;
 const delayBetweenPoints = totalDuration / firstRawData.length;
-const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y',], true).y;
+const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
 const animation = {
   x: {
     type: 'number',
@@ -143,7 +94,6 @@ const animation = {
       xDelayed = true;
     },
     delay(ctx) {
-      console.log("here")
       if (ctx.type !== 'data' || ctx.xStarted) {
         return 0;
       }
@@ -207,9 +157,8 @@ const getOrCreateTooltip = (chart) => {
 };
 
 const externalTooltipHandler = (context) => {
-  console.log(1)
   // Tooltip Element
-  const { chart, tooltip, } = context;
+  const { chart, tooltip } = context;
   const tooltipEl = getOrCreateTooltip(chart);
 
   // Hide if no tooltip
@@ -221,11 +170,11 @@ const externalTooltipHandler = (context) => {
   // Set Text
   if (tooltip.body) {
     const titleLines = tooltip.title || [];
-    const bodyLines = tooltip.body.map(b, => b.lines);
+    const bodyLines = tooltip.body.map(b => b.lines);
 
 const tableHead = document.createElement('thead');
 
-titleLines.forEach(title, => {
+titleLines.forEach(title => {
   const tr = document.createElement('tr');
   tr.style.borderWidth = 0;
 
@@ -278,7 +227,7 @@ tableRoot.appendChild(tableHead);
 tableRoot.appendChild(tableBody);
   }
 
-const { offsetLeft: positionX, offsetTop: positionY, } = chart.canvas;
+const { offsetLeft: positionX, offsetTop: positionY } = chart.canvas;
 
 // Display, position, and set styles for font
 tooltipEl.style.opacity = 1;
@@ -363,7 +312,6 @@ export const options = {
           let innerHtml = "";
 
           bodyLines.forEach(function (body, i) {
-            console.log(body)
             let elements = body[0].split(":");
             let value = parseFloat(elements[1])
 
@@ -401,7 +349,6 @@ export const options = {
 
 
 
-        console.log(width, distanceToRight)
         if (rightAlign) {
           tooltipEl.style.right = position.right - tooltipModel.caretX + 'px';
           tooltipEl.style.left = 'unset';
@@ -416,7 +363,6 @@ export const options = {
         tooltipEl.style.pointerEvents = 'none';
       },
     },
-    legend: false,
   },
   layout: {
     padding: 25,
@@ -469,7 +415,7 @@ window.addEventListener('scroll', function () {
   if (isScrolledIntoView('canvas')) {
     if (inView) { return; }
     inView = true;
-    new ChartJS(document.getElementsByTagName("canvas")[0].getContext("2d"), { type: 'line', data, options, });
+    new ChartJS(document.getElementsByTagName("canvas")[0].getContext("2d"), { type: 'line', data, options });
   } else {
     inView = false;
   }

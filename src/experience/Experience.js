@@ -1,4 +1,4 @@
-import React, { Component, } from 'react';
+import React, { Component } from 'react';
 
 /**
  * Experience renders my previous jobs.
@@ -52,7 +52,7 @@ class Experience extends Component {
     );
 
     if (nearsetJob && nearsetJob.id && nearsetJob.id !== this.state.selected) {
-      this.setState({ selected: nearsetJob.id, });
+      this.setState({ selected: nearsetJob.id });
     }
   }
 
@@ -62,7 +62,7 @@ class Experience extends Component {
    * @param {String} jobId the ID of the job that should currently be highlighted.
    */
   highlightJob(jobId) {
-    this.setState({ selected: jobId, });
+    this.setState({ selected: jobId });
   }
 
   /**
