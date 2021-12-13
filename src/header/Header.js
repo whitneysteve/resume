@@ -21,7 +21,7 @@ const RightKey = 39;
  */
 class Header extends Component {
   static defaultProps = {
-    start: Math.floor(Math.random() * 8)
+    start: Math.floor(Math.random() * 8),
   };
 
   state = {jobIndex: this.props.start};

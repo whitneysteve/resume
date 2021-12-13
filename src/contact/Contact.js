@@ -45,28 +45,28 @@ const CONTACTS = [
     link: "mailto: steve.whitney.cv@gmail.com",
     logo: "img/gmail.svg",
     sameWindow: "true",
-    service: "Gmail"
+    service: "Gmail",
   },
   {
     link: "https://join.skype.com/eyeCmLRyJisN",
     logo: "img/skype.svg",
-    service: "Skype"
+    service: "Skype",
   },
   {
     link: "https://www.linkedin.com/in/whitneysteve/",
     logo: "img/linkedin.svg",
-    service: "LinkedIn"
+    service: "LinkedIn",
   },
   {
     link: "http://github.com/whitneysteve",
     logo: "img/github.svg",
-    service: "Github"
+    service: "Github",
   },
   {
     link: "https://twitter.com/whitneysteve",
     logo: "img/twitter.svg",
-    service: "Twitter"
-  }
+    service: "Twitter",
+  },
 ];
 
 export default Contact;

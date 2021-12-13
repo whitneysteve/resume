@@ -1,6 +1,33 @@
-.skills-text-container {
-    color: $white;
+.chartjs-tooltip {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 0px 10px 10px 10px;
+  background-color: $white;
+  border: 1px solid $light-grey;
+  box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.07);
+  min-width: 150px;
+
+
+
+  opacity: 1 !important;
+
+  .fa-star {
+    color: $golden;
+  }
+}
+
+.chartjs-tooltip.right-pointer {
+  border-radius: 10px 00px 10px 10px;
+}
+
+#learning {
+  .learning-text-container {
+    flex-direction: column;
+  }
+
+  .learning-text-container {
     font-size: 1.1em;
     margin-top: 50px;
     text-align: center;
   }
+}

@@ -6,9 +6,9 @@ class Map extends Component {
   static defaultProps = {
     center: {
       lat: 53.349,
-      lng: -6.260
+      lng: -6.260,
     },
-    zoom: 5
+    zoom: 5,
   };
 
   constructor(props) {

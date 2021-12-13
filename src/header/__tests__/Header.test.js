@@ -8,7 +8,7 @@ const RightKey = 39;
 describe('Header', () => {
   it('renders without crashing', () => {
     shallow(
-      <Header />
+      <Header />,
     );
   });
 

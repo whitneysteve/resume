@@ -1,13 +1,13 @@
 $star-cream: rgb(248, 248, 239);
 $star-blue: rgb(163, 185, 255);
-$star-background: #0e212b;
+$star-background: rgb(38,38,43);
 
 $animation-background: $star-background;
 $animation-palette: [ $white, $star-blue, $star-cream ];
 
-$small-stars: generate-items(1000, $animation-palette);
-$medium-stars: generate-items(750, $animation-palette);
-$large-stars: generate-items(200, $animation-palette);
+$small-stars: generate-items(200, $animation-palette);
+$medium-stars: generate-items(150, $animation-palette);
+$large-stars: generate-items(50, $animation-palette);
 
 
 #skills {
@@ -17,12 +17,8 @@ $large-stars: generate-items(200, $animation-palette);
   .floaty-container {
     @include floaty-container();
     background-color: $animation-background;
+    background: linear-gradient(180deg, rgba(19,19,20,1) 0%, rgba(40,39,44,1) 75%);
     height: 100% !important;
-    // Generated
-    -webkit-box-shadow: inset 0px 0px 179px 0px rgba(0,0,0,0.65);
-    -moz-box-shadow: inset 0px 0px 179px 0px rgba(0,0,0,0.65);
-    box-shadow: inset 0px 0px 179px 0px rgba(0,0,0,0.65);
-
 
     @media #{$phone} {
       height: 200px;

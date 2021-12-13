@@ -6,7 +6,7 @@ import React, { Component } from 'react';
  */
 class Floaty extends Component {
   static defaultProps = {
-    numLayers: 3
+    numLayers: 3,
   };
 
   render() {
@@ -14,7 +14,7 @@ class Floaty extends Component {
       <div className="floaty-container">
         {
           [...Array(this.props.numLayers).keys()].map((_, idx) =>
-            <div aria-hidden="true" className={`floaty-${idx+1}`} key={`floaty-${idx}`} />
+            <div aria-hidden="true" className={`floaty-${idx+1}`} key={`floaty-${idx}`} />,
           )
         }
         <div aria-hidden="true" className="floaty-background"/>
@@ -24,7 +24,7 @@ class Floaty extends Component {
 }
 
 Floaty.propTypes = {
-  numLayers: PropTypes.number
+  numLayers: PropTypes.number,
 };
 
 export default Floaty;

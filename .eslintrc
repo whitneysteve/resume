@@ -9,6 +9,10 @@
   },
   "rules": {
     "handle-callback-err": "off",
-    "no-console": "off"
+    "no-console": "error",
+    "comma-dangle": [
+      "error",
+      "only-multiline"
+    ]
   }
 }

@@ -40,18 +40,10 @@ $grid-colour: #c7c7c7;
   }
 }
 
-.dev-grid-cell {
+@mixin cell {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  height: 50vh;
-  width: 50vw;
-
-  @media only screen and (max-width: 375px) {
-    height: 100vh;
-    width: 100vw;
-  }
 
   text-align: center;
   vertical-align: middle;
@@ -126,6 +118,29 @@ $grid-colour: #c7c7c7;
     margin: auto;
     opacity: 0.5;
   }
+}
+
+.dev-grid-cell {
+  @include cell;
+  height: 50vh;
+  width: 50vw;
+
+  @media only screen and (max-width: 375px) {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.dev-grid-cell-three-quarters-height {
+  @include cell;
+  height: 75vh;
+  width: 100vw;
+}
+
+.dev-grid-cell-one-quarter-height {
+  @include cell;
+  height: 25vh;
+  width: 100vw;
 }
 
 .grid-red {

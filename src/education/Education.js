@@ -50,15 +50,15 @@ const EDUCATION = [
     grade: "1st Class Honours",
     logo: "img/dcu.svg",
     school: "Dublin City University",
-    year: "2005"
+    year: "2005",
   },
   {
     course: "M.Bs, Information Systems",
     grade: "1st Class Honours",
     logo: "img/ucd.svg",
     school: "Smurfit Graduate Business School",
-    year: "2007"
-  }
+    year: "2007",
+  },
 ];
 
 export default Education;

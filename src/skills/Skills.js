@@ -17,7 +17,7 @@ class Skills extends Component {
     super(props);
 
     this.state = {
-      newSelection: "Today"
+      newSelection: "Today",
     };
   }
 

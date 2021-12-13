@@ -4,7 +4,8 @@
   "private": true,
   "homepage": "https://whitneysteve.github.io/resume",
   "dependencies": {
-    "@visx/visx": "2.5.0",
+    "chart.js": "^3.6.2",
+    "chartjs-plugin-deferred": "^1.0.2",
     "google-map-react": "^1.1.4",
     "react": "16.14",
     "react-dom": "16.14"

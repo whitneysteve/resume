@@ -7,7 +7,7 @@ it('renders without crashing', () => {
     <Tabs>
       <Tab title="Tab 1">Content 1</Tab>
       <Tab title="Tab 2">Content 2</Tab>
-    </Tabs>
+    </Tabs>,
   );
   // expect(true).toBe(false)
 });

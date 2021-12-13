@@ -10,7 +10,7 @@ class Tabs extends Component {
       super(props, context);
 
       this.state = {
-          selected: 0
+          selected: 0,
       }
 
       this.select = this.select.bind(this);
@@ -33,7 +33,7 @@ class Tabs extends Component {
         return React.cloneElement(child, {
           select : this.select,
           index: index,
-          selected: index === this.state.selected
+          selected: index === this.state.selected,
         });
       });
     }
@@ -95,7 +95,7 @@ class Tab extends Component {
 Tab.propTypes = {
   select: PropTypes.func,
   selected: PropTypes.bool,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export { Tabs, Tab };

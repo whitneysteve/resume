@@ -5,8 +5,8 @@ import { Component } from 'react';
  */
 class Devgrid extends Component {
   componentDidMount() {
-      window.addEventListener('load', drawMeasurements);
-      window.addEventListener('resize', drawMeasurements);
+    window.addEventListener('load', drawMeasurements);
+    window.addEventListener('resize', drawMeasurements);
   }
 
   componentWillUnmount() {
@@ -32,7 +32,7 @@ function updateX() {
   ['top', 'bottom'].forEach(position => {
     const elements = document.getElementsByClassName(`dev-grid-measurement-${position}`);
     for (let element of elements) {
-      element.innerHTML = `${element.parentElement?.offsetWidth || '??' }px`;
+      element.innerHTML = `${element.parentElement?.offsetWidth || '??'}px`;
     }
   });
 }
@@ -40,16 +40,16 @@ function updateX() {
 function updateY() {
   ['right', 'left'].forEach(position => {
     const elements = document.getElementsByClassName(`dev-grid-measurement-${position}`);
-    for (let element of elements) {
-      element.innerHTML = `${element.parentElement?.offsetHeight || '??' }px`;
+    for(let element of elements) {
+      element.innerHTML = `${element.parentElement?.offsetHeight || '??'}px`;
     }
   });
 }
 
 function updateTopLeftCornerLeftMargins() {
   const elements = document.getElementsByClassName('dev-grid-margin-top-left-corner-left');
-  for(let element of elements) {
-    const {parentRect, targetRect} = getElementRectangles(element);
+  for (let element of elements) {
+    const { parentRect, targetRect } = getElementRectangles(element);
 
     const firstY = targetRect.left;
     const secondY = parentRect.left;
@@ -58,7 +58,7 @@ function updateTopLeftCornerLeftMargins() {
     updateElement(
       element,
       targetRect.top - parentRect.top,
-      distance/4,
+      distance / 4,
       distance,
     );
   }
@@ -66,8 +66,8 @@ function updateTopLeftCornerLeftMargins() {
 
 function updateBottomLeftCornerDownMargins() {
   const elements = document.getElementsByClassName('dev-grid-margin-bottom-left-corner-down');
-  for(let element of elements) {
-    const {parentRect, targetRect} = getElementRectangles(element);
+  for (let element of elements) {
+    const { parentRect, targetRect } = getElementRectangles(element);
 
     const firstY = targetRect.top + targetRect.height;
     const secondY = parentRect.top + parentRect.height;
@@ -76,7 +76,7 @@ function updateBottomLeftCornerDownMargins() {
 
     updateElement(
       element,
-      leftCorner + (distance/2),
+      leftCorner + (distance / 2),
       targetRect.left - parentRect.left,
       distance,
     );
@@ -85,8 +85,8 @@ function updateBottomLeftCornerDownMargins() {
 
 function updateCenterUpMargins() {
   const elements = document.getElementsByClassName('dev-grid-margin-center-up');
-  for(let element of elements) {
-    const {parentRect, targetRect} = getElementRectangles(element);
+  for (let element of elements) {
+    const { parentRect, targetRect } = getElementRectangles(element);
 
     const firstY = targetRect.top;
     const secondY = parentRect.top;
@@ -94,8 +94,8 @@ function updateCenterUpMargins() {
 
     updateElement(
       element,
-      distance/2,
-      (targetRect.width/2) - (distance/4),
+      distance / 2,
+      (targetRect.width / 2) - (distance / 4),
       distance,
     );
   }
@@ -103,7 +103,7 @@ function updateCenterUpMargins() {
 
 function updateBetweens() {
   const elements = document.getElementsByClassName('dev-grid-margin-between');
-  for(let element of elements) {
+  for (let element of elements) {
     const target1 = document.getElementById(element.dataset.targetOne);
     const target1Parent = target1.parentElement;
     const target2 = document.getElementById(element.dataset.targetTwo);
@@ -118,7 +118,7 @@ function updateBetweens() {
 
     updateElement(
       element,
-      (target1Rect.top - target1ParentRect.top) + (distance/2),
+      (target1Rect.top - target1ParentRect.top) + (distance / 2),
       target1Rect.width - (distance / 4),
       distance,
     );
@@ -129,7 +129,7 @@ function updateElement(element, top, left, distance) {
   element.innerHTML = `${distance}px`;
   element.style.top = `${top}px`;
   element.style.left = `${left}px`;
-  element.style.width = `${distance/2}px`;
+  element.style.width = `${distance / 2}px`;
   element.style.display = distance < 35 ? "none" : "flex";
 }
 
