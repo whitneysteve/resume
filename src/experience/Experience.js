@@ -32,9 +32,13 @@ class Experience extends Component {
  */
 const genJob = (job) => {
   const jobId = job.company.toLowerCase();
+  const containerId = `experience-job-${jobId}`;
+
   return (
     <div className="dev-grid-cell experience-job" id={ job.id } key={ jobId }>
-      <div className={`experience-job-company-container experience-job-${jobId}`}>
+      <div className="dev-grid-margin-top-left-corner-left" data-target={containerId}></div>
+      <div className="dev-grid-margin-center-up" data-target={containerId}></div>
+      <div id={containerId} className={`experience-job-company-container ${containerId}`}>
         <img alt={ `${ job.company } logo` } src={ job.logo } />
         <canvas id={`gradient-canvas-${jobId}`} data-transition-in />
       </div>

@@ -114,7 +114,7 @@ function updateCenterUpMargins() {
     updateElement(
       element,
       distance / 2,
-      targetRect.left + (targetRect.width / 2) - 20,
+      targetRect.left + (targetRect.width / 2) - 20 - parentRect.left,
       distance,
     );
   }
