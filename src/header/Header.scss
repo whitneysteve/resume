@@ -1,13 +1,5 @@
-$animation-background: #58D5D3;
-$animation-palette: #F8D5F0, #41A4C3, #3F4B83;
-
-$small-circles: generate-items(1000, $animation-palette);
-$medium-circles: generate-items(750, $animation-palette);
-$large-circles: generate-items(200, $animation-palette);
-
 #header {
   background-color: $light-grey;
-  margin: 0;
 
   h1, h2, h3, h4 {
     color: $white;
@@ -17,11 +9,14 @@ $large-circles: generate-items(200, $animation-palette);
   .header-container {
     @include parallax();
     @include slight-inset-shadow();
-    background-size: cover;
+
     display: flex;
-    font-size: 1.4em;
-    top: 0;
+
     bottom: 0;
+    top: 0;
+
+    background-size: cover;
+    font-size: 1.4em;
   }
 
   .header-text-overlay {
@@ -29,11 +24,13 @@ $large-circles: generate-items(200, $animation-palette);
   }
 
   .header-0 {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(img/landing-1.jpg);
-    background-position: 75% 30%;
     justify-content: flex-end;
 
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(img/landing-1.jpg);
+    background-position: 75% 30%;
+
     .header-text-overlay {
+      bottom: 0;
       right: 0;
       text-align: right;
     }
@@ -42,7 +39,6 @@ $large-circles: generate-items(200, $animation-palette);
   .header-1 {
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(0,0,0,0.2) 100%), url(img/landing-2.jpg);
     background-position: 100% 50%;
-    text-align: left;
 
     .header-text-overlay {
       bottom: 0;
@@ -50,13 +46,13 @@ $large-circles: generate-items(200, $animation-palette);
   }
 
   .header-2 {
+    justify-content: center;
+
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(64,64,64,0.1) 100%), url(img/landing-3.jpg);
     background-position: 50% 90%;
-    align-items: center;
 
     .header-text-overlay {
       bottom: 0;
-      text-align: center;
     }
   }
 
@@ -69,6 +65,10 @@ $large-circles: generate-items(200, $animation-palette);
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(64,64,64,0.1) 100%), url(img/landing-5.jpg);
     background-position: 80% 50%;
     justify-content: flex-end;
+
+    .header-text-overlay {
+      text-align: right;
+    }
   }
 
   .header-5 {
@@ -93,27 +93,16 @@ $large-circles: generate-items(200, $animation-palette);
   }
 
   @media #{$phone}, #{$tablet} {
-    text-align: center;
-
-    img {
-      margin: 0;
-    }
-
-    h3 {
-      padding-bottom: 50px;
-    }
-
-    .header-0 {
-      text-align: left;
-    }
-
     .header-1 {
       background-position: 72% 85%;
     }
 
     .header-2 {
+      align-items: center;
+
       .header-text-overlay {
-        top: 0;
+        margin-bottom: 150px;
+        bottom: unset;
       }
     }
 
@@ -123,23 +112,27 @@ $large-circles: generate-items(200, $animation-palette);
 
     .header-4 {
       background-position: 80% 50%;
-      justify-content: flex-start;
-      text-align: left;
     }
 
     .header-5 {
       background-position: 60% 50%;
-      justify-content: flex-start;
     }
 
     .header-6 {
       background-position: 30% 50%;
-      justify-content: flex-start;
+
+      .header-text-overlay {
+        bottom: 0;
+      }
     }
 
     .header-7 {
       justify-content: flex-end;
-      text-align: left;
+
+      .header-text-overlay {
+        bottom: 0;
+        text-align: right;
+      }
     }
   }
 
@@ -156,13 +149,26 @@ $large-circles: generate-items(200, $animation-palette);
     }
 
     .header-2 {
-      font-size: 1.2em;
       justify-content: flex-start;
+
+      font-size: 1.2em;
+
+      .header-text-overlay {
+        top: 40px;
+
+        text-align: center;
+      }
     }
 
     .header-3 {
-      background-position: 83% 50%;
       justify-content: flex-end;
+
+      background-position: 83% 50%;
+      font-size: 1.1em;
+
+      .header-text-overlay {
+        text-align: center;
+      }
     }
 
     .header-4, .header-6 {
@@ -175,24 +181,6 @@ $large-circles: generate-items(200, $animation-palette);
 
     .header-7 {
       background-position: 80% 50%;
-    }
-  }
-
-  @media #{$tablet} {
-    .header-2 {
-      justify-content: center;
-    }
-
-    .header-3 {
-      .header-text-overlay {
-        text-align: left;
-      }
-    }
-
-    .header-7 {
-      background-position: 70% 50%;
-      justify-content: flex-end;
-      text-align: left;
     }
   }
 }
