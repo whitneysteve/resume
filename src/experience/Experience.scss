@@ -1,37 +1,29 @@
-$amdocs-background: $medium-grey;
-$intercom-background: #326BFF;
-$mastercard-background: #5b6770;
-$newbay-background: #f7980b;
-$stripe-background: #537cec;
-$twitter-background: #2bafe9;
-
 .experience {
   .experience-job-company-container {
-    background-color: turquoise;
-    border-radius: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
     height: 75%;
     width: 75%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    background-color: turquoise;
+    border-radius: 25px;
     -webkit-box-shadow: 0px 0px 22px 6px #f4f4f4;
     box-shadow: 0px 0px 22px 6px #f4f4f4;
+    cursor: pointer;
+    overflow: hidden;
 
     transition: transform 0.25s ease-out, box-shadow 0.25s ease-in;
-
-    cursor: pointer;
-    position: relative;
   }
 
   .experience-job-company-container:hover {
-    transform: perspective(500px) rotate3d(1, 1.0, 15.0, 10deg);
     box-shadow: 0px 0px 22px 6px #e4e4e4;
+    transform: rotate3d(1, 1.0, 15.0, 10deg);
   }
 
   .experience-job-company-container.experience-job-intercom {
-    background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 80%);
   }
 
@@ -40,7 +32,7 @@ $twitter-background: #2bafe9;
   }
 
   .experience-job-company-container.experience-job-twitter {
-    background: linear-gradient(180deg, rgba(29,161,242,1) 0%, rgba(225,232,237,1) 81%);
+    background: rgba(29,161,242,1);
   }
 
   .experience-job-company-container.experience-job-mastercard {
@@ -66,81 +58,4 @@ $twitter-background: #2bafe9;
     --gradient-color-2: #f88a4a;
     border-radius: 25px;
   }
-
-  @mixin experience-text {
-    color: $white;
-    margin-left: 0;
-    text-align: left;
-  }
-
-
-
-  h3, h4, h5  {
-    @include experience-text();
-    font-weight: 500;
-  }
-
-  p {
-    @include experience-text();
-    font-weight: 100;
-  }
-
-  h3 {
-    margin-top: 40px;
-  }
-
-  h4 {
-    font-size: 0.9em;
-    margin-top: 5px;
-
-    .fas {
-      margin-left: 5px;
-    }
-  }
-
-
-  h5 {
-    font-size: 1.1em;
-  }
-
-  .experience-footer {
-    color: $white;
-    font-size: 1.2em;
-    margin: 50px 0;
-    text-align: center;
-  }
-
-  .experience-job {
-    sub {
-      &:after {
-        content: ", "
-      }
-    }
-
-    sub:last-of-type {
-      &:after {
-        content: ""
-      }
-    }
-
-    .experience-job-company {
-      display: flex;
-      align-items: center;
-
-      img {
-        display: none;
-        height: 40px;
-        margin-left: 15px;
-        vertical-align: middle;
-
-        // Because of batched scroll updates these browsers will not support
-        // the background image changing on scroll. So we show the company
-        // logo beside the name.
-        @include browser(Android,iPhone,iPad) {
-          display: inline;
-        }
-      }
-    }
-  }
 }
-

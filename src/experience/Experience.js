@@ -10,73 +10,37 @@ import mastercard from '../img/companies/mastercard.svg';
  */
 class Experience extends Component {
   componentDidMount() {
-    // Create your instance
+    // Stripe gradient provided by https://whatamesh.vercel.app
     const gradient = new Gradient();
-
-    // Call `initGradient` with the selector to your canvas
     gradient.initGradient('#gradient-canvas-stripe');
   }
 
   render() {
-
     return (
       <div className={`Section experience dev-grid`} id="experience">
         { JOBS.map(genJob) }
-        {/* <div className="experience-footer">
-          This just a selection. Please get in touch for a full C.V.
-        </div> */}
       </div>
     );
   }
 }
 
 /**
-   * Genreate the markup for a job and attach hover events to update the
-   * background.
-   *
-   * @param {Object} job the job configuration.
-   */
-  const genJob = (job) => {
-    const jobId = job.company.toLowerCase();
-    return (
-      <div className="dev-grid-cell experience-job" id={ job.id } key={ jobId }>
-        <div className={`experience-job-company-container experience-job-${jobId}`}>
-          <img alt={ `${ job.company } logo` } src={ job.logo } />
-          <canvas id={`gradient-canvas-${jobId}`} data-transition-in>
-          </canvas>
-        </div>
-        {/* <div className="experience-job-company">
-          <h3>{ job.company }  </h3>
-
-        </div>
-        <h4>
-          { job.position }
-        </h4>
-        { job.blurbs.map(genBlurb) }
-        { job.terms.map(genTerm) } */}
+ * Genreate the markup for a job and attach hover events to update the
+ * background.
+ *
+ * @param {Object} job the job configuration.
+ */
+const genJob = (job) => {
+  const jobId = job.company.toLowerCase();
+  return (
+    <div className="dev-grid-cell experience-job" id={ job.id } key={ jobId }>
+      <div className={`experience-job-company-container experience-job-${jobId}`}>
+        <img alt={ `${ job.company } logo` } src={ job.logo } />
+        <canvas id={`gradient-canvas-${jobId}`} data-transition-in />
       </div>
-    );
-  };
-
-/**
- * Generate the markup for a term spent at a job.
- *
- * @param {String} term the length of time worked at the job.
- */
-const genTerm = (term) => {
-  return <sub key={term}>{term}</sub>;
+    </div>
+  );
 };
-
-/**
- * Generate the markup for a blurb about a job.
- *
- * @param {string} blurb a short description of the job.
- */
-const genBlurb = (blurb) => {
-  return <p key={blurb}>{blurb}</p>;
-};
-
-const CURRENT = "twitter";
 
 const JOBS = [
   {

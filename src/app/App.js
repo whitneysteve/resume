@@ -18,9 +18,9 @@ class App extends Component {
         <Devgrid />
         <Header />
         <Location />
+        <Experience />
         <Skills />
         <Learning />
-        <Experience />
         <Education />
         {/* <Contact /> */}
       </div>
