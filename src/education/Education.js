@@ -9,7 +9,6 @@ class Education extends Component {
   render() {
     return (
       <div className="Section" id="education">
-        <h1>Education</h1>
         { renderEducation() }
       </div>
     );

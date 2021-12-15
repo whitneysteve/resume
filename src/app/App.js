@@ -22,17 +22,9 @@ class App extends Component {
         <Learning />
         <Experience />
         <Education />
+        {/* <Contact /> */}
       </div>
     );
-  }
-
-  todo() {
-    return (
-      <div className="App">
-        <Education />
-        <Contact />
-      </div>
-    )
   }
 }
 

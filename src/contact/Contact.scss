@@ -4,6 +4,7 @@
 
   .contact-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     width: 80%;
 
@@ -35,7 +36,7 @@
     .contact-container-icons {
       align-items: center;
       display: inline-flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-between;
       margin-right: 15px;
 
