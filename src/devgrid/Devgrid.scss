@@ -2,6 +2,7 @@ $grid-colour: #c7c7c7;
 
 @mixin measurement {
   position: absolute;
+
   color: $grid-colour;
   font-size: 10px;
 }
@@ -44,6 +45,7 @@ $grid-colour: #c7c7c7;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   text-align: center;
   vertical-align: middle;
@@ -53,7 +55,6 @@ $grid-colour: #c7c7c7;
   background-position: 0 0, 0 0, 100% 0, 0 100%;
   background-repeat: no-repeat;
 
-  position: relative;
 
   .dev-grid-measurement-right {
     @include measurement;
@@ -125,7 +126,7 @@ $grid-colour: #c7c7c7;
   height: 50vh;
   width: 50vw;
 
-  @media only screen and (max-width: 375px) {
+  @media #{$phone} {
     height: 100vh;
     width: 100vw;
   }
@@ -141,20 +142,4 @@ $grid-colour: #c7c7c7;
   @include cell;
   height: 25vh;
   width: 100vw;
-}
-
-.grid-red {
-  // background-color: red;
-}
-
-.grid-green {
-  // background-color: green;
-}
-
-.grid-blue {
-  // background-color: blue;
-}
-
-.grid-yellow {
-  // background-color: yellow;
 }

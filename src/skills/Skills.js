@@ -67,7 +67,7 @@ const genSkillRow = (skill) => {
   return (
     <div className="dev-grid-cell skills-container-skill" key={ skill.title }>
       <div className="dev-grid-margin-between" data-target-one={ containerId } data-target-two={ starsId } />
-      <div className="dev-grid-margin-center-up" data-target={ logoImgId } />
+      {/* <div className="dev-grid-margin-center-up" data-target={ logoImgId } /> */}
       <div id={ containerId } className="skills-container-skill-name-logo">
         <div id={ logoImgId } className="skills-container-skill-logo"><img alt={ skill.title } src={ skill.logo } /></div>
         <div id={ starsId } className="skills-container-skill-name">{ skill.title }</div>

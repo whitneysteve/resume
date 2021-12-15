@@ -17,12 +17,18 @@
       margin: 20px 60px;
     }
 
-    p:last-of-type {
-      margin-bottom: 60px;
+    @media #{$phone} {
+      font-size: 0.6em;
     }
 
-    @media #{$phone}, #{$tablet} {
+    @media #{$tablet} {
       font-size: 0.9em;
+    }
+
+    p {
+      @media #{$phone} {
+        margin: 10px 20px;
+      }
     }
   }
 
@@ -33,6 +39,7 @@
     width: 75%;
 
     @media #{$phone}, #{$tablet} {
+      height: 90%;
       width: 90%;
     }
   }

@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
 /**
- * Renders devgrid measurements.
+ * Renders supported devgrid measurements on load and when the window resizes.
  */
 class Devgrid extends Component {
   componentDidMount() {
@@ -19,6 +19,9 @@ class Devgrid extends Component {
   }
 }
 
+/**
+ * Function renders all the different measurements supported by devgrid.
+ */
 function drawMeasurements() {
   updateX();
   updateY();
@@ -28,6 +31,9 @@ function drawMeasurements() {
   updateBetweens();
 }
 
+/**
+ * Update the measurement values along any horizontal borders.
+ */
 function updateX() {
   ['top', 'bottom'].forEach(position => {
     const elements = document.getElementsByClassName(`dev-grid-measurement-${position}`);
@@ -37,6 +43,9 @@ function updateX() {
   });
 }
 
+/**
+ * Update the measurement values along any vertical borders.
+ */
 function updateY() {
   ['right', 'left'].forEach(position => {
     const elements = document.getElementsByClassName(`dev-grid-measurement-${position}`);
@@ -46,6 +55,9 @@ function updateY() {
   });
 }
 
+/**
+ * Update the measurement values of margins between elements from the top-left of the element, going left.
+ */
 function updateTopLeftCornerLeftMargins() {
   const elements = document.getElementsByClassName('dev-grid-margin-top-left-corner-left');
   for (let element of elements) {
@@ -64,6 +76,9 @@ function updateTopLeftCornerLeftMargins() {
   }
 }
 
+/**
+ * Update the measurement values of margins between elements from the bottom-left of the element, going downwards.
+ */
 function updateBottomLeftCornerDownMargins() {
   const elements = document.getElementsByClassName('dev-grid-margin-bottom-left-corner-down');
   for (let element of elements) {
@@ -76,13 +91,17 @@ function updateBottomLeftCornerDownMargins() {
 
     updateElement(
       element,
-      leftCorner + (distance / 2),
+      leftCorner + (distance / 2) - 5,
       targetRect.left - parentRect.left,
       distance,
     );
   }
 }
 
+/**
+ * Update the measurement values of margins between elements from the centre of the top border of the element, going
+ * upwards.
+ */
 function updateCenterUpMargins() {
   const elements = document.getElementsByClassName('dev-grid-margin-center-up');
   for (let element of elements) {
@@ -95,12 +114,15 @@ function updateCenterUpMargins() {
     updateElement(
       element,
       distance / 2,
-      (targetRect.width / 2) - (distance / 4),
+      targetRect.left + (targetRect.width / 2) - 20,
       distance,
     );
   }
 }
 
+/**
+ * Update the measurement values of distances between elements.
+ */
 function updateBetweens() {
   const elements = document.getElementsByClassName('dev-grid-margin-between');
   for (let element of elements) {
@@ -125,6 +147,14 @@ function updateBetweens() {
   }
 }
 
+/**
+ * Update the measurement element with position and value.
+ *
+ * @param {DOMElement} element the measurement element to update.
+ * @param {Number} top the top value for the measurement element.
+ * @param {Number} left the left value of the measurement element.
+ * @param {Number} distance the distance di display on the margin.
+ */
 function updateElement(element, top, left, distance) {
   element.innerHTML = `${distance}px`;
   element.style.top = `${top}px`;
@@ -133,6 +163,13 @@ function updateElement(element, top, left, distance) {
   element.style.display = distance < 35 ? "none" : "flex";
 }
 
+/**
+ * Utility function to pull the bounding rectangles from elements we are measuring.
+ *
+ * @param {DOMElement} element the element to extract the source and target bounding rectangles between which we are
+ * measuring.
+ * @returns the extracted rectangles in an object form keyed by parentRect and targetRect.
+ */
 function getElementRectangles(element) {
   const parent = element.parentElement;
   const target = document.getElementById(element.dataset.target);
