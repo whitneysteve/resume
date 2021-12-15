@@ -47,5 +47,5 @@ describe('Header', () => {
       awaitAsync(component);
       expectHeader(component, 1);
     });
-  })
+  });
 });

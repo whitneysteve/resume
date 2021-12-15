@@ -10,7 +10,7 @@ const JobDescriptions = {
   5: 'Software engineer',
   6: 'Holding the umbrella',
   7: 'Software engineer',
-}
+};
 
 const MaxHeaders = 7;
 const LeftKey = 37;

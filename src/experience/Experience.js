@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Gradient } from '../3rdparty/Gradient'
+import { Gradient } from '../3rdparty/Gradient';
 import intercom from '../img/companies/intercom.svg';
 import stripe from '../img/companies/stripe.svg';
 import twitter from '../img/companies/twitter.svg';
@@ -11,10 +11,10 @@ import mastercard from '../img/companies/mastercard.svg';
 class Experience extends Component {
   componentDidMount() {
     // Create your instance
-    const gradient = new Gradient()
+    const gradient = new Gradient();
 
     // Call `initGradient` with the selector to your canvas
-    gradient.initGradient('#gradient-canvas-stripe')
+    gradient.initGradient('#gradient-canvas-stripe');
   }
 
   render() {
@@ -131,6 +131,6 @@ const JOBS = [
     ],
     logo: mastercard,
   },
-]
+];
 
 export default Experience;

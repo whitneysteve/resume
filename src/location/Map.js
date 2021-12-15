@@ -44,7 +44,7 @@ class Map extends Component {
           defaultZoom={this.props.zoom}>
         </GoogleMapReact>
       </div>
-    )
+    );
   }
 }
 

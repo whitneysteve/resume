@@ -31,7 +31,7 @@ ChartJS.register(
 
     this.state = {
       inView: false,
-    }
+    };
 
     this.showGraphWhenScrollIntoView = this.showGraphWhenScrollIntoView.bind(this);
   }
@@ -153,13 +153,13 @@ function createDataset(label, data) {
     label,
     pointRadius: 0,
     tension: 0.4,
-  }
+  };
 }
 
 /**
  * The first dataset in the graph. This is used as a template for generating animations and whatnot.
  */
-let firstRawData = generateExpCurve(0.009, 3.5)
+let firstRawData = generateExpCurve(0.009, 3.5);
 
 /**
  *
@@ -191,7 +191,7 @@ function buildTooltip(context) {
   if (!tooltipElement) {
     const tooltipId = "chartjs-tooltip";
     tooltipElement = document.createElement('div');
-    tooltipElement.className = tooltipId
+    tooltipElement.className = tooltipId;
     tooltipElement.id = tooltipId;
     tooltipElement.innerHTML = '<div></div>';
     document.body.appendChild(tooltipElement);
@@ -221,18 +221,18 @@ function buildTooltip(context) {
 
     bodyLines.forEach(function (body, i) {
       const elements = body[0].split(":");
-      const value = parseFloat(elements[1])
+      const value = parseFloat(elements[1]);
 
       innerHtml += `<p>${elements[0]}</p>`;
       let stars = "";
 
       let j = 0;
       while (j < value - 0.3) {
-        stars += "<i class='fas fa-star'></i>"
+        stars += "<i class='fas fa-star'></i>";
         j += 1;
       }
       while (j < 5) {
-        stars += "<i class='far fa-star'></i>"
+        stars += "<i class='far fa-star'></i>";
         j += 1;
       }
       innerHtml += `<p>${stars}</p>`;
@@ -251,7 +251,7 @@ function buildTooltip(context) {
     tooltipElement.style.right = position.right - tooltipModel.caretX + 'px';
     tooltipElement.style.left = 'unset';
   } else {
-    tooltipElement.style.right = 'unset'
+    tooltipElement.style.right = 'unset';
     tooltipElement.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
   }
 }
@@ -267,7 +267,7 @@ function buildAnimation() {
   const delayBetweenPoints = totalDuration / firstRawData.length;
   const previousY = (ctx) => {
     if (ctx.index === 0) {
-      return ctx.chart.scales.y.getPixelForValue(100)
+      return ctx.chart.scales.y.getPixelForValue(100);
     } else {
       return ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
     }
@@ -280,11 +280,11 @@ function buildAnimation() {
       from,
       onComplete,
       type: 'number',
-    }
+    };
   };
 
-  const xAnimation = axisAnimation(NaN, () => { xComplete = true; })
-  const yAnimation = axisAnimation(previousY, () => { yComplete = true; })
+  const xAnimation = axisAnimation(NaN, () => { xComplete = true; });
+  const yAnimation = axisAnimation(previousY, () => { yComplete = true; });
   xAnimation.delay = (ctx) => {
     if (ctx.type !== 'data' || ctx.xStarted) {
       return 0;
@@ -298,7 +298,7 @@ function buildAnimation() {
     }
 
     return delay;
-  }
+  };
 
   yAnimation.delay = (ctx) => {
     if (ctx.type !== 'data' || ctx.yStarted) {
@@ -313,7 +313,7 @@ function buildAnimation() {
     }
 
     return delay;
-  }
+  };
 
   return{
     x: xAnimation,

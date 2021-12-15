@@ -10,8 +10,8 @@ class Devgrid extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('load', drawMeasurements)
-    window.removeEventListener('resize', drawMeasurements)
+    window.removeEventListener('load', drawMeasurements);
+    window.removeEventListener('resize', drawMeasurements);
   }
 
   render() {
@@ -174,7 +174,7 @@ function getElementRectangles(element) {
   const parent = element.parentElement;
   const target = document.getElementById(element.dataset.target);
 
-  return { parentRect: parent.getBoundingClientRect(), targetRect: target.getBoundingClientRect() }
+  return { parentRect: parent.getBoundingClientRect(), targetRect: target.getBoundingClientRect() };
 }
 
 Devgrid.propTypes = {};

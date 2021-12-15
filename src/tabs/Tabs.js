@@ -11,7 +11,7 @@ class Tabs extends Component {
 
       this.state = {
           selected: 0,
-      }
+      };
 
       this.select = this.select.bind(this);
     }

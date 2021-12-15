@@ -59,7 +59,7 @@ const genSkillEraTab = (era) => {
  * @param {Object} skill the skill to render.
  */
 const genSkillRow = (skill) => {
-  const safeTitle = skill.title.replace(/[\W_]+/g," ")
+  const safeTitle = skill.title.replace(/[\W_]+/g," ");
   const containerId = `skill-${safeTitle}-logo-container`;
   const logoImgId = `skill-${safeTitle}-logo-img`;
   const starsId = `skill-${safeTitle}-stars`;
@@ -94,13 +94,13 @@ const genStars = (numFilledStars) => {
       {genStar(numFilledStars > 1, 2)}
       {genStar(numFilledStars > 2, 3)}
     </div>
-  )
+  );
   const lastTwo = (
     <div className="avoid-wrap">
       {genStar(numFilledStars > 3, 4)}
       {genStar(numFilledStars > 4, 5)}
     </div>
-  )
+  );
   return (
     <div className="stars">
       {firstThree}
@@ -123,12 +123,12 @@ const genStar = (filled, key) => {
     role="presentation"></i>;
 };
 
-const JS = {title: "Javascript & CSS", logo: js}
-const RUBY = {title: "Ruby", logo: ruby}
-const SCALA = {title: "Scala", logo: scala}
-const GOLANG = {title: "Golang", logo: golang}
-const PYTHON = {title: "Python", logo: python}
-const JAVA = {title: "Java", logo: java}
+const JS = {title: "Javascript & CSS", logo: js};
+const RUBY = {title: "Ruby", logo: ruby};
+const SCALA = {title: "Scala", logo: scala};
+const GOLANG = {title: "Golang", logo: golang};
+const PYTHON = {title: "Python", logo: python};
+const JAVA = {title: "Java", logo: java};
 
 const SKILLS = [
   {

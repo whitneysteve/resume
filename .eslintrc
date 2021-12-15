@@ -26,6 +26,7 @@
     "no-empty": ["error", { "allowEmptyCatch": true }],
     "no-multiple-empty-lines": ["error", {"max": 1}],
     "no-trailing-spaces": "error",
-    "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }]
+    "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }],
+    "semi": ["error", "always"]
   }
 }
