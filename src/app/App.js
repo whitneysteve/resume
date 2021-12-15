@@ -21,6 +21,7 @@ class App extends Component {
         <Skills />
         <Learning />
         <Experience />
+        <Education />
       </div>
     );
   }

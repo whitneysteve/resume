@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import dcu from '../img/education/dcu.svg';
+import ucd from '../img/education/ucd.svg';
 
 /**
  * Education renders my college degrees.
@@ -48,14 +50,14 @@ const EDUCATION = [
   {
     course: "B.Sc, Computer Applications",
     grade: "1st Class Honours",
-    logo: "img/dcu.svg",
+    logo: dcu,
     school: "Dublin City University",
     year: "2005",
   },
   {
     course: "M.Bs, Information Systems",
     grade: "1st Class Honours",
-    logo: "img/ucd.svg",
+    logo: ucd,
     school: "Smurfit Graduate Business School",
     year: "2007",
   },
