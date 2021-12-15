@@ -31,7 +31,7 @@ class Tabs extends Component {
     renderTabs() {
       return React.Children.map(this.props.children, (child, index) => {
         return React.cloneElement(child, {
-          select : this.select,
+          select: this.select,
           index: index,
           selected: index === this.state.selected,
         });

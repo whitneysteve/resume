@@ -28,7 +28,7 @@ global.localStorage = {
   },
   clear: () => {
     global.localStore = {};
-  }
+  },
 };
 
 global.sessionStorage = {
@@ -40,20 +40,20 @@ global.sessionStorage = {
   },
   clear: () => {
     global.sessionStore = {};
-  }
+  },
 };
 
 global.window = {
   Element: {
     prototype: {
-      matches: {}
-    }
-  }
+      matches: {},
+    },
+  },
 };
 
 Object.defineProperty(window, 'location', {
   value: {
-    href: '/'
+    href: '/',
   },
   writable: true,
 });
@@ -61,7 +61,7 @@ Object.defineProperty(window, 'location', {
 global.document = {
   createElement: _ => {
     return {};
-  }
+  },
 };
 
 jest.useFakeTimers();
