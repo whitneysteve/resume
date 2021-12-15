@@ -2,7 +2,6 @@
   "extends": "react-app",
   "globals": {
     "awaitAsync": false,
-    "clearSessionStorage": false,
     "expect": false,
     "flushPromises": false,
     "it": false

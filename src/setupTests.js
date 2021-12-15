@@ -15,55 +15,6 @@ global.awaitAsync = async (component) => {
   await global.flushPromises();
 };
 
-// Mock storage
-global.localStore = {};
-global.sessionStore = {};
-
-global.localStorage = {
-  getItem: key => {
-    return global.localStore[key];
-  },
-  setItem: (key, value) => {
-    return (global.localStore[key] = value);
-  },
-  clear: () => {
-    global.localStore = {};
-  },
-};
-
-global.sessionStorage = {
-  getItem: key => {
-    return global.sessionStore[key];
-  },
-  setItem: (key, value) => {
-    return (global.sessionStore[key] = value);
-  },
-  clear: () => {
-    global.sessionStore = {};
-  },
-};
-
-global.window = {
-  Element: {
-    prototype: {
-      matches: {},
-    },
-  },
-};
-
-Object.defineProperty(window, 'location', {
-  value: {
-    href: '/',
-  },
-  writable: true,
-});
-
-global.document = {
-  createElement: _ => {
-    return {};
-  },
-};
-
 jest.useFakeTimers();
 
 // Mock event listeners. Rather crudely, this will only work for one listener

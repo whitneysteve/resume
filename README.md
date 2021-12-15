@@ -46,3 +46,8 @@ Run Tests
 ^^^^^^^^^
 
 `./test`
+
+Credits
+-------
+
+Stripe Gradient is generated using tools from [@jordiener](https://whatamesh.vercel.app), [Stripe](https://stripe.com/ie) and [kevinhufnagl](https://kevinhufnagl.com)
