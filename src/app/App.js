@@ -20,6 +20,7 @@ class App extends Component {
         <Location />
         <Skills />
         <Learning />
+        <Experience />
       </div>
     );
   }
@@ -27,7 +28,6 @@ class App extends Component {
   todo() {
     return (
       <div className="App">
-        <Experience />
         <Education />
         <Contact />
       </div>

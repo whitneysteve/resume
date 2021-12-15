@@ -1,94 +1,30 @@
 import React, { Component } from 'react';
+import { Gradient } from '../3rdparty/Gradient'
+import intercom from '../img/companies/intercom.svg';
+import stripe from '../img/companies/stripe.svg';
+import twitter from '../img/companies/twitter.svg';
+import mastercard from '../img/companies/mastercard.svg';
 
 /**
  * Experience renders my previous jobs.
  */
 class Experience extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      selected: CURRENT,
-    }
-
-    this.handleScroll = this.handleScroll.bind(this);
-    this.highlightJob = this.highlightJob.bind(this);
-  }
-
-  /**
-   * Find the element closest to the specified position.
-   *
-   * @param {Array} elements
-   * @param {Number} position
-   */
-  closestElement(elements, position) {
-    let minDiff = 999999;
-    let closest;
-
-    elements.forEach(element => {
-      const diff = Math.abs(position - element.offsetTop);
-      if (diff < minDiff) {
-        minDiff = diff;
-        closest = element;
-      }
-    });
-
-    return closest;
-  }
-
-  /**
-   * Handle a scroll event in the case the highlighted job needs to be changed.
-   *
-   * @param {Object} e the scroll event that caused this invocation.
-   */
-  handleScroll(e) {
-    const documentElement = document.scrollingElement || document.documentElement;
-    const currentTopPosition = documentElement.scrollTop;
-
-    // Find the element closest to the top of the screen.
-    const nearsetJob = this.closestElement(
-      Array.from(document.querySelectorAll('.experience-job')),
-      currentTopPosition,
-    );
-
-    if (nearsetJob && nearsetJob.id && nearsetJob.id !== this.state.selected) {
-      this.setState({ selected: nearsetJob.id });
-    }
-  }
-
-  /**
-   * Highlight a job to give it prominence over the others.
-   *
-   * @param {String} jobId the ID of the job that should currently be highlighted.
-   */
-  highlightJob(jobId) {
-    this.setState({ selected: jobId });
-  }
-
-  /**
-   * Latch onto scroll events so we can update the job background.
-   */
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
+    // Create your instance
+    const gradient = new Gradient()
 
-  /**
-   * Remove the listener to scroll events created when component was mounted.
-   */
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    // Call `initGradient` with the selector to your canvas
+    gradient.initGradient('#gradient-canvas-stripe')
   }
 
   render() {
+
     return (
-      <div className={`Section ${this.state.selected} experience`} id="experience">
-        <h1>Experience</h1>
-        <div>
-          { JOBS.map(genJob) }
-          <div className="experience-footer">
-            This just a selection. Please get in touch for a full C.V.
-          </div>
-        </div>
+      <div className={`Section experience dev-grid`} id="experience">
+        { JOBS.map(genJob) }
+        {/* <div className="experience-footer">
+          This just a selection. Please get in touch for a full C.V.
+        </div> */}
       </div>
     );
   }
@@ -101,17 +37,23 @@ class Experience extends Component {
    * @param {Object} job the job configuration.
    */
   const genJob = (job) => {
+    const jobId = job.company.toLowerCase();
     return (
-      <div className="experience-job" id={ job.id } key={ job.company }>
-        <div className="experience-job-company">
-          <h3>{ job.company } <img alt={ `${ job.company } logo` } src={ job.logo } /> </h3>
+      <div className="dev-grid-cell experience-job" id={ job.id } key={ jobId }>
+        <div className={`experience-job-company-container experience-job-${jobId}`}>
+          <img alt={ `${ job.company } logo` } src={ job.logo } />
+          <canvas id={`gradient-canvas-${jobId}`} data-transition-in>
+          </canvas>
+        </div>
+        {/* <div className="experience-job-company">
+          <h3>{ job.company }  </h3>
 
         </div>
         <h4>
           { job.position }
         </h4>
         { job.blurbs.map(genBlurb) }
-        { job.terms.map(genTerm) }
+        { job.terms.map(genTerm) } */}
       </div>
     );
   };
@@ -147,7 +89,7 @@ const JOBS = [
     blurbs: [
       "I recently joined Intercom to work on their Growth teams.",
     ],
-    logo: "img/stripe_background.svg",
+    logo: intercom,
   },
   {
     id: "stripe",
@@ -160,7 +102,7 @@ const JOBS = [
       "Working as a full-stack engineer on Stripe's Security Products, building great products to keep our users safe.",
       "At Stripe I've been fortunate enough to work between writing distributed services and message consumers in Ruby and Java and building, great user experiences in React.",
     ],
-    logo: "img/stripe_background.svg",
+    logo: stripe,
   },
   {
     id: "twitter",
@@ -174,7 +116,7 @@ const JOBS = [
       "Mostly backend engineering on low and high throughput applications, from Ruby to Scala, from monoliths to micro services, and Hadoop.",
       "Built web-apps in React when I could.",
     ],
-    logo: "img/twitter_background.svg",
+    logo: twitter,
   },
   {
     id: "mastercard",
@@ -187,7 +129,7 @@ const JOBS = [
       "Researching emerging technologies and trends to create prototypes and other innovations for MasterCard’s next and future generation of products.",
       "Had to pleasure of launching several new, multi-platform services to prototype, pilot, beta and full production.",
     ],
-    logo: "img/mastercard_background.svg",
+    logo: mastercard,
   },
 ]
 
