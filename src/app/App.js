@@ -19,8 +19,8 @@ class App extends Component {
         <Header />
         <Location />
         <Experience />
-        <Skills />
         <Learning />
+        <Skills />
         <Education />
         {/* <Contact /> */}
       </div>

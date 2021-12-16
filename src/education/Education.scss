@@ -2,6 +2,10 @@
   margin: 20px;
   text-align: center;
 
+  @media #{$phone} {
+    margin-top: 80px;
+  }
+
   .education-container {
     display: flex;
     justify-content: space-evenly;
