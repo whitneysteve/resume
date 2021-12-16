@@ -111,12 +111,12 @@ const genStar = (filled, key) => {
     role="presentation"></i>;
 };
 
-const JS = {title: "Javascript & CSS", logo: js};
-const RUBY = {title: "Ruby", logo: ruby};
-const SCALA = {title: "Scala", logo: scala};
-const GOLANG = {title: "Golang", logo: golang};
-const PYTHON = {title: "Python", logo: python};
-const JAVA = {title: "Java", logo: java};
+const JS = { title: "Javascript & CSS", logo: js };
+const RUBY = { title: "Ruby", logo: ruby };
+const SCALA = { title: "Scala", logo: scala };
+const GOLANG = { title: "Golang", logo: golang };
+const PYTHON = { title: "Python", logo: python };
+const JAVA = { title: "Java", logo: java };
 
 const SKILLS = [
   {

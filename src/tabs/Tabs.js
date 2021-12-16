@@ -22,7 +22,7 @@ class Tabs extends Component {
      * @param {Number} newSelection the index of the new selection.
      */
   select(newSelection) {
-    this.setState( { selected: newSelection } );
+    this.setState({ selected: newSelection });
   }
 
   /**

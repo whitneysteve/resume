@@ -30,7 +30,7 @@ class Map extends Component {
 
   handleScroll(event) {
     if (window.scrollY > 50) {
-      this.setState({expand: true});
+      this.setState({ expand: true });
       this.removeScrollListener();
     }
   };

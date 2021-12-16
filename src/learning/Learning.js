@@ -55,7 +55,7 @@ class Learning extends Component {
 
     if (isGraphScrolledIntoView('learning-canvas')) {
       if (this.state.inView) { return; }
-      this.setState({inView: true});
+      this.setState({ inView: true });
       window.removeEventListener('scroll', this.showGraphWhenScrollIntoView);
       renderGraph();
     }

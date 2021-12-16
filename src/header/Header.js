@@ -24,7 +24,7 @@ class Header extends Component {
     start: Math.floor(Math.random() * 8),
   };
 
-  state = {jobIndex: this.props.start};
+  state = { jobIndex: this.props.start };
 
   handleKeyDown = (event) => {
     let jobIndex = this.state.jobIndex;
@@ -42,7 +42,7 @@ class Header extends Component {
       }
     }
     if (jobIndex !== this.state.jobIndex){
-      this.setState({jobIndex});
+      this.setState({ jobIndex });
     }
   }
 
@@ -55,7 +55,7 @@ class Header extends Component {
   }
 
   render() {
-    const {jobIndex} = this.state;
+    const { jobIndex } = this.state;
     return (
       <div className={`Section `} id="header">
         <div className={`dev-grid header-container header-${jobIndex}`}>
