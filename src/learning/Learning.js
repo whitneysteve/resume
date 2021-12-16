@@ -37,7 +37,11 @@ ChartJS.register(
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.showGraphWhenScrollIntoView);
+    if (isGraphScrolledIntoView('learning-canvas')) {
+      renderGraph();
+    } else {
+      window.addEventListener('scroll', this.showGraphWhenScrollIntoView);
+    }
   }
 
   componentWillUnmount() {
@@ -73,6 +77,9 @@ ChartJS.register(
             <p>
               I learn more and faster with focus, frequency and teamwork.
             </p>
+            <p>
+              I like to help others learn too <i aria-label="Heart" className={"fas fa-heart"} role="presentation"></i>
+            </p>
           </div>
         </div>
       </div>
@@ -106,9 +113,10 @@ function renderGraph() {
  * @returns
  */
  function isGraphScrolledIntoView(canvasId) {
-  let rect = document.getElementById(canvasId).getBoundingClientRect();
+  let rect = document?.getElementById(canvasId)?.getBoundingClientRect();
 
   return (
+    rect &&
     rect.top >= 0 &&
     rect.left >= 0 &&
     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
