@@ -23,7 +23,7 @@
           "afterColon": true
       }
     }],
-    "no-console": "error",
+
     "no-empty": ["error", { "allowEmptyCatch": true }],
     "no-multiple-empty-lines": ["error", {"max": 1}],
     "no-trailing-spaces": "error",

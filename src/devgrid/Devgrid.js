@@ -22,7 +22,7 @@ class Devgrid extends Component {
 /**
  * Function renders all the different measurements supported by devgrid.
  */
-function drawMeasurements() {
+export function drawMeasurements() {
   updateX();
   updateY();
   updateBottomLeftCornerDownMargins();
@@ -105,6 +105,7 @@ function updateBottomLeftCornerDownMargins() {
 function updateCenterUpMargins() {
   const elements = document.getElementsByClassName('dev-grid-margin-center-up');
   for (let element of elements) {
+    console.log(element);
     const { parentRect, targetRect } = getElementRectangles(element);
 
     const firstY = targetRect.top;

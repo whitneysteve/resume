@@ -6,28 +6,30 @@ import React, { Component } from 'react';
  * user's selection.
  */
 class Tabs extends Component {
-  constructor(props, context) {
-    super(props, context);
-
-    this.state = {
-      selected: 0,
-    };
+  constructor(props) {
+    super(props);
 
     this.select = this.select.bind(this);
   }
 
+  static defaultProps = {
+    selected: 0,
+  };
+
+  state = { selected: this.props.selected };
+
   /**
-     * Select a new tab.
-     *
-     * @param {Number} newSelection the index of the new selection.
-     */
-  select(newSelection) {
-    this.setState({ selected: newSelection });
+   * Select a new tab.
+   *
+   * @param {Number} selected the index of the new selection.
+   */
+  select(selected) {
+    this.setState({ selected });
   }
 
   /**
-     * Render the tabs for user selection.
-     */
+   * Render the tabs for user selection.
+   */
   renderTabs() {
     return React.Children.map(this.props.children, (child, index) => {
       return React.cloneElement(child, {
@@ -39,8 +41,8 @@ class Tabs extends Component {
   }
 
   /**
-     * Render the content of the selected tab.
-     */
+   * Render the content of the selected tab.
+   */
   renderContent() {
     const children = this.props.children;
     const selected = this.state.selected;
