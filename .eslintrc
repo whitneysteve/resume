@@ -12,6 +12,7 @@
       "always-multiline"
     ],
     "handle-callback-err": "off",
+    "indent": ["error", 2],
     "key-spacing": [2, {
       "singleLine": {
           "beforeColon": false,

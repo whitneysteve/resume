@@ -21,12 +21,7 @@ $large-stars: generate-items(50, $animation-palette);
     height: 100% !important;
 
     @media #{$phone} {
-      height: 200px;
       padding-bottom: 70px;
-    }
-
-    @media #{$tablet} {
-      height: 250px;
     }
 
     .floaty-1 {

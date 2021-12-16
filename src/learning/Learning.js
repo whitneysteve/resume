@@ -25,7 +25,7 @@ ChartJS.register(
 /**
  * Learning renders the blurb about how I pick up new skills.
  */
- class Learning extends Component {
+class Learning extends Component {
   constructor(props, context) {
     super(props);
 
@@ -112,7 +112,7 @@ function renderGraph() {
  * @param {String} canvasId the ID of the canvas element the graph is rendered in.
  * @returns
  */
- function isGraphScrolledIntoView(canvasId) {
+function isGraphScrolledIntoView(canvasId) {
   let rect = document?.getElementById(canvasId)?.getBoundingClientRect();
 
   return (
