@@ -8,37 +8,33 @@ import ucd from '../img/education/ucd.svg';
 class Education extends Component {
   render() {
     return (
-      <div className="Section" id="education">
-        { renderEducation() }
+      <div className="Section education dev-grid-half" id="education">
+        { EDUCATION.map(renderQualication) }
       </div>
     );
   }
 }
 
-const renderEducation = () => {
-  return (
-    <div className="education-container">
-      { EDUCATION.map(renderQualication) }
-    </div>
-  );
-};
-
 const renderQualication = (qualification) => {
+  const jobId = qualification.school.toLowerCase();
+  const logoContainerId = `experience-job-${jobId}`;
   return (
-    <div className="education-container-qualification" key={ qualification.course }>
-      <div className="education-container-qualification-logo">
+    <div className="education-qualification-container dev-grid-cell" key={ qualification.course }>
+      <div className="dev-grid-measurement-right" />
+      {/* <div className="dev-grid-margin-top-left-corner-left" data-target={logoContainerId}></div> */}
+      <div className="education-qualification-container-logo" id={logoContainerId}>
         <img alt={`${qualification.school} Logo`} src={ qualification.logo } />
       </div>
-      <div className="education-container-qualification-school">
+      <div>
         { qualification.school }
       </div>
-      <div className="education-container-qualification-course">
+      <div>
         { qualification.course }
       </div>
-      <div className="education-container-qualification-result">
+      <div>
         { qualification.grade }
       </div>
-      <div className="education-container-qualification-year">
+      <div>
         { qualification.year }
       </div>
     </div>

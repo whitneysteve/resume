@@ -1,47 +1,22 @@
-#education {
-  margin: 20px;
-  text-align: center;
-
-  @media #{$phone} {
+.education {
+  @media #{$phone}, #{$tablet} {
     margin-top: 80px;
   }
 
-  .education-container {
-    display: flex;
-    justify-content: space-evenly;
+  .education-qualification-container {
+    flex-direction: column;
 
-    @media #{$phone} {
-      flex-wrap: wrap;
-    }
+    .education-qualification-container-logo {
+      img {
+        height: 300px;
+        max-width: 90%;
+        min-height: 100px;
 
-    div {
-      margin: 5px;
-    }
+        padding: 10px 10px 40px 10px;
 
-    .education-container-qualification {
-      @include slight-shadow;
-      margin: 10px;
-      max-width: 500px;
-      padding: $further-at-bottom;
-      width: 45%;
-
-      @media #{$phone} {
-        width: 95%;
-      }
-
-      .education-container-qualification-logo {
-        img {
-          max-height: 300px;
-          max-width:90%;
-          padding: $further-at-bottom;
-
-          @media #{$phone}, #{$tablet} {
-            max-height:100%;
-          }
-
-          @media #{$tablet} {
-            height: 200px;
-          }
+        @media #{$phone}, #{$tablet} {
+          max-height: 250px;
+          padding: 10px;
         }
       }
     }
