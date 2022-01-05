@@ -9,13 +9,13 @@ class Education extends Component {
   render() {
     return (
       <div className="Section education dev-grid-half" id="education">
-        { EDUCATION.map(renderQualication) }
+        { EDUCATION.map(renderQualification) }
       </div>
     );
   }
 }
 
-const renderQualication = (qualification) => {
+const renderQualification = (qualification) => {
   const jobId = qualification.school.toLowerCase();
   const logoContainerId = `experience-job-${jobId}`;
   return (
@@ -25,17 +25,16 @@ const renderQualication = (qualification) => {
       <div className="education-qualification-container-logo" id={logoContainerId}>
         <img alt={`${qualification.school} Logo`} src={ qualification.logo } />
       </div>
-      <div>
-        { qualification.school }
-      </div>
-      <div>
-        { qualification.course }
-      </div>
-      <div>
-        { qualification.grade }
-      </div>
-      <div>
-        { qualification.year }
+      <div className="education-qualification-container-text" id={logoContainerId}>
+        <div>
+          { qualification.school }
+        </div>
+        <div>
+          { qualification.course }
+        </div>
+        <div>
+          { qualification.grade }, { qualification.year }
+        </div>
       </div>
     </div>
   );

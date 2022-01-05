@@ -1,29 +1,30 @@
 import React, { Component } from 'react';
+import github from '../img/contact/github.svg';
+import gmail from '../img/contact/gmail.svg';
+import linkedin from '../img/contact/linkedin.svg';
+import skype from '../img/contact/skype.svg';
+import twitter from '../img/contact/twitter.svg';
 
 /**
- * Education renders my contact details.
+ * Contact renders my contact details.
  */
 class Contact extends Component {
   render() {
     return (
-      <div className="Section" id="contact">
-        <div className="contact-container">
-          <div className="contact-container-text">
+      <div className="Section contact" id="contact">
+        <div className="dev-grid">
+          <div className="contact-container-icons dev-grid-cell-three-quarters-height">
+            <div className="dev-grid-margin-top-left-corner-left" data-target="contact-icon-gmail" />
+            { CONTACTS.map(genContact) }
+          </div>
+          <div className="contact-container-text dev-grid-cell-one-quarter-height">
+            <div className="dev-grid-measurement-top" />
             <p>
-              I like it, online, and I’ve worked with remote teams most of my career.
-            </p>
-            <p>
-              But I have a fairly minimal online presence.
+              I like it, online, and I’ve worked with remote teams most of my career. But I have a fairly minimal online presence.
             </p>
             <p>
               I’d like to think I’m moving towards quality, not quantity.
             </p>
-            <p>
-              It’s a process.
-            </p>
-          </div>
-          <div className="contact-container-icons">
-            { CONTACTS.map(genContact) }
           </div>
         </div>
       </div>
@@ -32,38 +33,41 @@ class Contact extends Component {
 }
 
 const genContact = (contact) => {
+  const service = contact.service.toLowerCase();
   return (
-    <a href={contact.link} key={contact.service} target={contact.sameWindow ? "_self" : "_blank"} rel="noreferrer">
-      <img alt={`${contact.service} Logo`} src={contact.logo} />
-    </a>
+    <div className="contact-container-icon">
+      <a href={contact.link} key={contact.service} target={contact.sameWindow ? "_self" : "_blank"} rel="noreferrer">
+        <img alt={`${contact.service} Logo`} src={contact.logo} id={`contact-icon-${service}`} />
+      </a>
+    </div>
   );
 };
 
 const CONTACTS = [
   {
     link: "mailto: steve.whitney.cv@gmail.com",
-    logo: "img/gmail.svg",
+    logo: gmail,
     sameWindow: "true",
     service: "Gmail",
   },
   {
     link: "https://join.skype.com/eyeCmLRyJisN",
-    logo: "img/skype.svg",
+    logo: skype,
     service: "Skype",
   },
   {
     link: "https://www.linkedin.com/in/whitneysteve/",
-    logo: "img/linkedin.svg",
+    logo: linkedin,
     service: "LinkedIn",
   },
   {
     link: "http://github.com/whitneysteve",
-    logo: "img/github.svg",
+    logo: github,
     service: "Github",
   },
   {
     link: "https://twitter.com/whitneysteve",
-    logo: "img/twitter.svg",
+    logo: twitter,
     service: "Twitter",
   },
 ];

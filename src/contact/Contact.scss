@@ -1,56 +1,30 @@
-#contact {
-  display: flex;
-  justify-content: center;
-
-  .contact-container {
-    display: flex;
+.contact {
+  .contact-container-text {
     flex-direction: column;
-    justify-content: space-evenly;
-    width: 80%;
 
-    @media #{$phone} {
-      flex-direction: column;
+    @media #{$phone}, #{tablet} {
+      font-size: 0.8em;
     }
+  }
 
-    .contact-container-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-right: 100px;
+  .contact-container-icons {
+    flex-wrap: wrap;
 
-      @media #{$phone} {
-        margin-right: 0;
-      }
+    .contact-container-icon {
+      min-width: 33%;
 
-      p {
-        font-size: 1.4em;
-        margin-left: 0;
-        text-align: left;
-
-        @media #{$phone} {
-          text-align: center;
-        }
-      }
-    }
-
-    .contact-container-icons {
-      align-items: center;
-      display: inline-flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin-right: 15px;
-
-      @media #{$phone} {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+      @media #{$phone}, #{tablet} {
+        min-width: 50%;
       }
 
       img {
-        width: 75px;
+        height: 150px;
+        max-width: 90%;
+        min-height: 100px;
 
-        @media #{$phone} {
-          margin: 10px;
+        @media #{$phone}, #{tablet} {
+          height: 100px;
+          max-width: 75%;
         }
       }
     }

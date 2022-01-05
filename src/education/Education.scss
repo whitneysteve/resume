@@ -7,18 +7,15 @@
     flex-direction: column;
 
     .education-qualification-container-logo {
+      height: 70%;
+
       img {
-        height: 300px;
-        max-width: 90%;
-        min-height: 100px;
-
-        padding: 10px 10px 40px 10px;
-
-        @media #{$phone}, #{$tablet} {
-          max-height: 250px;
-          padding: 10px;
-        }
+        height: 90%;
       }
+    }
+
+    .education-qualification-container-text {
+      height: 30%;
     }
   }
 }
