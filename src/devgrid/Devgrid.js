@@ -105,7 +105,6 @@ function updateBottomLeftCornerDownMargins() {
 function updateCenterUpMargins() {
   const elements = document.getElementsByClassName('dev-grid-margin-center-up');
   for (let element of elements) {
-    console.log(element);
     const { parentRect, targetRect } = getElementRectangles(element);
 
     const firstY = targetRect.top;
