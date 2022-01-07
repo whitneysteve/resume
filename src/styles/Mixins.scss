@@ -11,12 +11,34 @@
   color: $dark-grey;
 }
 
+@mixin horizontal-text {
+  margin: 20px 60px;
+
+  @media #{$phone} {
+    font-size: 0.6em;
+    margin: 10px 20px;
+  }
+
+  @media #{$tablet} {
+    font-size: 0.9em;
+  }
+
+  @media #{$letterbox} {
+    font-size: 0.7em;
+    margin: 10px;
+  }
+
+  @media #{$small-letterbox} {
+    font-size: 0.5em;
+    margin: 5px;
+  }
+}
+
 @mixin parallax {
   min-height: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
 
-  // @include browser(Android,iPhone,iPad) {
   @media #{$phone}, #{$tablet} {
     background-attachment: scroll
   }
@@ -27,13 +49,6 @@
   -webkit-box-shadow: 0px 6px 13px 0px rgba(219,219,219,1);
   -moz-box-shadow: 0px 6px 13px 0px rgba(219,219,219,1);
   box-shadow: 0px 6px 13px 0px rgba(219,219,219,1);
-}
-
-@mixin slight-dark-shadow {
-  // Generated
-  -webkit-box-shadow: 0px 1px 1px 0px #444;
-  -moz-box-shadow: 0px 1px 1px 0px #444;
-  box-shadow: 0px 1px 1px 0px #444;
 }
 
 @mixin slight-inset-shadow {

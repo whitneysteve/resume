@@ -2,8 +2,8 @@
   .contact-container-text {
     flex-direction: column;
 
-    @media #{$phone}, #{tablet} {
-      font-size: 0.8em;
+    p {
+      @include horizontal-text();
     }
   }
 
@@ -17,6 +17,10 @@
         min-width: 50%;
       }
 
+      @media #{$letterbox} {
+        min-width: 20%;
+      }
+
       img {
         height: 150px;
         max-width: 90%;
@@ -24,6 +28,11 @@
 
         @media #{$phone}, #{tablet} {
           height: 100px;
+          max-width: 75%;
+        }
+
+        @media #{$letterbox} {
+          height: 50px;
           max-width: 75%;
         }
       }

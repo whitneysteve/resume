@@ -9,13 +9,26 @@
     .education-qualification-container-logo {
       height: 70%;
 
+      @media #{$letterbox} {
+        height: 100%;
+      }
+
       img {
         height: 90%;
+
+        @media #{$letterbox} {
+          height: 100%;
+        }
       }
     }
 
     .education-qualification-container-text {
       height: 30%;
+
+      @media #{$letterbox} {
+        background-color: red;
+        display: none;
+      }
     }
   }
 }

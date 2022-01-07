@@ -72,10 +72,7 @@ class Learning extends Component {
           <div className="dev-grid-cell-one-quarter-height learning-text-container">
             <div className="dev-grid-measurement-bottom" />
             <p>
-              I can usually pick things up very quickly.
-            </p>
-            <p>
-              I learn more and faster with focus, frequency and teamwork.
+              I can usually pick things up very quickly, faster with focus, frequency and teamwork.
             </p>
             <p>
               I like to help others learn too <i aria-label="Heart" className={"fas fa-heart"} role="presentation"></i>

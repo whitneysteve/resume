@@ -31,21 +31,8 @@
   }
 
   .learning-text-container {
-    font-size: 1.1em;
-    text-align: center;
-
-    @media #{$phone} {
-      font-size: 0.8em;
-    }
-
-    @media #{$tablet} {
-      font-size: 0.9em;
-    }
-
     p {
-      @media #{$phone} {
-        margin: 10px 20px;
-      }
+      @include horizontal-text();
     }
   }
 

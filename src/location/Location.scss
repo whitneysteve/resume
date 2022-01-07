@@ -14,21 +14,7 @@
     flex-direction: column;
 
     p {
-      margin: 20px 60px;
-    }
-
-    @media #{$phone} {
-      font-size: 0.6em;
-    }
-
-    @media #{$tablet} {
-      font-size: 0.9em;
-    }
-
-    p {
-      @media #{$phone} {
-        margin: 10px 20px;
-      }
+      @include horizontal-text();
     }
   }
 
