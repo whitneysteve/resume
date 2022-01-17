@@ -11,11 +11,10 @@ import PropTypes from 'prop-types';
  */
 class Experience extends Component {
   static defaultProps = {
-    expanded: false,
     selectedJob: null,
   };
 
-  state = { expanded: this.props.expanded, selectedJob: this.props.selectedJob };
+  state = { selectedJob: this.props.selectedJob };
 
   componentDidMount() {
     // Stripe gradient provided by https://whatamesh.vercel.app
@@ -116,7 +115,6 @@ export const JOBS = [
 ];
 
 Experience.propTypes = {
-  expanded: PropTypes.bool,
   selectedJob: PropTypes.object,
 };
 

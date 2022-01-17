@@ -9,5 +9,4 @@ it('renders without crashing', () => {
       <Tab title="Tab 2">Content 2</Tab>
     </Tabs>,
   );
-  // expect(true).toBe(false)
 });
