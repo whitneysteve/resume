@@ -104,7 +104,7 @@ export const JOBS = [
   },
   {
     id: "mastercard",
-    company: "MC Labs",
+    company: "MasterCard Labs",
     position: "Consultant Software Engineer",
     term: "2012 - 2013",
     blurbs: [
