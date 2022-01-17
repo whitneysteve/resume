@@ -2,6 +2,7 @@
   .experience-job-company-container {
     align-items: center;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     position: relative;
 
@@ -16,11 +17,49 @@
     overflow: hidden;
 
     transition: transform 0.25s ease-out, box-shadow 0.25s ease-in;
+
+    @media #{$tablet} {
+      flex-direction: column;
+    }
+
+    .experience-job-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      height: 45%;
+      width: 0;
+
+      font-size: 1.2em;
+      overflow: hidden;
+      white-space: nowrap;
+
+      z-index: 1;
+
+      transition: width 0.15s ease-out, height 0.15s ease-out;
+
+      @media #{$tablet} {
+        height: 0;
+        width: 40%;
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .experience-job-company-container.selected {
+    .experience-job-description {
+      width: 40%;
+      transform: rotate(0);
+
+      @media #{$tablet} {
+        height: 40%;
+      }
+    }
   }
 
   .experience-job-company-container:hover {
     box-shadow: 0px 0px 22px 6px #e4e4e4;
-    transform: rotate(10deg);
+    transform: rotate(2deg);
   }
 
   .experience-job-company-container.experience-job-intercom {
@@ -29,14 +68,17 @@
 
   .experience-job-company-container.experience-job-stripe {
     background-color: #a95eff;
+    color: $white;
   }
 
   .experience-job-company-container.experience-job-twitter {
     background: rgba(29,161,242,1);
+    color: $white;
   }
 
   .experience-job-company-container.experience-job-mastercard {
     background: linear-gradient(180deg, #FCE38A 0%, #F38181 100%);
+    color: $white;
   }
 
   canvas {
