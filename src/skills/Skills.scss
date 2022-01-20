@@ -21,7 +21,7 @@ $large-stars: generate-items(50, $animation-palette);
     height: 100% !important;
 
     @media #{$phone} {
-      padding-bottom: 70px;
+      padding-bottom: 10px;
     }
 
     .floaty-1 {
@@ -52,10 +52,6 @@ $large-stars: generate-items(50, $animation-palette);
     width: 100%;
 
     .tabs-navigation {
-      @media #{$phone} {
-        margin-bottom: -50px;
-      }
-
       button {
         font-size: 1.2em;
       }
@@ -103,6 +99,12 @@ $large-stars: generate-items(50, $animation-palette);
 
           .skills-container-skill-rating {
             width: 60%;
+          }
+        }
+
+        .skills-container-skill:last-of-type {
+          @media #{$phone} {
+            margin-bottom: 50px;
           }
         }
       }
