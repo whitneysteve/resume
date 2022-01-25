@@ -14,6 +14,7 @@ class Tabs extends Component {
 
   static defaultProps = {
     selected: 0,
+    onSelect: null,
   };
 
   state = { selected: this.props.selected };
@@ -25,6 +26,9 @@ class Tabs extends Component {
    */
   select(selected) {
     this.setState({ selected });
+    if (this.props.onSelect) {
+      this.props.onSelect(selected);
+    }
   }
 
   /**
@@ -98,6 +102,7 @@ Tab.propTypes = {
   select: PropTypes.func,
   selected: PropTypes.bool,
   title: PropTypes.string,
+  onSelect: PropTypes.func,
 };
 
 export { Tabs, Tab };
