@@ -9,14 +9,14 @@
     height: 85%;
     width: 85%;
 
+    transition: box-shadow 0.25s ease-in;
+
     background-color: turquoise;
     border-radius: 25px;
     -webkit-box-shadow: 0px 0px 22px 6px #f4f4f4;
     box-shadow: 0px 0px 22px 6px #f4f4f4;
     cursor: pointer;
     overflow: hidden;
-
-    transition: transform 0.25s ease-out, box-shadow 0.25s ease-in;
 
     @media #{$tablet} {
       flex-direction: column;
@@ -47,10 +47,13 @@
     }
   }
 
+  .experience-job-company-container.transition {
+    transition: transform 0.25s linear;
+  }
+
   .experience-job-company-container.selected {
     .experience-job-description {
       width: 40%;
-      transform: rotate(0);
 
       @media #{$tablet} {
         height: 40%;
@@ -59,8 +62,11 @@
   }
 
   .experience-job-company-container:hover {
+    --xPercent: 1;
+    --yPercent: 1;
+    transform: perspective(1000px) rotateZ(calc(var(--yPercent) * 4deg)) rotateY(calc(var(--xPercent) * 14deg)) scale3d(1,1,1);
+
     box-shadow: 0px 0px 22px 6px #e4e4e4;
-    transform: rotate(2deg);
   }
 
   .experience-job-company-container.experience-job-intercom {

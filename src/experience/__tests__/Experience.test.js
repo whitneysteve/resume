@@ -1,6 +1,6 @@
 import Experience, { JOBS } from '../Experience';
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 it('renders without crashing', () => {
   shallow(
@@ -10,6 +10,6 @@ it('renders without crashing', () => {
 
 it('renders selected job', () => {
   const testJob = JOBS[0];
-  const component = shallow(<Experience selectedJob={testJob} />);
+  const component = mount(<Experience selectedJob={testJob} />);
   expect(component.find(`.experience-job-company-container.experience-job-${testJob.id}.selected`)).toHaveLength(1);
 });

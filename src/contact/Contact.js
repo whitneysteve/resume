@@ -35,7 +35,7 @@ class Contact extends Component {
 const genContact = (contact) => {
   const service = contact.service.toLowerCase();
   return (
-    <div className="contact-container-icon">
+    <div key={service} className="contact-container-icon">
       <a href={contact.link} key={contact.service} target={contact.sameWindow ? "_self" : "_blank"} rel="noreferrer">
         <img alt={`${contact.service} Logo`} src={contact.logo} id={`contact-icon-${service}`} />
       </a>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Gradient } from '../3rdparty/Gradient';
+import Job from '../experience/Job';
 import intercom from '../img/companies/intercom.svg';
 import stripe from '../img/companies/stripe.svg';
 import twitter from '../img/companies/twitter.svg';
@@ -20,38 +21,6 @@ class Experience extends Component {
     // Stripe gradient provided by https://whatamesh.vercel.app
     const gradient = new Gradient();
     gradient.initGradient('#gradient-canvas-stripe');
-
-    this.selectJob = this.selectJob.bind(this);
-  }
-
-  /**
-   * Genreate the markup for a job and attach hover events to update the
-   * background.
-   *
-   * @param {Object} job the job configuration.
-   */
-  genJob = (job) => {
-    const containerId = `experience-job-${job.id}`;
-    const selectedState = this.state.selectedJob === job ? 'selected' : '';
-
-    return (
-      <div className="dev-grid-cell experience-job" id={ job.id } key={ job.id }>
-        <div className="dev-grid-margin-top-left-corner-left" data-target={containerId}></div>
-        <div className="dev-grid-margin-center-up" data-target={containerId}></div>
-        <div id={containerId} className={`experience-job-company-container ${containerId}  ${selectedState}`} onClick={() => this.selectJob(job)} >
-          <img alt={ `${ job.company } logo` } src={ job.logo } />
-          <div className="experience-job-description">
-            <div className="experience-job-description-company-name">
-              {job.company}
-            </div>
-            <div className="experience-job-description-company-term">
-              {job.term}
-            </div>
-          </div>
-          <canvas id={`gradient-canvas-${job.id}`} data-transition-in />
-        </div>
-      </div>
-    );
   }
 
   selectJob(job) {
@@ -61,7 +30,16 @@ class Experience extends Component {
   render() {
     return (
       <div className="Section experience dev-grid" id="experience">
-        { JOBS.map(this.genJob) }
+        {
+          JOBS.map((job) =>
+            <Job
+              key={job.id}
+              job={job}
+              selected={this.state.selectedJob?.id === job.id}
+              selectJob={this.selectJob.bind(this)}
+            />,
+          )
+        }
       </div>
     );
   }
