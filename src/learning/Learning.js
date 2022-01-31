@@ -63,7 +63,7 @@ class Learning extends Component {
 
   render() {
     return (
-      <div className="Section" id="learning">
+      <div className="Section learning">
         <div className="dev-grid">
           <div className="dev-grid-cell-three-quarters-height learning-graph-container">
             <div className="dev-grid-measurement-right" />

@@ -7,7 +7,7 @@ import Map from './Map';
 class Location extends Component {
   render() {
     return (
-      <div className="Section" id="location">
+      <div className="Section location">
         <div className="dev-grid">
           <div className="dev-grid-cell-one-quarter-height location-text">
             <div className="dev-grid-measurement-right"></div>

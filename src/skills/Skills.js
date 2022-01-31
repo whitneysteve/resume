@@ -27,7 +27,7 @@ class Skills extends Component {
 
   render() {
     return (
-      <div className="Section" id="skills">
+      <div className="Section skills">
         <Floaty numLayers={3} />
         <Tabs onSelect={this.tabChanged}>
           { SKILLS.map(genSkillEraTab) }

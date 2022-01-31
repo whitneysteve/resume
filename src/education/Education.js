@@ -8,7 +8,7 @@ import ucd from '../img/education/ucd.svg';
 class Education extends Component {
   render() {
     return (
-      <div className="Section education dev-grid-half" id="education">
+      <div className="Section education dev-grid-half">
         { EDUCATION.map(renderQualification) }
       </div>
     );
@@ -25,7 +25,7 @@ const renderQualification = (qualification) => {
       <div className="education-qualification-container-logo" id={logoContainerId}>
         <img alt={`${qualification.school} Logo`} src={ qualification.logo } />
       </div>
-      <div className="education-qualification-container-text" id={logoContainerId}>
+      <div className="education-qualification-container-text">
         <div>
           { qualification.school }
         </div>

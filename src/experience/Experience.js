@@ -29,7 +29,7 @@ class Experience extends Component {
 
   render() {
     return (
-      <div className="Section experience dev-grid" id="experience">
+      <div className="Section experience dev-grid">
         {
           JOBS.map((job) =>
             <Job

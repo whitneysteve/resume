@@ -11,7 +11,7 @@ import twitter from '../img/contact/twitter.svg';
 class Contact extends Component {
   render() {
     return (
-      <div className="Section contact" id="contact">
+      <div className="Section contact">
         <div className="dev-grid">
           <div className="contact-container-icons dev-grid-cell-three-quarters-height">
             <div className="dev-grid-margin-top-left-corner-left" data-target="contact-icon-gmail" />
