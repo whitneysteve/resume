@@ -27,6 +27,7 @@ export function drawMeasurements() {
   updateY();
   updateBottomLeftCornerDownMargins();
   updateTopLeftCornerLeftMargins();
+  updateMiddleLeftLeftMargins();
   updateCenterUpMargins();
   updateBetweens();
 }
@@ -93,6 +94,27 @@ function updateBottomLeftCornerDownMargins() {
       element,
       leftCorner + (distance / 2) - 5,
       targetRect.left - parentRect.left,
+      distance,
+    );
+  }
+}
+
+/**
+ * Update the measurement values of margins between elements from the middle-left of the element, going left.
+ */
+function updateMiddleLeftLeftMargins() {
+  const elements = document.getElementsByClassName('dev-grid-margin-middle-left-left');
+  for (let element of elements) {
+    const { parentRect, targetRect } = getElementRectangles(element);
+
+    const firstY = targetRect.left;
+    const secondY = parentRect.left;
+    const distance = Math.abs(Math.round(firstY - secondY));
+
+    updateElement(
+      element,
+      targetRect.top - parentRect.top + (targetRect.height / 2),
+      distance / 4,
       distance,
     );
   }

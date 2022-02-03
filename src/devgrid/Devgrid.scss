@@ -84,6 +84,11 @@ $grid-colour: #c7c7c7;
     @include margin;
   }
 
+  .dev-grid-margin-middle-left-left {
+    @include measurement;
+    @include margin;
+  }
+
   .dev-grid-margin-bottom-left-corner-down {
     @include measurement;
     @include margin;
@@ -112,7 +117,8 @@ $grid-colour: #c7c7c7;
   .dev-grid-margin-top-left-corner-left:after, .dev-grid-margin-top-left-corner-left:before,
   .dev-grid-margin-bottom-left-corner-down:after, .dev-grid-margin-bottom-left-corner-down:before,
   .dev-grid-margin-center-up:after, .dev-grid-margin-center-up:before,
-  .dev-grid-margin-between:after, .dev-grid-margin-between:before {
+  .dev-grid-margin-between:after, .dev-grid-margin-between:before,
+  .dev-grid-margin-middle-left-left:after, .dev-grid-margin-middle-left-left:before {
     content: "";
     flex: 1 1;
     border-bottom: 1px solid $grid-colour;

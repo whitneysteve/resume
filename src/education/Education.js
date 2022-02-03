@@ -21,7 +21,7 @@ const renderQualification = (qualification) => {
   return (
     <div className="education-qualification-container dev-grid-cell" key={ qualification.course }>
       <div className="dev-grid-measurement-right" />
-      {/* <div className="dev-grid-margin-top-left-corner-left" data-target={logoContainerId}></div> */}
+      <div className="dev-grid-margin-middle-left-left" data-target={logoContainerId}></div>
       <div className="education-qualification-container-logo" id={logoContainerId}>
         <img alt={`${qualification.school} Logo`} src={ qualification.logo } />
       </div>
