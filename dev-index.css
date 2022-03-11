@@ -467,104 +467,104 @@ p {
   visibility: initial;
 }
 
-.contact .contact-container-text {
+.Contact .Contact__Text-Container {
   flex-direction: column;
 }
-.contact .contact-container-text p {
+.Contact .Contact__Text-Container p {
   margin: 20px 60px;
 }
 @media only screen and (max-width: 600px) {
-  .contact .contact-container-text p {
-    font-size: 0.6em;
+  .Contact .Contact__Text-Container p {
+    font-size: 0.8em;
     margin: 10px 20px;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 916px) {
-  .contact .contact-container-text p {
+  .Contact .Contact__Text-Container p {
     font-size: 0.9em;
   }
 }
 @media screen and (max-height: 550px) {
-  .contact .contact-container-text p {
+  .Contact .Contact__Text-Container p {
     font-size: 0.7em;
     margin: 10px;
   }
 }
 @media screen and (max-height: 350px) {
-  .contact .contact-container-text p {
+  .Contact .Contact__Text-Container p {
     font-size: 0.5em;
     margin: 5px;
   }
 }
-.contact .contact-container-icons {
+.Contact .Contact__Icon-Container {
   flex-wrap: wrap;
 }
-.contact .contact-container-icons .contact-container-icon {
+.Contact .Contact__Icon-Container .Contact__Icon-Container__Icon {
   min-width: 33%;
 }
 @media only screen and (max-width: 600px), tablet {
-  .contact .contact-container-icons .contact-container-icon {
+  .Contact .Contact__Icon-Container .Contact__Icon-Container__Icon {
     min-width: 50%;
   }
 }
 @media screen and (max-height: 550px) {
-  .contact .contact-container-icons .contact-container-icon {
+  .Contact .Contact__Icon-Container .Contact__Icon-Container__Icon {
     min-width: 20%;
   }
 }
-.contact .contact-container-icons .contact-container-icon img {
+.Contact .Contact__Icon-Container .Contact__Icon-Container__Icon img {
   height: 150px;
   max-width: 90%;
   min-height: 100px;
 }
 @media only screen and (max-width: 600px), tablet {
-  .contact .contact-container-icons .contact-container-icon img {
+  .Contact .Contact__Icon-Container .Contact__Icon-Container__Icon img {
     height: 100px;
     max-width: 75%;
   }
 }
 @media screen and (max-height: 550px) {
-  .contact .contact-container-icons .contact-container-icon img {
+  .Contact .Contact__Icon-Container .Contact__Icon-Container__Icon img {
     height: 50px;
     max-width: 75%;
   }
 }
 
 @media only screen and (max-width: 600px), screen and (min-width: 601px) and (max-width: 916px) {
-  .education {
+  .Education {
     margin-top: 20px;
   }
 }
-.education .education-qualification-container {
+.Education .Education__Qualification-Container {
   flex-direction: column;
 }
-.education .education-qualification-container .education-qualification-container-logo {
+.Education .Education__Qualification-Container .Education__Qualification-Container__Logo {
   height: 70%;
 }
 @media screen and (max-height: 550px) {
-  .education .education-qualification-container .education-qualification-container-logo {
+  .Education .Education__Qualification-Container .Education__Qualification-Container__Logo {
     height: 100%;
   }
 }
-.education .education-qualification-container .education-qualification-container-logo img {
+.Education .Education__Qualification-Container .Education__Qualification-Container__Logo img {
   height: 90%;
 }
 @media screen and (max-height: 550px) {
-  .education .education-qualification-container .education-qualification-container-logo img {
+  .Education .Education__Qualification-Container .Education__Qualification-Container__Logo img {
     height: 100%;
   }
 }
-.education .education-qualification-container .education-qualification-container-text {
+.Education .Education__Qualification-Container .Education__Qualification-Container__Text {
   height: 30%;
 }
 @media screen and (max-height: 550px) {
-  .education .education-qualification-container .education-qualification-container-text {
+  .Education .Education__Qualification-Container .Education__Qualification-Container__Text {
     background-color: red;
     display: none;
   }
 }
 
-.experience .experience-job-company-container {
+.Experience .Experience__Company-Container {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -581,11 +581,11 @@ p {
   overflow: hidden;
 }
 @media screen and (min-width: 601px) and (max-width: 916px) {
-  .experience .experience-job-company-container {
+  .Experience .Experience__Company-Container {
     flex-direction: column;
   }
 }
-.experience .experience-job-company-container .experience-job-description {
+.Experience .Experience__Company-Container .Experience__Company-Container__Description {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -599,56 +599,56 @@ p {
   transition: width 0.15s ease-out, height 0.15s ease-out;
 }
 @media screen and (min-width: 601px) and (max-width: 916px) {
-  .experience .experience-job-company-container .experience-job-description {
+  .Experience .Experience__Company-Container .Experience__Company-Container__Description {
     height: 0;
     width: 40%;
     font-size: 1.5em;
   }
 }
-.experience .experience-job-company-container.transition {
+.Experience .Experience__Company-Container--transition {
   transition: transform 0.25s linear;
 }
-.experience .experience-job-company-container.selected .experience-job-description {
+.Experience .Experience__Company-Container--selected .Experience__Company-Container__Description {
   width: 40%;
 }
 @media screen and (min-width: 601px) and (max-width: 916px) {
-  .experience .experience-job-company-container.selected .experience-job-description {
+  .Experience .Experience__Company-Container--selected .Experience__Company-Container__Description {
     height: 40%;
   }
 }
-.experience .experience-job-company-container:hover {
+.Experience .Experience__Company-Container:hover {
   --xPercent: 1;
   --yPercent: 1;
   transform: perspective(1000px) rotateZ(calc(var(--yPercent) * 4deg)) rotateY(calc(var(--xPercent) * 14deg)) scale3d(1, 1, 1);
   box-shadow: 0px 0px 22px 6px #e4e4e4;
 }
-.experience .experience-job-company-container.experience-job-intercom {
+.Experience .Experience__Company-Container.intercom {
   background: black;
 }
-.experience .experience-job-company-container.experience-job-stripe {
+.Experience .Experience__Company-Container.stripe {
   background-color: #a95eff;
 }
-.experience .experience-job-company-container.experience-job-twitter {
+.Experience .Experience__Company-Container.twitter {
   background: #1da1f2;
 }
-.experience .experience-job-company-container.experience-job-mastercard {
+.Experience .Experience__Company-Container.mastercard {
   background: linear-gradient(180deg, #FCE38A 0%, #F38181 100%);
 }
 @media only screen and (max-width: 600px) {
-  .experience .experience-job-company-container.experience-job-mastercard .experience-job-description {
+  .Experience .Experience__Company-Container.mastercard .Experience__Company-Container__Description {
     font-size: 0.9em;
   }
 }
-.experience canvas {
+.Experience canvas {
   position: absolute;
   height: 25vh;
 }
-.experience img {
+.Experience img {
   width: 50%;
   height: 50%;
   z-index: 1;
 }
-.experience #gradient-canvas-stripe {
+.Experience #gradient-canvas-stripe {
   width: 100%;
   height: 100%;
   --gradient-color-1: #a95eff;
@@ -658,14 +658,14 @@ p {
   border-radius: 25px;
 }
 
-.header {
+.Header {
   background-color: #efefef;
 }
-.header h1, .header h2, .header h3, .header h4 {
+.Header h1, .Header h2, .Header h3, .Header h4 {
   color: #ffffff;
   text-shadow: 0px 1px rgba(255, 255, 255, 0.5);
 }
-.header .header-container {
+.Header .Header__Container {
   min-height: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -679,132 +679,132 @@ p {
   font-size: 1.4em;
 }
 @media only screen and (max-width: 600px), screen and (min-width: 601px) and (max-width: 916px) {
-  .header .header-container {
+  .Header .Header__Container {
     background-attachment: scroll;
   }
 }
-.header .header-text-overlay {
+.Header .Header__Text-Overlay {
   position: absolute;
 }
-.header .header-0 {
+.Header .Header--0 {
   justify-content: flex-end;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(img/landing-1.jpg);
   background-position: 75% 30%;
 }
-.header .header-0 .header-text-overlay {
+.Header .Header--0 .Header__Text-Overlay {
   bottom: 0;
   right: 0;
   text-align: right;
 }
-.header .header-1 {
+.Header .Header--1 {
   background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.2) 100%), url(img/landing-2.jpg);
   background-position: 100% 50%;
 }
-.header .header-1 .header-text-overlay {
+.Header .Header--1 .Header__Text-Overlay {
   bottom: 0;
 }
-.header .header-2 {
+.Header .Header--2 {
   justify-content: center;
   background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0) 0%, rgba(64, 64, 64, 0.1) 100%), url(img/landing-3.jpg);
   background-position: 50% 90%;
 }
-.header .header-2 .header-text-overlay {
+.Header .Header--2 .Header__Text-Overlay {
   bottom: 0;
 }
-.header .header-3 {
+.Header .Header--3 {
   background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0) 0%, rgba(64, 64, 64, 0.1) 100%), url(img/landing-4.jpg);
   background-position: 57% 50%;
 }
-.header .header-4 {
+.Header .Header--4 {
   background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0) 0%, rgba(64, 64, 64, 0.1) 100%), url(img/landing-5.jpg);
   background-position: 80% 50%;
   justify-content: flex-end;
 }
-.header .header-4 .header-text-overlay {
+.Header .Header--4 .Header__Text-Overlay {
   text-align: right;
 }
-.header .header-5 {
+.Header .Header--5 {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(img/landing-6.jpg);
   background-position: 50% 85%;
 }
-.header .header-6 {
+.Header .Header--6 {
   background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 33%, rgba(64, 64, 64, 0.5) 100%), url(img/landing-7.jpg);
   background-position: 40% 50%;
   justify-content: flex-end;
 }
-.header .header-6 .header-text-overlay {
+.Header .Header--6 .Header__Text-Overlay {
   right: 0;
   text-align: right;
 }
-.header .header-7 {
+.Header .Header--7 {
   background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0) 0%, rgba(64, 64, 64, 0.1) 100%), url(img/landing-8.jpg);
   background-position: 70% 50%;
 }
 @media only screen and (max-width: 600px), screen and (min-width: 601px) and (max-width: 916px) {
-  .header .header-1 {
+  .Header .header-1 {
     background-position: 72% 85%;
   }
-  .header .header-2 {
+  .Header .Header--2 {
     align-items: center;
   }
-  .header .header-2 .header-text-overlay {
+  .Header .Header--2 .Header__Text-Overlay {
     margin-bottom: 150px;
     bottom: unset;
   }
-  .header .header-3 {
+  .Header .Header--3 {
     background-position: 80% 50%;
   }
-  .header .header-4 {
+  .Header .Header--4 {
     background-position: 80% 50%;
   }
-  .header .header-5 {
+  .Header .Header--5 {
     background-position: 60% 50%;
   }
-  .header .header-6 {
+  .Header .Header--6 {
     background-position: 30% 50%;
   }
-  .header .header-6 .header-text-overlay {
+  .Header .Header--6 .Header__Text-Overlay {
     bottom: 0;
   }
-  .header .header-7 {
+  .Header .Header--7 {
     justify-content: flex-end;
   }
-  .header .header-7 .header-text-overlay {
+  .Header .Header--7 .Header__Text-Overlay {
     bottom: 0;
     text-align: right;
   }
 }
 @media only screen and (max-width: 600px) {
-  .header .header-0 {
+  .Header .header-0 {
     background-position: 70% 30%;
     text-align: left;
   }
-  .header .header-1 .header-text-overlay {
+  .Header .header-1 .Header__Text-Overlay {
     top: 0;
   }
-  .header .header-2 {
+  .Header .Header--2 {
     justify-content: flex-start;
     font-size: 1.2em;
   }
-  .header .header-2 .header-text-overlay {
+  .Header .Header--2 .Header__Text-Overlay {
     top: 40px;
     text-align: center;
   }
-  .header .header-3 {
+  .Header .Header--3 {
     justify-content: flex-end;
     background-position: 83% 50%;
     font-size: 1.1em;
   }
-  .header .header-3 .header-text-overlay {
+  .Header .Header--3 .Header__Text-Overlay {
     text-align: center;
   }
-  .header .header-4, .header .header-6 {
+  .Header .Header--4, .Header .Header--6 {
     font-size: 1.2em;
   }
-  .header .header-5 {
+  .Header .Header--5 {
     font-size: 1.1em;
   }
-  .header .header-7 {
+  .Header .Header--7 {
     background-position: 80% 50%;
   }
 }
@@ -835,81 +835,81 @@ p {
   border-radius: 10px 0px 10px 10px;
 }
 
-.learning .learning-text-container {
+.Learning .Learning__Text-Container {
   flex-direction: column;
 }
-.learning .learning-text-container p {
+.Learning .Learning__Text-Container p {
   margin: 20px 60px;
 }
 @media only screen and (max-width: 600px) {
-  .learning .learning-text-container p {
-    font-size: 0.6em;
+  .Learning .Learning__Text-Container p {
+    font-size: 0.8em;
     margin: 10px 20px;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 916px) {
-  .learning .learning-text-container p {
+  .Learning .Learning__Text-Container p {
     font-size: 0.9em;
   }
 }
 @media screen and (max-height: 550px) {
-  .learning .learning-text-container p {
+  .Learning .Learning__Text-Container p {
     font-size: 0.7em;
     margin: 10px;
   }
 }
 @media screen and (max-height: 350px) {
-  .learning .learning-text-container p {
+  .Learning .Learning__Text-Container p {
     font-size: 0.5em;
     margin: 5px;
   }
 }
-.learning .fa-heart {
+.Learning .fa-heart {
   color: #e94848;
 }
 
-.location {
+.Location {
   opacity: 0.75;
   font-size: 1.6em;
 }
-.location .dev-grid {
+.Location .dev-grid {
   flex-direction: row;
 }
 @media only screen and (max-width: 600px) {
-  .location .dev-grid {
+  .Location .dev-grid {
     flex-direction: column;
   }
 }
-.location .location-text {
+.Location .Location__Text {
   flex-direction: column;
 }
-.location .location-text p {
+.Location .Location__Text p {
   margin: 20px 60px;
 }
 @media only screen and (max-width: 600px) {
-  .location .location-text p {
-    font-size: 0.6em;
+  .Location .Location__Text p {
+    font-size: 0.8em;
     margin: 10px 20px;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 916px) {
-  .location .location-text p {
+  .Location .Location__Text p {
     font-size: 0.9em;
   }
 }
 @media screen and (max-height: 550px) {
-  .location .location-text p {
+  .Location .Location__Text p {
     font-size: 0.7em;
     margin: 10px;
   }
 }
 @media screen and (max-height: 350px) {
-  .location .location-text p {
+  .Location .Location__Text p {
     font-size: 0.5em;
     margin: 5px;
   }
 }
-.location .map {
+.Location .map {
   -webkit-box-shadow: 0px 6px 13px 0px #dbdbdb;
   -moz-box-shadow: 0px 6px 13px 0px #dbdbdb;
   box-shadow: 0px 6px 13px 0px #dbdbdb;
@@ -917,17 +917,17 @@ p {
   width: 75%;
 }
 @media only screen and (max-width: 600px), screen and (min-width: 601px) and (max-width: 916px) {
-  .location .map {
+  .Location .map {
     height: 90%;
     width: 90%;
   }
 }
 
-.skills {
+.Skills {
   margin-bottom: 0;
   position: relative;
 }
-.skills .floaty-container {
+.Skills .floaty-container {
   left: 0;
   overflow: hidden;
   position: absolute;
@@ -939,82 +939,82 @@ p {
   height: 100% !important;
 }
 @media only screen and (max-width: 600px) {
-  .skills .floaty-container {
+  .Skills .floaty-container {
     padding-bottom: 10px;
   }
 }
-.skills .floaty-container .floaty-1 {
+.Skills .floaty-container .floaty-1 {
   position: absolute;
   top: 0;
   z-index: -1;
   animation: upwards-journey 45s linear infinite;
-  box-shadow: 1686px 773px #a3b9ff , 1564px 549px #a3b9ff , 457px 584px #f8f8ef , 681px 1694px #f8f8ef , 80px 829px #a3b9ff , 1360px 124px #ffffff , 1836px 1458px #a3b9ff , 1354px 103px #ffffff , 1375px 591px #a3b9ff , 1879px 319px #a3b9ff , 579px 1448px #f8f8ef , 164px 280px #a3b9ff , 148px 1204px #a3b9ff , 1840px 1644px #f8f8ef , 1123px 1354px #a3b9ff , 1955px 720px #ffffff , 986px 97px #f8f8ef , 1863px 1469px #ffffff , 1596px 1102px #ffffff , 1686px 1001px #a3b9ff , 1656px 887px #a3b9ff , 1207px 1128px #a3b9ff , 1765px 1797px #a3b9ff , 758px 1324px #a3b9ff , 648px 435px #ffffff , 451px 149px #a3b9ff , 969px 1090px #a3b9ff , 704px 1958px #a3b9ff , 607px 381px #ffffff , 536px 582px #ffffff , 1844px 593px #ffffff , 1179px 709px #ffffff , 1116px 1025px #a3b9ff , 1357px 1171px #ffffff , 254px 1797px #a3b9ff , 182px 297px #ffffff , 15px 395px #ffffff , 1974px 1739px #ffffff , 1448px 524px #ffffff , 1692px 1954px #f8f8ef , 1574px 85px #f8f8ef , 666px 5px #a3b9ff , 820px 1580px #a3b9ff , 264px 1753px #a3b9ff , 7px 1468px #a3b9ff , 1645px 806px #f8f8ef , 1804px 1652px #a3b9ff , 1272px 1556px #a3b9ff , 27px 1396px #f8f8ef , 514px 1564px #a3b9ff;
+  box-shadow: 1166px 1647px #ffffff , 77px 1202px #f8f8ef , 1152px 1903px #f8f8ef , 613px 56px #a3b9ff , 948px 1530px #a3b9ff , 376px 519px #f8f8ef , 98px 1925px #a3b9ff , 88px 656px #f8f8ef , 1588px 249px #ffffff , 1948px 1556px #f8f8ef , 1140px 1551px #a3b9ff , 711px 1166px #ffffff , 1537px 1797px #ffffff , 715px 822px #ffffff , 1028px 1068px #f8f8ef , 87px 1496px #ffffff , 144px 1713px #a3b9ff , 511px 1837px #ffffff , 280px 41px #ffffff , 1705px 1523px #f8f8ef , 291px 1645px #a3b9ff , 799px 1807px #f8f8ef , 2px 278px #f8f8ef , 634px 1885px #ffffff , 1997px 1048px #ffffff , 1679px 469px #ffffff , 370px 1558px #a3b9ff , 1351px 1452px #a3b9ff , 78px 752px #ffffff , 1271px 1336px #f8f8ef , 1899px 674px #f8f8ef , 1968px 1968px #a3b9ff , 1666px 1575px #ffffff , 66px 1170px #a3b9ff , 1622px 1572px #a3b9ff , 1619px 1660px #a3b9ff , 1557px 418px #f8f8ef , 10px 1057px #ffffff , 563px 897px #a3b9ff , 20px 1334px #a3b9ff , 72px 778px #a3b9ff , 1958px 1834px #a3b9ff , 728px 1815px #ffffff , 1198px 4px #f8f8ef , 419px 1623px #f8f8ef , 302px 1516px #f8f8ef , 1961px 434px #ffffff , 1442px 640px #f8f8ef , 640px 340px #f8f8ef , 763px 1987px #f8f8ef;
   height: 3px;
   width: 3px;
 }
-.skills .floaty-container .floaty-2 {
+.Skills .floaty-container .floaty-2 {
   position: absolute;
   top: 0;
   z-index: -1;
   animation: upwards-journey 35s linear infinite;
-  box-shadow: 17px 1765px #a3b9ff , 89px 1647px #f8f8ef , 794px 268px #ffffff , 1441px 1625px #a3b9ff , 1771px 669px #f8f8ef , 189px 1618px #f8f8ef , 1153px 1848px #f8f8ef , 733px 597px #ffffff , 1656px 1188px #ffffff , 1742px 505px #ffffff , 1152px 831px #a3b9ff , 1928px 1288px #a3b9ff , 864px 881px #f8f8ef , 618px 607px #f8f8ef , 857px 190px #ffffff , 1929px 893px #f8f8ef , 590px 953px #f8f8ef , 680px 1798px #ffffff , 1080px 1382px #ffffff , 1419px 554px #ffffff , 803px 228px #a3b9ff , 1129px 842px #a3b9ff , 811px 49px #ffffff , 699px 1102px #f8f8ef , 893px 328px #a3b9ff , 1433px 816px #f8f8ef , 1645px 1620px #f8f8ef , 1282px 1253px #f8f8ef , 1629px 806px #a3b9ff , 1922px 1691px #a3b9ff , 32px 1113px #ffffff , 1725px 691px #a3b9ff , 1048px 20px #ffffff , 1061px 576px #a3b9ff , 440px 195px #a3b9ff , 1394px 696px #f8f8ef , 942px 792px #f8f8ef , 1809px 1563px #f8f8ef , 402px 1775px #ffffff , 1933px 1428px #f8f8ef , 90px 731px #ffffff , 1311px 1298px #a3b9ff , 1042px 1442px #f8f8ef , 621px 1446px #ffffff , 222px 743px #ffffff , 992px 1070px #a3b9ff , 1425px 578px #a3b9ff , 1821px 1186px #f8f8ef , 1456px 525px #f8f8ef , 51px 694px #ffffff , 1770px 203px #ffffff , 1507px 1390px #a3b9ff , 1522px 322px #ffffff , 1300px 712px #f8f8ef , 615px 1075px #ffffff , 1770px 192px #a3b9ff , 1735px 591px #ffffff , 1088px 731px #ffffff , 391px 1024px #a3b9ff , 977px 1657px #ffffff , 1499px 280px #a3b9ff , 256px 747px #ffffff , 509px 1589px #ffffff , 1253px 61px #a3b9ff , 58px 1510px #ffffff , 1645px 1685px #a3b9ff , 1346px 1317px #f8f8ef , 469px 1744px #ffffff , 1185px 157px #ffffff , 110px 1636px #a3b9ff , 1041px 1658px #ffffff , 1825px 190px #ffffff , 1466px 312px #ffffff , 207px 614px #a3b9ff , 1185px 881px #f8f8ef , 1770px 239px #a3b9ff , 1465px 1865px #a3b9ff , 1635px 197px #a3b9ff , 477px 1075px #f8f8ef , 616px 883px #f8f8ef , 1157px 759px #a3b9ff , 248px 1110px #f8f8ef , 1247px 194px #ffffff , 1449px 1371px #f8f8ef , 1351px 385px #a3b9ff , 1480px 383px #a3b9ff , 1842px 1285px #f8f8ef , 355px 1006px #f8f8ef , 221px 89px #f8f8ef , 1511px 1505px #f8f8ef , 477px 1434px #ffffff , 1929px 502px #f8f8ef , 241px 1737px #ffffff , 1826px 1769px #f8f8ef , 1999px 1377px #ffffff , 1151px 55px #f8f8ef , 855px 1307px #ffffff , 1578px 619px #f8f8ef , 1056px 1308px #a3b9ff , 1652px 1761px #ffffff , 100px 740px #a3b9ff , 1707px 27px #a3b9ff , 565px 741px #a3b9ff , 722px 62px #f8f8ef , 155px 1614px #a3b9ff , 358px 580px #ffffff , 673px 858px #ffffff , 256px 1367px #f8f8ef , 1797px 767px #f8f8ef , 1840px 165px #a3b9ff , 285px 1220px #a3b9ff , 994px 1712px #f8f8ef , 708px 694px #ffffff , 1947px 1284px #a3b9ff , 895px 423px #a3b9ff , 1205px 823px #a3b9ff , 870px 147px #ffffff , 1003px 453px #f8f8ef , 1267px 1752px #a3b9ff , 1304px 1351px #ffffff , 1327px 1955px #a3b9ff , 577px 1780px #ffffff , 853px 1504px #a3b9ff , 906px 169px #ffffff , 834px 930px #ffffff , 1688px 1194px #a3b9ff , 1538px 935px #ffffff , 1301px 1303px #f8f8ef , 1242px 1496px #f8f8ef , 978px 1808px #f8f8ef , 920px 1940px #f8f8ef , 309px 921px #ffffff , 1769px 742px #f8f8ef , 576px 307px #f8f8ef , 1439px 1414px #ffffff , 212px 1085px #ffffff , 1424px 930px #a3b9ff , 766px 240px #a3b9ff , 784px 667px #a3b9ff , 1757px 1318px #f8f8ef , 1738px 1052px #f8f8ef , 1237px 698px #f8f8ef , 367px 1644px #f8f8ef , 123px 390px #f8f8ef , 422px 388px #f8f8ef , 312px 1593px #a3b9ff , 1273px 1846px #a3b9ff , 463px 1246px #f8f8ef , 1700px 1667px #f8f8ef , 915px 1574px #f8f8ef;
+  box-shadow: 605px 1547px #a3b9ff , 1402px 1534px #f8f8ef , 1070px 1436px #f8f8ef , 1835px 172px #ffffff , 412px 1417px #ffffff , 1851px 899px #f8f8ef , 1574px 669px #a3b9ff , 795px 1403px #a3b9ff , 1049px 1815px #f8f8ef , 1192px 173px #a3b9ff , 1250px 1721px #f8f8ef , 789px 160px #f8f8ef , 1907px 498px #f8f8ef , 1612px 1104px #a3b9ff , 280px 504px #a3b9ff , 1780px 1878px #ffffff , 485px 425px #ffffff , 984px 1973px #ffffff , 312px 1404px #ffffff , 1145px 66px #f8f8ef , 992px 1618px #a3b9ff , 1198px 580px #ffffff , 1970px 649px #a3b9ff , 1483px 1535px #a3b9ff , 1918px 1270px #a3b9ff , 1154px 637px #a3b9ff , 1905px 903px #ffffff , 605px 761px #f8f8ef , 1426px 563px #ffffff , 454px 154px #a3b9ff , 845px 1990px #f8f8ef , 1061px 232px #f8f8ef , 1975px 1716px #ffffff , 25px 1429px #f8f8ef , 536px 275px #a3b9ff , 1875px 258px #ffffff , 1186px 1452px #ffffff , 1313px 1731px #f8f8ef , 900px 1776px #ffffff , 923px 554px #a3b9ff , 58px 1728px #a3b9ff , 1524px 1985px #ffffff , 342px 644px #a3b9ff , 475px 665px #ffffff , 764px 1780px #ffffff , 132px 1354px #ffffff , 1808px 480px #ffffff , 1808px 146px #f8f8ef , 640px 96px #ffffff , 678px 192px #a3b9ff , 1997px 396px #ffffff , 1925px 271px #ffffff , 788px 1720px #a3b9ff , 1106px 1616px #ffffff , 1524px 1492px #f8f8ef , 397px 667px #f8f8ef , 1497px 1926px #a3b9ff , 1414px 415px #ffffff , 1820px 703px #a3b9ff , 1181px 1491px #f8f8ef , 1597px 530px #f8f8ef , 663px 1894px #f8f8ef , 1467px 1199px #ffffff , 1637px 1086px #f8f8ef , 1037px 1504px #f8f8ef , 1182px 1621px #ffffff , 1759px 121px #ffffff , 151px 1865px #f8f8ef , 707px 1782px #ffffff , 1134px 1814px #ffffff , 1261px 1322px #a3b9ff , 583px 1362px #a3b9ff , 1643px 987px #a3b9ff , 1482px 1143px #f8f8ef , 806px 1716px #a3b9ff , 1859px 1148px #ffffff , 1137px 729px #ffffff , 1912px 723px #ffffff , 595px 549px #ffffff , 1346px 934px #a3b9ff , 846px 596px #f8f8ef , 949px 1099px #f8f8ef , 1690px 584px #ffffff , 1725px 413px #f8f8ef , 1505px 947px #a3b9ff , 517px 1416px #ffffff , 1206px 1702px #a3b9ff , 1935px 1843px #ffffff , 12px 1777px #a3b9ff , 1127px 27px #f8f8ef , 192px 1132px #f8f8ef , 865px 112px #a3b9ff , 1536px 1670px #a3b9ff , 328px 1937px #a3b9ff , 1395px 1166px #ffffff , 527px 1021px #a3b9ff , 426px 1865px #ffffff , 1198px 536px #f8f8ef , 986px 1283px #ffffff , 1169px 1370px #ffffff , 1990px 816px #ffffff , 504px 1633px #a3b9ff , 1181px 1120px #a3b9ff , 123px 971px #ffffff , 865px 668px #f8f8ef , 272px 571px #a3b9ff , 447px 1114px #f8f8ef , 511px 1090px #f8f8ef , 1065px 702px #a3b9ff , 1314px 595px #f8f8ef , 1363px 1636px #ffffff , 1149px 117px #a3b9ff , 1135px 636px #f8f8ef , 838px 1759px #a3b9ff , 1223px 1902px #ffffff , 1982px 1974px #f8f8ef , 303px 47px #ffffff , 1061px 1882px #ffffff , 621px 816px #a3b9ff , 1199px 1879px #ffffff , 474px 1044px #a3b9ff , 766px 735px #a3b9ff , 1034px 1518px #ffffff , 1813px 1775px #f8f8ef , 240px 895px #f8f8ef , 1151px 873px #a3b9ff , 111px 1790px #f8f8ef , 595px 1086px #ffffff , 1264px 513px #ffffff , 1936px 933px #f8f8ef , 439px 544px #f8f8ef , 542px 503px #f8f8ef , 621px 1522px #ffffff , 1314px 691px #a3b9ff , 989px 993px #ffffff , 327px 1987px #ffffff , 1336px 1649px #ffffff , 19px 1026px #f8f8ef , 153px 104px #f8f8ef , 1533px 182px #ffffff , 577px 42px #ffffff , 154px 111px #f8f8ef , 159px 313px #f8f8ef , 1631px 175px #f8f8ef , 407px 494px #a3b9ff , 1203px 1657px #f8f8ef , 723px 1796px #a3b9ff , 387px 171px #a3b9ff , 1959px 210px #f8f8ef , 378px 1096px #f8f8ef;
   height: 2px;
   width: 2px;
 }
-.skills .floaty-container .floaty-3 {
+.Skills .floaty-container .floaty-3 {
   animation: upwards-journey 25s linear infinite;
-  box-shadow: 1266px 1657px #f8f8ef , 373px 1875px #ffffff , 593px 1784px #a3b9ff , 1531px 1669px #a3b9ff , 260px 714px #ffffff , 1308px 1712px #ffffff , 1678px 1031px #ffffff , 1423px 1948px #ffffff , 1580px 638px #f8f8ef , 753px 1502px #a3b9ff , 1007px 968px #f8f8ef , 429px 1986px #ffffff , 157px 1688px #a3b9ff , 918px 428px #ffffff , 661px 257px #a3b9ff , 1459px 591px #f8f8ef , 1295px 970px #ffffff , 274px 1938px #f8f8ef , 1711px 617px #a3b9ff , 454px 1772px #f8f8ef , 16px 477px #a3b9ff , 59px 923px #f8f8ef , 165px 1837px #f8f8ef , 746px 1244px #f8f8ef , 1299px 1432px #ffffff , 358px 1130px #f8f8ef , 1531px 1874px #ffffff , 433px 657px #ffffff , 313px 1549px #a3b9ff , 1528px 51px #ffffff , 337px 690px #a3b9ff , 333px 85px #f8f8ef , 1279px 854px #ffffff , 897px 1431px #f8f8ef , 935px 1171px #a3b9ff , 449px 1031px #f8f8ef , 1001px 1261px #ffffff , 1200px 1731px #a3b9ff , 529px 1280px #ffffff , 1879px 1943px #ffffff , 1141px 1904px #ffffff , 1624px 892px #f8f8ef , 744px 1757px #ffffff , 1647px 1546px #a3b9ff , 216px 346px #ffffff , 843px 810px #f8f8ef , 115px 750px #f8f8ef , 1001px 1311px #ffffff , 1421px 1244px #f8f8ef , 1398px 139px #f8f8ef , 1224px 1777px #ffffff , 1158px 1375px #a3b9ff , 673px 805px #f8f8ef , 1127px 69px #f8f8ef , 594px 1145px #ffffff , 1664px 1605px #ffffff , 1083px 1100px #ffffff , 1401px 1035px #ffffff , 514px 1897px #a3b9ff , 1816px 590px #ffffff , 1362px 792px #a3b9ff , 609px 788px #f8f8ef , 1505px 1734px #a3b9ff , 1086px 446px #f8f8ef , 1859px 1361px #f8f8ef , 1852px 17px #f8f8ef , 402px 1051px #ffffff , 249px 1998px #ffffff , 1228px 180px #f8f8ef , 1899px 774px #f8f8ef , 74px 181px #ffffff , 857px 1726px #f8f8ef , 444px 7px #f8f8ef , 853px 1731px #f8f8ef , 454px 1622px #ffffff , 1745px 1545px #ffffff , 152px 1385px #a3b9ff , 885px 1718px #f8f8ef , 1584px 421px #a3b9ff , 1776px 461px #f8f8ef , 211px 1485px #a3b9ff , 220px 478px #f8f8ef , 143px 264px #a3b9ff , 275px 1136px #ffffff , 965px 1453px #f8f8ef , 1274px 1368px #ffffff , 1968px 1767px #ffffff , 710px 1935px #f8f8ef , 1608px 638px #a3b9ff , 668px 328px #a3b9ff , 1908px 1518px #f8f8ef , 1954px 1106px #f8f8ef , 675px 162px #a3b9ff , 1320px 399px #a3b9ff , 1233px 1513px #a3b9ff , 1398px 274px #ffffff , 1862px 13px #a3b9ff , 944px 1568px #f8f8ef , 785px 1874px #f8f8ef , 1667px 1887px #ffffff , 1800px 1077px #ffffff , 1154px 1472px #f8f8ef , 510px 73px #a3b9ff , 1845px 366px #a3b9ff , 1035px 120px #a3b9ff , 1884px 1710px #f8f8ef , 988px 300px #a3b9ff , 583px 1589px #ffffff , 1645px 1680px #a3b9ff , 37px 558px #a3b9ff , 1906px 31px #f8f8ef , 1759px 137px #ffffff , 176px 672px #a3b9ff , 667px 1848px #f8f8ef , 1129px 399px #f8f8ef , 8px 1085px #a3b9ff , 996px 70px #a3b9ff , 1194px 1023px #ffffff , 999px 1537px #a3b9ff , 1487px 499px #ffffff , 1108px 440px #a3b9ff , 514px 1348px #f8f8ef , 1084px 448px #a3b9ff , 1036px 1113px #f8f8ef , 806px 649px #ffffff , 1206px 1352px #f8f8ef , 453px 487px #f8f8ef , 1530px 1893px #ffffff , 1270px 1852px #ffffff , 1468px 931px #a3b9ff , 1577px 249px #ffffff , 1622px 18px #ffffff , 654px 472px #f8f8ef , 1081px 302px #a3b9ff , 829px 1978px #f8f8ef , 1314px 832px #f8f8ef , 245px 186px #a3b9ff , 240px 637px #ffffff , 462px 1920px #f8f8ef , 6px 1385px #a3b9ff , 526px 449px #ffffff , 808px 1088px #f8f8ef , 996px 1428px #a3b9ff , 1535px 421px #a3b9ff , 1361px 1482px #a3b9ff , 1153px 337px #ffffff , 536px 385px #f8f8ef , 746px 960px #ffffff , 950px 1650px #f8f8ef , 1212px 721px #f8f8ef , 736px 1519px #ffffff , 1263px 1551px #a3b9ff , 815px 1922px #ffffff , 1430px 596px #a3b9ff , 859px 1142px #a3b9ff , 305px 1746px #ffffff , 1053px 1191px #ffffff , 1523px 1577px #a3b9ff , 1429px 1508px #f8f8ef , 1469px 718px #ffffff , 285px 1519px #f8f8ef , 1715px 1801px #a3b9ff , 673px 1810px #f8f8ef , 85px 1267px #ffffff , 713px 1995px #f8f8ef , 995px 1560px #f8f8ef , 229px 426px #ffffff , 1658px 236px #ffffff , 1369px 449px #f8f8ef , 477px 330px #f8f8ef , 1402px 544px #a3b9ff , 1879px 1013px #f8f8ef , 936px 1888px #f8f8ef , 1635px 494px #f8f8ef , 1828px 1259px #ffffff , 237px 1319px #a3b9ff , 448px 1800px #f8f8ef , 1924px 1660px #f8f8ef , 235px 978px #a3b9ff , 818px 1074px #a3b9ff , 1314px 1149px #ffffff , 1336px 742px #a3b9ff , 369px 347px #a3b9ff , 24px 468px #ffffff , 1065px 833px #f8f8ef , 302px 462px #ffffff , 107px 55px #ffffff , 1988px 1383px #f8f8ef , 1338px 648px #a3b9ff , 40px 427px #f8f8ef , 153px 1598px #a3b9ff , 651px 1175px #ffffff , 1695px 1470px #f8f8ef , 1254px 1954px #ffffff , 1345px 1452px #f8f8ef , 1050px 1685px #a3b9ff , 1265px 645px #ffffff , 473px 1931px #a3b9ff , 464px 1697px #f8f8ef , 1642px 1083px #f8f8ef;
+  box-shadow: 815px 1253px #ffffff , 679px 1716px #f8f8ef , 1256px 1462px #ffffff , 1900px 1013px #ffffff , 1709px 64px #a3b9ff , 1254px 1453px #a3b9ff , 1333px 1931px #f8f8ef , 1078px 604px #ffffff , 565px 927px #ffffff , 621px 335px #f8f8ef , 583px 427px #ffffff , 55px 349px #a3b9ff , 1834px 1401px #a3b9ff , 860px 1695px #f8f8ef , 221px 1138px #a3b9ff , 481px 1728px #ffffff , 234px 1818px #a3b9ff , 1939px 1910px #ffffff , 123px 1185px #ffffff , 1269px 66px #a3b9ff , 892px 1058px #f8f8ef , 1166px 346px #a3b9ff , 1928px 972px #ffffff , 525px 827px #ffffff , 1263px 297px #f8f8ef , 1656px 1900px #a3b9ff , 963px 1531px #f8f8ef , 1760px 612px #f8f8ef , 1958px 1713px #f8f8ef , 1937px 1326px #a3b9ff , 225px 647px #f8f8ef , 1251px 828px #ffffff , 1911px 1876px #f8f8ef , 973px 1451px #a3b9ff , 42px 1826px #f8f8ef , 651px 1663px #ffffff , 1885px 1705px #f8f8ef , 1116px 1712px #ffffff , 1070px 604px #f8f8ef , 590px 673px #a3b9ff , 1963px 1560px #ffffff , 176px 277px #f8f8ef , 1163px 1071px #ffffff , 87px 28px #ffffff , 1846px 936px #f8f8ef , 1111px 1031px #ffffff , 486px 209px #a3b9ff , 358px 1594px #f8f8ef , 1571px 1928px #a3b9ff , 862px 1852px #f8f8ef , 1639px 1387px #f8f8ef , 976px 1668px #a3b9ff , 544px 905px #a3b9ff , 191px 897px #ffffff , 658px 319px #ffffff , 1962px 1532px #ffffff , 1578px 1388px #a3b9ff , 1682px 1751px #a3b9ff , 1393px 1989px #ffffff , 951px 1718px #ffffff , 554px 43px #f8f8ef , 1517px 1478px #a3b9ff , 441px 1436px #a3b9ff , 649px 696px #a3b9ff , 1141px 867px #f8f8ef , 889px 191px #ffffff , 1373px 1278px #f8f8ef , 1058px 549px #a3b9ff , 1760px 485px #a3b9ff , 621px 1748px #a3b9ff , 468px 1292px #f8f8ef , 1203px 767px #a3b9ff , 1316px 1259px #f8f8ef , 1897px 1675px #f8f8ef , 1558px 1029px #f8f8ef , 1588px 1682px #f8f8ef , 240px 145px #a3b9ff , 8px 1350px #f8f8ef , 1919px 1389px #a3b9ff , 1237px 1164px #f8f8ef , 912px 392px #ffffff , 1789px 159px #ffffff , 143px 1756px #a3b9ff , 1974px 18px #a3b9ff , 1058px 525px #ffffff , 239px 248px #a3b9ff , 1666px 1361px #a3b9ff , 1916px 1090px #ffffff , 1738px 295px #a3b9ff , 1736px 1658px #a3b9ff , 1131px 1484px #a3b9ff , 1987px 368px #a3b9ff , 1245px 1363px #a3b9ff , 1436px 1473px #a3b9ff , 696px 1216px #a3b9ff , 1577px 1864px #f8f8ef , 1915px 401px #f8f8ef , 1287px 277px #ffffff , 480px 1011px #a3b9ff , 1479px 1697px #ffffff , 790px 1897px #ffffff , 517px 538px #f8f8ef , 1354px 1875px #f8f8ef , 1923px 1943px #f8f8ef , 79px 946px #ffffff , 1859px 901px #a3b9ff , 1341px 921px #a3b9ff , 341px 576px #f8f8ef , 1681px 1831px #f8f8ef , 1130px 381px #ffffff , 536px 995px #f8f8ef , 1387px 598px #ffffff , 1872px 1894px #a3b9ff , 1261px 909px #ffffff , 759px 497px #ffffff , 1170px 1522px #ffffff , 1792px 1616px #ffffff , 1769px 1289px #f8f8ef , 211px 452px #ffffff , 1709px 704px #ffffff , 212px 1665px #ffffff , 966px 1158px #f8f8ef , 1781px 1949px #a3b9ff , 1657px 369px #f8f8ef , 625px 1486px #a3b9ff , 1974px 1650px #f8f8ef , 1920px 1765px #f8f8ef , 235px 669px #ffffff , 952px 401px #f8f8ef , 81px 1798px #ffffff , 987px 778px #a3b9ff , 1713px 1757px #f8f8ef , 104px 855px #ffffff , 1550px 1806px #ffffff , 1553px 1054px #f8f8ef , 824px 1765px #ffffff , 1247px 1180px #a3b9ff , 707px 1659px #a3b9ff , 1083px 1816px #a3b9ff , 1327px 757px #a3b9ff , 330px 1116px #ffffff , 818px 140px #f8f8ef , 1777px 888px #a3b9ff , 527px 304px #f8f8ef , 65px 577px #f8f8ef , 1895px 1665px #f8f8ef , 1324px 529px #f8f8ef , 1717px 262px #ffffff , 956px 229px #a3b9ff , 86px 674px #f8f8ef , 1709px 1804px #f8f8ef , 1947px 287px #a3b9ff , 736px 1781px #a3b9ff , 1358px 935px #f8f8ef , 1854px 467px #f8f8ef , 535px 1609px #f8f8ef , 1211px 1065px #ffffff , 1554px 1997px #f8f8ef , 633px 1698px #a3b9ff , 1980px 871px #f8f8ef , 1359px 217px #a3b9ff , 23px 235px #ffffff , 1091px 264px #f8f8ef , 266px 1604px #f8f8ef , 1554px 1092px #ffffff , 789px 1814px #a3b9ff , 1163px 676px #ffffff , 1697px 769px #a3b9ff , 1009px 15px #f8f8ef , 817px 1754px #ffffff , 88px 911px #a3b9ff , 1573px 566px #f8f8ef , 1541px 750px #f8f8ef , 1397px 472px #ffffff , 827px 605px #f8f8ef , 73px 1921px #ffffff , 775px 1464px #ffffff , 3px 1539px #a3b9ff , 1682px 1177px #ffffff , 1799px 1362px #f8f8ef , 1977px 942px #ffffff , 1447px 1543px #a3b9ff , 243px 1696px #a3b9ff , 1205px 1294px #ffffff , 738px 773px #ffffff , 110px 805px #ffffff , 789px 1691px #f8f8ef , 585px 846px #a3b9ff , 1553px 1037px #a3b9ff , 774px 1799px #a3b9ff , 1248px 208px #a3b9ff , 433px 489px #f8f8ef , 1563px 515px #a3b9ff , 1634px 1032px #a3b9ff , 1676px 1213px #ffffff , 707px 752px #f8f8ef , 702px 1217px #a3b9ff , 123px 774px #ffffff , 135px 1397px #ffffff , 1134px 96px #ffffff;
   height: 1px;
   width: 1px;
 }
-.skills .tabs {
+.Skills .tabs {
   width: 100%;
 }
-.skills .tabs .tabs-navigation button {
+.Skills .tabs .tabs-navigation button {
   font-size: 1.2em;
 }
 @media only screen and (max-width: 600px) {
-  .skills .tabs .tabs-navigation .tabs-tab {
+  .Skills .tabs .tabs-navigation .tabs-tab {
     margin: 0 15px;
     padding: 0;
   }
 }
-.skills .tabs .tabs-content {
+.Skills .tabs .tabs-content {
   color: #ffffff;
   font-size: 1.75em;
 }
-.skills .tabs .tabs-content .skills-container .skills-container-skill {
+.Skills .tabs .tabs-content .Skills__Container .Skills__Container__Skill {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.skills .tabs .tabs-content .skills-container .skills-container-skill .skills-container-skill-name-logo {
+.Skills .tabs .tabs-content .Skills__Container .Skills__Container__Skill .Skills__Container__Skill__Name-Logo {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 40%;
 }
-.skills .tabs .tabs-content .skills-container .skills-container-skill .skills-container-skill-name {
+.Skills .tabs .tabs-content .Skills__Container .Skills__Container__Skill .Skills__Container__Skill__Name-Logo .Skills__Container__Skill__Name {
   font-size: 0.7em;
   margin: 0 50px;
 }
-.skills .tabs .tabs-content .skills-container .skills-container-skill .skills-container-skill-logo {
+.Skills .tabs .tabs-content .Skills__Container .Skills__Container__Skill .Skills__Container__Skill__Name-Logo .Skills__Container__Skill__Logo {
   margin-bottom: 15px;
 }
-.skills .tabs .tabs-content .skills-container .skills-container-skill .skills-container-skill-logo img {
+.Skills .tabs .tabs-content .Skills__Container .Skills__Container__Skill .Skills__Container__Skill__Name-Logo .Skills__Container__Skill__Logo img {
   width: 40%;
   max-height: 350px;
 }
-.skills .tabs .tabs-content .skills-container .skills-container-skill .skills-container-skill-rating {
+.Skills .tabs .tabs-content .Skills__Container .Skills__Container__Skill .Skills__Container__Skill__Rating {
   width: 60%;
 }
 @media only screen and (max-width: 600px) {
-  .skills .tabs .tabs-content .skills-container .skills-container-skill:last-of-type {
+  .Skills .tabs .tabs-content .Skills__Container .Skills__Container__Skill:last-of-type {
     margin-bottom: 50px;
   }
 }
-.skills .stars {
+.Skills .Stars {
   color: #fdd43b;
   display: flex;
   flex-wrap: wrap;
@@ -1023,16 +1023,16 @@ p {
   letter-spacing: 15px;
 }
 @media only screen and (max-width: 600px) {
-  .skills .stars {
+  .Skills .Stars {
     font-size: 1em;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 916px) {
-  .skills .stars {
+  .Skills .Stars {
     font-size: 1.2em;
   }
 }
-.skills .stars .avoid-wrap {
+.Skills .Stars .Stars--Avoid-Wrap {
   white-space: nowrap;
 }
 

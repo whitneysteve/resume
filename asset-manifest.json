@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/resume/static/css/main.3fd75cca.chunk.css",
-    "main.js": "/resume/static/js/main.bb9d0ae0.chunk.js",
-    "main.js.map": "/resume/static/js/main.bb9d0ae0.chunk.js.map",
+    "main.css": "/resume/static/css/main.ac76df49.chunk.css",
+    "main.js": "/resume/static/js/main.23db7604.chunk.js",
+    "main.js.map": "/resume/static/js/main.23db7604.chunk.js.map",
     "runtime-main.js": "/resume/static/js/runtime-main.d1f74a17.js",
     "runtime-main.js.map": "/resume/static/js/runtime-main.d1f74a17.js.map",
     "static/js/2.f07c0563.chunk.js": "/resume/static/js/2.f07c0563.chunk.js",
     "static/js/2.f07c0563.chunk.js.map": "/resume/static/js/2.f07c0563.chunk.js.map",
     "index.html": "/resume/index.html",
-    "static/css/main.3fd75cca.chunk.css.map": "/resume/static/css/main.3fd75cca.chunk.css.map",
+    "static/css/main.ac76df49.chunk.css.map": "/resume/static/css/main.ac76df49.chunk.css.map",
     "static/js/2.f07c0563.chunk.js.LICENSE.txt": "/resume/static/js/2.f07c0563.chunk.js.LICENSE.txt",
     "static/media/dcu.b0369de4.svg": "/resume/static/media/dcu.b0369de4.svg",
     "static/media/github.255db585.svg": "/resume/static/media/github.255db585.svg",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.d1f74a17.js",
     "static/js/2.f07c0563.chunk.js",
-    "static/css/main.3fd75cca.chunk.css",
-    "static/js/main.bb9d0ae0.chunk.js"
+    "static/css/main.ac76df49.chunk.css",
+    "static/js/main.23db7604.chunk.js"
   ]
 }
