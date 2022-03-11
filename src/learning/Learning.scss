@@ -25,12 +25,12 @@
   border-radius: 10px 00px 10px 10px;
 }
 
-.learning {
-  .learning-text-container {
+.Learning {
+  .Learning__Text-Container {
     flex-direction: column;
   }
 
-  .learning-text-container {
+  .Learning__Text-Container {
     p {
       @include horizontal-text();
     }
