@@ -1,12 +1,12 @@
-.education {
+.Education {
   @media #{$phone}, #{$tablet} {
     margin-top: 20px;
   }
 
-  .education-qualification-container {
+  .Education__Qualification-Container {
     flex-direction: column;
 
-    .education-qualification-container-logo {
+    .Education__Qualification-Container__Logo {
       height: 70%;
 
       @media #{$letterbox} {
@@ -22,7 +22,7 @@
       }
     }
 
-    .education-qualification-container-text {
+    .Education__Qualification-Container__Text {
       height: 30%;
 
       @media #{$letterbox} {

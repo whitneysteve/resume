@@ -8,7 +8,7 @@ import ucd from '../img/education/ucd.svg';
 class Education extends Component {
   render() {
     return (
-      <div className="Section education dev-grid-half">
+      <div className="Section Education dev-grid-half">
         { EDUCATION.map(renderQualification) }
       </div>
     );
@@ -19,13 +19,13 @@ const renderQualification = (qualification) => {
   const jobId = qualification.school.toLowerCase();
   const logoContainerId = `experience-job-${jobId}`;
   return (
-    <div className="education-qualification-container dev-grid-cell" key={ qualification.course }>
+    <div className="Education__Qualification-Container dev-grid-cell" key={ qualification.course }>
       <div className="dev-grid-measurement-right" />
       <div className="dev-grid-margin-middle-left-left" data-target={logoContainerId}></div>
-      <div className="education-qualification-container-logo" id={logoContainerId}>
+      <div className="Education__Qualification-Container__Logo" id={logoContainerId}>
         <img alt={`${qualification.school} Logo`} src={ qualification.logo } />
       </div>
-      <div className="education-qualification-container-text">
+      <div className="Education__Qualification-Container__Text">
         <div>
           { qualification.school }
         </div>
