@@ -63,11 +63,15 @@ const genSkillRow = (skill) => {
   const containerId = `skill-${safeTitle}-logo-container`;
   const logoImgId = `skill-${safeTitle}-logo-img`;
   const starsId = `skill-${safeTitle}-stars`;
+  const margin = Math.floor(Math.random() * 2) === 1;
 
   return (
     <div className="dev-grid-cell Skills__Container__Skill" key={ skill.title }>
-      <div className="dev-grid-margin-between" data-target-one={ containerId } data-target-two={ starsId } />
-      <div className="dev-grid-margin-center-up" data-target={ logoImgId } />
+      {
+        margin &&
+        <div className="dev-grid-margin-between" data-target-one={ containerId } data-target-two={ starsId } />
+      }
+      { !margin && <div className="dev-grid-margin-center-up" data-target={ logoImgId } /> }
       <div id={ containerId } className="Skills__Container__Skill__Name-Logo">
         <div id={ logoImgId } className="Skills__Container__Skill__Logo"><img alt={ skill.title } src={ skill.logo } /></div>
         <div id={ starsId } className="Skills__Container__Skill__Name">{ skill.title }</div>

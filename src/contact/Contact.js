@@ -15,6 +15,7 @@ class Contact extends Component {
         <div className="dev-grid">
           <div className="Contact__Icon-Container dev-grid-cell-three-quarters-height">
             <div className="dev-grid-margin-top-left-corner-left" data-target="contact-icon-gmail" />
+            <div className="dev-grid-margin-center-up" data-target="contact-icon-skype" />
             { CONTACTS.map(genContact) }
           </div>
           <div className="Contact__Text-Container dev-grid-cell-one-quarter-height">
