@@ -1,4 +1,4 @@
-.header {
+.Header {
   background-color: $light-grey;
 
   h1, h2, h3, h4 {
@@ -6,7 +6,7 @@
     text-shadow: 0px 1px rgba(255,255,255,0.5);
   }
 
-  .header-container {
+  .Header__Container {
     @include parallax();
     @include slight-inset-shadow();
 
@@ -19,75 +19,75 @@
     font-size: 1.4em;
   }
 
-  .header-text-overlay {
+  .Header__Text-Overlay {
     position: absolute;
   }
 
-  .header-0 {
+  .Header--0 {
     justify-content: flex-end;
 
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(img/landing-1.jpg);
     background-position: 75% 30%;
 
-    .header-text-overlay {
+    .Header__Text-Overlay {
       bottom: 0;
       right: 0;
       text-align: right;
     }
   }
 
-  .header-1 {
+  .Header--1 {
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(0,0,0,0.2) 100%), url(img/landing-2.jpg);
     background-position: 100% 50%;
 
-    .header-text-overlay {
+    .Header__Text-Overlay {
       bottom: 0;
     }
   }
 
-  .header-2 {
+  .Header--2 {
     justify-content: center;
 
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(64,64,64,0.1) 100%), url(img/landing-3.jpg);
     background-position: 50% 90%;
 
-    .header-text-overlay {
+    .Header__Text-Overlay {
       bottom: 0;
     }
   }
 
-  .header-3 {
+  .Header--3 {
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(64,64,64,0.1) 100%), url(img/landing-4.jpg);
     background-position: 57% 50%;
   }
 
-  .header-4 {
+  .Header--4 {
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(64,64,64,0.1) 100%), url(img/landing-5.jpg);
     background-position: 80% 50%;
     justify-content: flex-end;
 
-    .header-text-overlay {
+    .Header__Text-Overlay {
       text-align: right;
     }
   }
 
-  .header-5 {
+  .Header--5 {
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(img/landing-6.jpg);
     background-position: 50% 85%;
   }
 
-  .header-6 {
+  .Header--6 {
     background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 33%, rgba(64, 64, 64, 0.5) 100%), url(img/landing-7.jpg);
     background-position: 40% 50%;
     justify-content: flex-end;
 
-    .header-text-overlay {
+    .Header__Text-Overlay {
       right: 0;
       text-align: right;
     }
   }
 
-  .header-7 {
+  .Header--7 {
     background-image: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(64,64,64,0.1) 100%), url(img/landing-8.jpg);
     background-position: 70% 50%;
   }
@@ -97,39 +97,39 @@
       background-position: 72% 85%;
     }
 
-    .header-2 {
+    .Header--2 {
       align-items: center;
 
-      .header-text-overlay {
+      .Header__Text-Overlay {
         margin-bottom: 150px;
         bottom: unset;
       }
     }
 
-    .header-3 {
+    .Header--3 {
       background-position: 80% 50%;
     }
 
-    .header-4 {
+    .Header--4 {
       background-position: 80% 50%;
     }
 
-    .header-5 {
+    .Header--5 {
       background-position: 60% 50%;
     }
 
-    .header-6 {
+    .Header--6 {
       background-position: 30% 50%;
 
-      .header-text-overlay {
+      .Header__Text-Overlay {
         bottom: 0;
       }
     }
 
-    .header-7 {
+    .Header--7 {
       justify-content: flex-end;
 
-      .header-text-overlay {
+      .Header__Text-Overlay {
         bottom: 0;
         text-align: right;
       }
@@ -143,43 +143,43 @@
     }
 
     .header-1 {
-      .header-text-overlay {
+      .Header__Text-Overlay {
         top: 0;
       }
     }
 
-    .header-2 {
+    .Header--2 {
       justify-content: flex-start;
 
       font-size: 1.2em;
 
-      .header-text-overlay {
+      .Header__Text-Overlay {
         top: 40px;
 
         text-align: center;
       }
     }
 
-    .header-3 {
+    .Header--3 {
       justify-content: flex-end;
 
       background-position: 83% 50%;
       font-size: 1.1em;
 
-      .header-text-overlay {
+      .Header__Text-Overlay {
         text-align: center;
       }
     }
 
-    .header-4, .header-6 {
+    .Header--4, .Header--6 {
       font-size: 1.2em;
     }
 
-    .header-5 {
+    .Header--5 {
       font-size: 1.1em;
     }
 
-    .header-7 {
+    .Header--7 {
       background-position: 80% 50%;
     }
   }

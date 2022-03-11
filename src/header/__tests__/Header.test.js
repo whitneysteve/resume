@@ -14,7 +14,7 @@ describe('Header', () => {
 
   describe('Navigating through headers', () => {
     const expectHeader = (component, expectedIndex) => {
-      expect(component.find(`div.header-${expectedIndex}`)).toHaveLength(1);
+      expect(component.find(`div.Header--${expectedIndex}`)).toHaveLength(1);
     };
 
     it('cycles through header images', () => {

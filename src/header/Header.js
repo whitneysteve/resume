@@ -57,9 +57,9 @@ class Header extends Component {
   render() {
     const { jobIndex } = this.state;
     return (
-      <div className={`Section header`}>
-        <div className={`dev-grid header-container header-${jobIndex}`}>
-          <div className="header-text-overlay">
+      <div className={`Section Header`}>
+        <div className={`dev-grid Header__Container Header--${jobIndex}`}>
+          <div className="Header__Text-Overlay">
             <h1>Stephen Whitney</h1>
             <h2>{JobDescriptions[jobIndex]}</h2>
           </div>
