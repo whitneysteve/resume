@@ -11,13 +11,13 @@ import twitter from '../img/contact/twitter.svg';
 class Contact extends Component {
   render() {
     return (
-      <div className="Section contact">
+      <div className="Section Contact">
         <div className="dev-grid">
-          <div className="contact-container-icons dev-grid-cell-three-quarters-height">
+          <div className="Contact__Icon-Container dev-grid-cell-three-quarters-height">
             <div className="dev-grid-margin-top-left-corner-left" data-target="contact-icon-gmail" />
             { CONTACTS.map(genContact) }
           </div>
-          <div className="contact-container-text dev-grid-cell-one-quarter-height">
+          <div className="Contact__Text-Container dev-grid-cell-one-quarter-height">
             <div className="dev-grid-measurement-top" />
             <p>
               I like it, online, and I’ve worked with remote teams most of my career. But I have a fairly minimal online presence.
@@ -35,7 +35,7 @@ class Contact extends Component {
 const genContact = (contact) => {
   const service = contact.service.toLowerCase();
   return (
-    <div key={service} className="contact-container-icon">
+    <div key={service} className="Contact__Icon-Container__Icon">
       <a href={contact.link} key={contact.service} target={contact.sameWindow ? "_self" : "_blank"} rel="noreferrer">
         <img alt={`${contact.service} Logo`} src={contact.logo} id={`contact-icon-${service}`} />
       </a>

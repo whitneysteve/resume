@@ -1,5 +1,5 @@
-.contact {
-  .contact-container-text {
+.Contact {
+  .Contact__Text-Container {
     flex-direction: column;
 
     p {
@@ -7,10 +7,10 @@
     }
   }
 
-  .contact-container-icons {
+  .Contact__Icon-Container {
     flex-wrap: wrap;
 
-    .contact-container-icon {
+    .Contact__Icon-Container__Icon {
       min-width: 33%;
 
       @media #{$phone}, #{tablet} {
