@@ -63,27 +63,27 @@ class Job extends Component {
   render() {
     const { job } = this.props;
     const containerId = `experience-job-${job.id}`;
-    const selectedState = this.props.selected ? 'selected' : '';
-    const transitionState = this.state.transition ? 'transition' : '';
+    const selectedState = this.props.selected ? 'Experience__Company-Container--selected' : '';
+    const transitionState = this.state.transition ? 'Experience__Company-Container--transition' : '';
 
     return (
-      <div className="dev-grid-cell experience-job" key={ job.id }>
+      <div className="dev-grid-cell" key={ job.id }>
         <div className="dev-grid-margin-top-left-corner-left" data-target={containerId}></div>
         <div className="dev-grid-margin-center-up" data-target={containerId}></div>
         <div
           id={containerId}
           ref={this.jobContainer}
-          className={`experience-job-company-container ${transitionState} ${containerId}  ${selectedState}`}
+          className={`Experience__Company-Container ${transitionState} ${selectedState} ${job.id}`}
           onClick={() => this.props.selectJob(job)}
           onMouseEnter={this.startTracking}
           onMouseLeave={this.stopTracking}
           onMouseMove={this.track} >
           <img alt={ `${ job.company } logo` } src={ job.logo } />
-          <div className="experience-job-description">
-            <div className="experience-job-description-company-name">
+          <div className="Experience__Company-Container__Description">
+            <div>
               {job.company}
             </div>
-            <div className="experience-job-description-company-term">
+            <div>
               {job.term}
             </div>
           </div>

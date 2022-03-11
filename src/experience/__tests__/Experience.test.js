@@ -11,5 +11,5 @@ it('renders without crashing', () => {
 it('renders selected job', () => {
   const testJob = JOBS[0];
   const component = mount(<Experience selectedJob={testJob} />);
-  expect(component.find(`.experience-job-company-container.experience-job-${testJob.id}.selected`)).toHaveLength(1);
+  expect(component.find(`.Experience__Company-Container--selected`)).toHaveLength(1);
 });
