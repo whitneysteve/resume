@@ -27,7 +27,7 @@ class Skills extends Component {
 
   render() {
     return (
-      <div className="Section skills">
+      <div className="Section Skills">
         <Floaty numLayers={3} />
         <Tabs onSelect={this.tabChanged}>
           { SKILLS.map(genSkillEraTab) }
@@ -46,7 +46,7 @@ class Skills extends Component {
 const genSkillEraTab = (era) => {
   return (
     <Tab key={era.title} title={era.title}>
-      <div className="skills-container dev-grid">
+      <div className="Skills__Container dev-grid">
         { era.skills.map(genSkillRow) }
       </div>
     </Tab>
@@ -65,17 +65,17 @@ const genSkillRow = (skill) => {
   const starsId = `skill-${safeTitle}-stars`;
 
   return (
-    <div className="dev-grid-cell skills-container-skill" key={ skill.title }>
+    <div className="dev-grid-cell Skills__Container__Skill" key={ skill.title }>
       <div className="dev-grid-margin-between" data-target-one={ containerId } data-target-two={ starsId } />
       <div className="dev-grid-margin-center-up" data-target={ logoImgId } />
-      <div id={ containerId } className="skills-container-skill-name-logo">
-        <div id={ logoImgId } className="skills-container-skill-logo"><img alt={ skill.title } src={ skill.logo } /></div>
-        <div id={ starsId } className="skills-container-skill-name">{ skill.title }</div>
+      <div id={ containerId } className="Skills__Container__Skill__Name-Logo">
+        <div id={ logoImgId } className="Skills__Container__Skill__Logo"><img alt={ skill.title } src={ skill.logo } /></div>
+        <div id={ starsId } className="Skills__Container__Skill__Name">{ skill.title }</div>
       </div>
       <div
         id={ starsId}
         aria-label={ skill.stars + " stars" }
-        className="skills-container-skill-rating">
+        className="Skills__Container__Skill__Rating">
         { genStars(skill.stars) }
       </div>
     </div>
@@ -89,20 +89,20 @@ const genSkillRow = (skill) => {
  */
 const genStars = (numFilledStars) => {
   const firstThree = (
-    <div className="avoid-wrap">
+    <div className="Stars--Avoid-Wrap">
       {genStar(numFilledStars > 0, 1)}
       {genStar(numFilledStars > 1, 2)}
       {genStar(numFilledStars > 2, 3)}
     </div>
   );
   const lastTwo = (
-    <div className="avoid-wrap">
+    <div className="Stars--Avoid-Wrap">
       {genStar(numFilledStars > 3, 4)}
       {genStar(numFilledStars > 4, 5)}
     </div>
   );
   return (
-    <div className="stars">
+    <div className="Stars">
       {firstThree}
       {lastTwo}
     </div>

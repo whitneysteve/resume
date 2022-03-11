@@ -10,7 +10,7 @@ $medium-stars: generate-items(150, $animation-palette);
 $large-stars: generate-items(50, $animation-palette);
 
 
-.skills {
+.Skills {
   margin-bottom: 0;
   position: relative;
 
@@ -68,41 +68,41 @@ $large-stars: generate-items(50, $animation-palette);
       color: $white;
       font-size: 1.75em;
 
-      .skills-container {
-        .skills-container-skill {
+      .Skills__Container {
+        .Skills__Container__Skill {
           display: flex;
           flex-direction: row;
           justify-content: space-evenly;
 
-          .skills-container-skill-name-logo {
+          .Skills__Container__Skill__Name-Logo {
             align-items: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
 
             width: 40%;
-          }
 
-          .skills-container-skill-name {
-            font-size: 0.7em;
-            margin: 0 50px;
-          }
+            .Skills__Container__Skill__Name {
+              font-size: 0.7em;
+              margin: 0 50px;
+            }
 
-          .skills-container-skill-logo {
-            margin-bottom: 15px;
+            .Skills__Container__Skill__Logo {
+              margin-bottom: 15px;
 
-            img {
-              width: 40%;
-              max-height: 350px;
+              img {
+                width: 40%;
+                max-height: 350px;
+              }
             }
           }
 
-          .skills-container-skill-rating {
+          .Skills__Container__Skill__Rating {
             width: 60%;
           }
         }
 
-        .skills-container-skill:last-of-type {
+        .Skills__Container__Skill:last-of-type {
           @media #{$phone} {
             margin-bottom: 50px;
           }
@@ -111,7 +111,7 @@ $large-stars: generate-items(50, $animation-palette);
     }
   }
 
-  .stars {
+  .Stars {
     color: $golden;
     display: flex;
     flex-wrap: wrap;
@@ -127,7 +127,7 @@ $large-stars: generate-items(50, $animation-palette);
       font-size: 1.2em;
     }
 
-    .avoid-wrap {
+    .Stars--Avoid-Wrap {
       white-space: nowrap;
     }
   }
