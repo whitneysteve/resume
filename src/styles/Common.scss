@@ -37,6 +37,11 @@ p {
 }
 
 .Section {
-  @include dark-text();
-  font-size: 1.2em;
+  p {
+    @include dark-text();
+    @include horizontal-text();
+
+    font-size: 1.6em;
+    opacity: 0.8;
+  }
 }
