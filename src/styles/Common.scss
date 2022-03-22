@@ -3,7 +3,7 @@
 $white: #ffffff;
 $light-grey: #efefef;
 $medium-grey: #a8a8a8;
-$dark-grey: #686868;
+$dark-grey: #b0afaf;
 $golden: #fdd43b;
 
 a, button {
@@ -40,8 +40,6 @@ p {
   p {
     @include dark-text();
     @include horizontal-text();
-
     font-size: 1.6em;
-    opacity: 0.8;
   }
 }

@@ -1,6 +1,4 @@
 .Location {
-  opacity: 0.75;
-
   .dev-grid {
     flex-direction: row;
 
@@ -11,6 +9,10 @@
 
   .Location__Text {
     flex-direction: column;
+  }
+
+  .Location__Map {
+    opacity: 0.5;
   }
 
   .map {

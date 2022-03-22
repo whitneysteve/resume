@@ -20,7 +20,7 @@ class Location extends Component {
               I've been lucky enough to work with amazing people from <span aria-label="United States Flag" role="img"> 🇺🇸</span> to <span aria-label="Singapore Flag" role="img"> 🇸🇬</span>
             </p>
           </div>
-          <div className="dev-grid-cell-three-quarters-height">
+          <div className="dev-grid-cell-three-quarters-height Location__Map">
             <div className="dev-grid-measurement-bottom"></div>
             <div className="dev-grid-margin-top-left-corner-left" data-target="map"></div>
             <div className="dev-grid-margin-bottom-left-corner-down" data-target="map"></div>
