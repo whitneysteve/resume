@@ -14,12 +14,9 @@ class Contact extends Component {
       <div className="Section Contact">
         <div className="dev-grid">
           <div className="Contact__Icon-Container dev-grid-cell-three-quarters-height">
-            <div className="dev-grid-margin-top-left-corner-left" data-target="contact-icon-gmail" />
-            <div className="dev-grid-margin-center-up" data-target="contact-icon-skype" />
             { CONTACTS.map(genContact) }
           </div>
           <div className="Contact__Text-Container dev-grid-cell-one-quarter-height">
-            <div className="dev-grid-measurement-top" />
             <p>
               I like it, online, and I’ve worked with remote teams most of my career. But I have a fairly minimal online presence.
             </p>

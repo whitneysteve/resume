@@ -66,11 +66,9 @@ class Learning extends Component {
       <div className="Section Learning">
         <div className="dev-grid">
           <div className="dev-grid-cell-three-quarters-height learning-graph-container">
-            <div className="dev-grid-measurement-right" />
             <canvas id="learning-canvas" />
           </div>
           <div className="dev-grid-cell-one-quarter-height Learning__Text-Container">
-            <div className="dev-grid-measurement-bottom" />
             <p>
               I can usually pick things up very quickly, faster with focus, frequency and teamwork.
             </p>

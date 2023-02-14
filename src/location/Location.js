@@ -10,10 +10,7 @@ class Location extends Component {
       <div className="Section Location">
         <div className="dev-grid">
           <div className="dev-grid-cell-one-quarter-height Location__Text">
-            <div className="dev-grid-measurement-right"></div>
-            <div className="dev-grid-measurement-bottom"></div>
-            <div className="dev-grid-margin-center-up" data-target="location-text-p"></div>
-            <p id="location-text-p">
+            <p>
               I’m a software engineer based in Dublin, Ireland <span aria-label="Ireland Flag" role="img"> 🇮🇪</span>
             </p>
             <p>
@@ -21,9 +18,6 @@ class Location extends Component {
             </p>
           </div>
           <div className="dev-grid-cell-three-quarters-height Location__Map">
-            <div className="dev-grid-measurement-bottom"></div>
-            <div className="dev-grid-margin-top-left-corner-left" data-target="map"></div>
-            <div className="dev-grid-margin-bottom-left-corner-down" data-target="map"></div>
             <Map />
           </div>
         </div>

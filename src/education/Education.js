@@ -18,12 +18,9 @@ class Education extends Component {
 const renderQualification = (qualification) => {
   const jobId = qualification.school.toLowerCase();
   const logoContainerId = `experience-job-${jobId}`;
-  const margin = Math.floor(Math.random() * 2) === 1;
 
   return (
     <div className="Education__Qualification-Container dev-grid-cell" key={ qualification.course }>
-      <div className="dev-grid-measurement-right" />
-      { margin && <div className="dev-grid-margin-middle-left-left" data-target={logoContainerId} /> }
       <div className="Education__Qualification-Container__Logo" id={logoContainerId}>
         <img alt={`${qualification.school} Logo`} src={ qualification.logo } />
       </div>

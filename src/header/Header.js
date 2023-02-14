@@ -63,22 +63,6 @@ class Header extends Component {
             <h1>Stephen Whitney</h1>
             <h2>{JobDescriptions[jobIndex]}</h2>
           </div>
-          <div className="dev-grid-cell">
-            <div className="dev-grid-measurement-right"></div>
-            <div className="dev-grid-measurement-top"></div>
-            <div className="dev-grid-measurement-bottom"></div>
-          </div>
-          <div className="dev-grid-cell">
-            <div className="dev-grid-measurement-right"></div>
-          </div>
-          <div className="dev-grid-cell">
-            <div className="dev-grid-measurement-bottom"></div>
-            <div className="dev-grid-measurement-left"></div>
-          </div>
-          <div className="dev-grid-cell">
-            <div className="dev-grid-measurement-left"></div>
-            <div className="dev-grid-measurement-top"></div>
-          </div>
         </div>
       </div>
     );

@@ -65,12 +65,9 @@ class Job extends Component {
     const containerId = `experience-job-${job.id}`;
     const selectedState = this.props.selected ? 'Experience__Company-Container--selected' : '';
     const transitionState = this.state.transition ? 'Experience__Company-Container--transition' : '';
-    const margin = Math.floor(Math.random() * 2) === 1;
 
     return (
       <div className="dev-grid-cell" key={ job.id }>
-        { margin && <div className="dev-grid-margin-top-left-corner-left" data-target={containerId}></div> }
-        { !margin && <div className="dev-grid-margin-center-up" data-target={containerId}></div> }
         <div
           id={containerId}
           ref={this.jobContainer}

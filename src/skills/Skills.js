@@ -8,23 +8,11 @@ import python from '../img/languages/python.svg';
 import ruby from '../img/languages/ruby.svg';
 import scala from '../img/languages/scala.svg';
 import { Tab, Tabs } from '../tabs/Tabs';
-import { drawMeasurements } from '../devgrid/Devgrid';
 
 /**
  * Skills renders the current and past skills section.
  */
 class Skills extends Component {
-  constructor(props) {
-    super(props);
-
-    this.tabChanged = this.tabChanged.bind(this);
-  }
-
-  tabChanged() {
-    // Timeout is a quick fix for the DOM elements not getting updated in time in Tabs.js
-    setTimeout(drawMeasurements, 150);
-  }
-
   render() {
     return (
       <div className="Section Skills">
@@ -63,15 +51,9 @@ const genSkillRow = (skill) => {
   const containerId = `skill-${safeTitle}-logo-container`;
   const logoImgId = `skill-${safeTitle}-logo-img`;
   const starsId = `skill-${safeTitle}-stars`;
-  const margin = Math.floor(Math.random() * 2) === 1;
 
   return (
     <div className="dev-grid-cell Skills__Container__Skill" key={ skill.title }>
-      {
-        margin &&
-        <div className="dev-grid-margin-between" data-target-one={ containerId } data-target-two={ starsId } />
-      }
-      { !margin && <div className="dev-grid-margin-center-up" data-target={ logoImgId } /> }
       <div id={ containerId } className="Skills__Container__Skill__Name-Logo">
         <div id={ logoImgId } className="Skills__Container__Skill__Logo"><img alt={ skill.title } src={ skill.logo } /></div>
         <div id={ starsId } className="Skills__Container__Skill__Name">{ skill.title }</div>
