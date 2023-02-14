@@ -40,12 +40,12 @@ class Learning extends Component {
     if (isGraphScrolledIntoView('learning-canvas')) {
       renderGraph();
     } else {
-      window.addEventListener('scroll', this.showGraphWhenScrollIntoView);
+      document.getElementById("App").addEventListener('scroll', this.showGraphWhenScrollIntoView);
     }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.showGraphWhenScrollIntoView);
+    document.getElementById("App").removeEventListener('scroll', this.showGraphWhenScrollIntoView);
   }
 
   showGraphWhenScrollIntoView() {

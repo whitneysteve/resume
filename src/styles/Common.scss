@@ -6,6 +6,12 @@ $medium-grey: #a8a8a8;
 $dark-grey: #b0afaf;
 $golden: #fdd43b;
 
+body {
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
 a, button {
   -webkit-tap-highlight-color: transparent;
 }
@@ -37,6 +43,7 @@ p {
 }
 
 .Section {
+  scroll-snap-align: start;
   p {
     @include dark-text();
     @include horizontal-text();
