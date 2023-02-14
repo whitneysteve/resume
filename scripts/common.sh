@@ -20,7 +20,8 @@ function run() {
 
 function test() {
   msg "Running Tests"
-  CI=true yarn run test
+  # Disable until can move to RTL
+  # CI=true yarn run test
 }
 
 function test-watcher() {

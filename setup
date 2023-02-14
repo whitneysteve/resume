@@ -4,8 +4,7 @@
 
 set -e
 
-brew install sass/sass/sass
-
+npm install -g sass
 npm install --global yarn
 
 yarn install
