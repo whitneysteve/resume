@@ -17,7 +17,7 @@ class Location extends Component {
               I've been lucky enough to work with amazing people from <span aria-label="United States Flag" role="img"> 🇺🇸</span> to <span aria-label="Singapore Flag" role="img"> 🇸🇬</span>
             </p>
           </div>
-          <div className="dev-grid-cell-three-quarters-height Location__Map">
+          <div className="Location__Map">
             <Map />
           </div>
         </div>

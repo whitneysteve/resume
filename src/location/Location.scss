@@ -12,18 +12,31 @@
   }
 
   .Location__Map {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
     opacity: 0.5;
+    width: 100vw;
   }
 
-  .map {
-    @include slight-shadow();
-
-    height: 75%;
-    width: 75%;
+  .map-click-wrapper {
+    height: 100%;
+    width: 90%;
 
     @media #{$phone}, #{$tablet} {
-      height: 90%;
-      width: 90%;
+      width: 100%;
+    }
+
+    .map {
+      @include slight-shadow();
+
+      height: 100%;
+      width: 100%;
+    }
+
+    .map-unclicked {
+      pointer-events: none;
     }
   }
 }

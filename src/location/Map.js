@@ -11,38 +11,27 @@ class Map extends Component {
     zoom: 5,
   };
 
+  state = { clicked: false }
+
   constructor(props) {
     super(props);
-    this.handleScroll = this.handleScroll.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  };
-
-  componentWillUnmount() {
-    this.removeScrollListener();
-  };
-
-  removeScrollListener() {
-    window.removeEventListener('scroll', this.handleScroll);
-  };
-
-  handleScroll(event) {
-    if (window.scrollY > 50) {
-      this.setState({ expand: true });
-      this.removeScrollListener();
-    }
-  };
+  handleClick() {
+    this.setState({ clicked: !this.state.clicked });
+  }
 
   render() {
     return (
-      <div id="map" className={this.state && this.state.expand ? "map map-expanded" : "map"}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyC87jefYvUwpJ45N4Dxo_o7Cg0tjvZtcck" }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}>
-        </GoogleMapReact>
+      <div className="map-click-wrapper" onClick={this.handleClick}>
+        <div className={`map ${this.state.clicked ? "" : "map-unclicked"}`} id="map">
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: "AIzaSyC87jefYvUwpJ45N4Dxo_o7Cg0tjvZtcck" }}
+            defaultCenter={this.props.center}
+            defaultZoom={this.props.zoom}>
+          </GoogleMapReact>
+        </div>
       </div>
     );
   }
