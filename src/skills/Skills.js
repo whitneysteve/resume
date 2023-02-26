@@ -122,7 +122,7 @@ const SKILLS = [
     skills: [
       { ...JS, stars: 5 },
       { ...RUBY, stars: 4 },
-      { ...SCALA, stars: 3 },
+      { ...JAVA, stars: 3 },
       { ...GOLANG, stars: 3 },
     ],
   },
@@ -130,9 +130,9 @@ const SKILLS = [
     title: "2020",
     skills: [
       { ...RUBY, stars: 5 },
+      { ...JAVA, stars: 4 },
       { ...JS, stars: 4 },
       { ...SCALA, stars: 3 },
-      { ...GOLANG, stars: 2 },
 
     ],
   },
@@ -149,8 +149,8 @@ const SKILLS = [
     title: "2016",
     skills: [
       { ...JAVA, stars: 5 },
-      { ...RUBY, stars: 4 },
       { ...JS, stars: 4 },
+      { ...RUBY, stars: 4 },
       { ...SCALA, stars: 3 },
 
     ],
