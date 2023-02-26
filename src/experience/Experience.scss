@@ -1,4 +1,30 @@
 .Experience {
+  justify-content: center;
+
+  .Experience__Company-Cell {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    max-height: 50%;
+    max-width: 33%;
+    min-width: 33%;
+
+    @media #{$phone} {
+      max-height: 20%;
+      min-height: 20%;
+      max-width: unset;
+      min-width: unset;
+    }
+
+    @media #{$tablet} {
+      max-height: 33%;
+      min-height: 33%;
+      max-width: 50%;
+      min-width: 50%;
+    }
+  }
+
   .Experience__Company-Container {
     align-items: center;
     display: flex;
@@ -40,9 +66,10 @@
       transition: width 0.15s ease-out, height 0.15s ease-out;
 
       @media #{$tablet} {
+        align-items: center;
+        font-size: 1.5em;
         height: 0;
         width: 40%;
-        font-size: 1.5em;
       }
     }
   }
@@ -73,14 +100,6 @@
     background: black;
   }
 
-  .Experience__Company-Container.stripe {
-    background-color: #a95eff;
-  }
-
-  .Experience__Company-Container.twitter {
-    background: rgba(29,161,242,1);
-  }
-
   .Experience__Company-Container.mastercard {
     background: linear-gradient(180deg, #FCE38A 0%, #F38181 100%);
 
@@ -89,6 +108,18 @@
         font-size: 0.9em;
       }
     }
+  }
+
+  .Experience__Company-Container.stripe {
+    background-color: #a95eff;
+  }
+
+  .Experience__Company-Container.tines{
+    background: #8578E6;
+  }
+
+  .Experience__Company-Container.twitter {
+    background: rgba(29,161,242,1);
   }
 
   canvas {

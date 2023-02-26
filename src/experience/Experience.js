@@ -3,6 +3,7 @@ import { Gradient } from '../3rdparty/Gradient';
 import Job from '../experience/Job';
 import intercom from '../img/companies/intercom.svg';
 import stripe from '../img/companies/stripe.svg';
+import tines from '../img/companies/tines.svg';
 import twitter from '../img/companies/twitter.svg';
 import mastercard from '../img/companies/mastercard.svg';
 import PropTypes from 'prop-types';
@@ -47,10 +48,20 @@ class Experience extends Component {
 
 export const JOBS = [
   {
+    id: "tines",
+    company: "Tines",
+    position: "Software Engineer",
+    term: `2022 - ${new Date(Date.now()).getFullYear()}`,
+    blurbs: [
+      "I recently joined Tines as a software engineer.",
+    ],
+    logo: tines,
+  },
+  {
     id: "intercom",
     company: "Intercom",
     position: "Software Engineer",
-    term: `2021 - ${new Date(Date.now()).getFullYear()}`,
+    term: `2021 - 2022`,
     blurbs: [
       "I recently joined Intercom to work on their Growth teams.",
     ],

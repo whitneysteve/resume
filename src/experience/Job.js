@@ -67,7 +67,7 @@ class Job extends Component {
     const transitionState = this.state.transition ? 'Experience__Company-Container--transition' : '';
 
     return (
-      <div className="dev-grid-cell" key={ job.id }>
+      <div className="Experience__Company-Cell" key={ job.id }>
         <div
           id={containerId}
           ref={this.jobContainer}
