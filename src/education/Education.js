@@ -25,15 +25,15 @@ const renderQualification = (qualification) => {
         <img alt={`${qualification.school} Logo`} src={ qualification.logo } />
       </div>
       <div className="Education__Qualification-Container__Text">
-        <div>
+        <p>
           { qualification.school }
-        </div>
-        <div>
+        </p>
+        <p>
           { qualification.course }
-        </div>
-        <div>
+        </p>
+        <p>
           { qualification.grade }, { qualification.year }
-        </div>
+        </p>
       </div>
     </div>
   );
