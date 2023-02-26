@@ -15,7 +15,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 75vh;
+    height: calc( ( var(--app-height) / 4 ) * 3 );
     opacity: 0.5;
     width: 100vw;
   }
