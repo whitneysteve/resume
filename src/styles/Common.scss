@@ -44,7 +44,6 @@ p {
 }
 
 .Section {
-  scroll-snap-align: start;
   p {
     @include dark-text();
     @include horizontal-text();
