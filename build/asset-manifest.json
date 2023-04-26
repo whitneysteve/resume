@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/resume/static/css/main.6a78dd6f.css",
-    "main.js": "/resume/static/js/main.2d2712cd.js",
+    "main.js": "/resume/static/js/main.63de6637.js",
     "static/media/landing-5.jpg": "/resume/static/media/landing-5.3c1fd66edc9c1da464da.jpg",
     "static/media/landing-6.jpg": "/resume/static/media/landing-6.251cda783c08629eb593.jpg",
     "static/media/landing-1.jpg": "/resume/static/media/landing-1.a6af287fafbee6722574.jpg",
@@ -25,14 +25,15 @@
     "static/media/intercom.svg": "/resume/static/media/intercom.d4eb40315806b844d7a0bc1facd96707.svg",
     "static/media/github.svg": "/resume/static/media/github.255db585f8a0eb28a1e4deb91bde207d.svg",
     "static/media/mastercard.svg": "/resume/static/media/mastercard.b720e3b5a9bf9bce7ef42d6682f56356.svg",
+    "static/media/typescript.svg": "/resume/static/media/typescript.a6305a733dd55243980aec55f96f70c5.svg",
     "static/media/js.svg": "/resume/static/media/js.acc4642f682cd93a4c20a8a02c0cfa21.svg",
     "static/media/linkedin.svg": "/resume/static/media/linkedin.eb11e5e75854e5df0752812bbcabab63.svg",
     "static/media/gmail.svg": "/resume/static/media/gmail.cf6e9da6207069eaa596237538127bcb.svg",
     "main.6a78dd6f.css.map": "/resume/static/css/main.6a78dd6f.css.map",
-    "main.2d2712cd.js.map": "/resume/static/js/main.2d2712cd.js.map"
+    "main.63de6637.js.map": "/resume/static/js/main.63de6637.js.map"
   },
   "entrypoints": [
     "static/css/main.6a78dd6f.css",
-    "static/js/main.2d2712cd.js"
+    "static/js/main.63de6637.js"
   ]
 }
