@@ -7,6 +7,7 @@ import js from '../img/languages/js.svg';
 import python from '../img/languages/python.svg';
 import ruby from '../img/languages/ruby.svg';
 import scala from '../img/languages/scala.svg';
+import typescript from '../img/languages/typescript.svg';
 import { Tab, Tabs } from '../tabs/Tabs';
 
 /**
@@ -115,12 +116,13 @@ const SCALA = { title: "Scala", logo: scala };
 const GOLANG = { title: "Golang", logo: golang };
 const PYTHON = { title: "Python", logo: python };
 const JAVA = { title: "Java", logo: java };
+const TYPESCRIPT = { title: "Typescript & CSS", logo: typescript };
 
 const SKILLS = [
   {
     title: "Today",
     skills: [
-      { ...JS, stars: 5 },
+      { ...TYPESCRIPT, stars: 4 },
       { ...RUBY, stars: 4 },
       { ...JAVA, stars: 3 },
       { ...GOLANG, stars: 3 },
